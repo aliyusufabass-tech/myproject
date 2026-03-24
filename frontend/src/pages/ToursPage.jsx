@@ -92,7 +92,7 @@ function ToursPage() {
                   <div className="tour-format-card__overlay">
                     <span className="tour-format-pill">{card.badge}</span>
                     <span className="tour-rating-pill">
-                      <span className="tour-rating-pill__star">*</span>
+                      <span className="tour-rating-pill__star">{'\u2605'}</span>
                       {card.rating}
                     </span>
                   </div>
