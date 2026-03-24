@@ -274,7 +274,7 @@ p {
 
 .hero--home::before {
   background:
-    linear-gradient(120deg, rgba(4, 36, 46, 0.72), rgba(6, 77, 89, 0.52)),
+    linear-gradient(120deg, rgba(4, 36, 46, 0.54), rgba(6, 77, 89, 0.34)),
     var(--home-hero-image) center/cover;
 }
 
@@ -843,28 +843,32 @@ p {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
-  margin: 2rem 0;
+  margin: 1.5rem 0;
 }
 
 .hero__stats {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
-  margin-top: 2.5rem;
+  margin-top: 1.6rem;
 }
 
 .hero__stats div {
-  padding: 1rem 1.2rem;
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 0.8rem 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 1.2rem;
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(8px);
 }
 
 .hero__stats strong {
   display: block;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin-bottom: 0.15rem;
+}
+
+.hero__stats span {
+  font-size: 0.92rem;
 }
 
 .tour-card,

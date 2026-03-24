@@ -1,3 +1,5 @@
+import mnembaImage from '../assets/image 2.jpeg'
+
 export const tours = [
   {
     id: 1,
@@ -7,8 +9,7 @@ export const tours = [
     category: 'Half Day',
     description:
       'Enjoy clear Zanzibar waters with reef snorkeling, marine encounters, and possible dolphin sightings.',
-    image:
-      'https://www.yazantours.co.tz/wp-content/uploads/2025/12/mnemba-1.jpg',
+    image: mnembaImage,
   },
   {
     id: 2,
@@ -149,7 +150,7 @@ export const zanzibarTours = [
     reviews: '200 reviews',
     price: '$82 / person',
     rating: '4.9',
-    image: 'https://picsum.photos/seed/full7/1200/800',
+    image: mnembaImage,
     detailUrl:
       'https://www.yazantours.co.tz/mnemba-snorkeling-swimming-with-dolphins-and-turtles-kendwa-beach/',
   },
@@ -302,7 +303,7 @@ export const zanzibarTours = [
     reviews: 'Reviews',
     price: '$42 / person',
     rating: '4.9',
-    image: 'https://picsum.photos/seed/half8/1200/800',
+    image: mnembaImage,
     detailUrl: 'https://www.yazantours.co.tz/mnemba-snorkeling-dolphins/',
   },
   {

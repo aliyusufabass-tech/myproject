@@ -33,7 +33,6 @@ function HomePage() {
         style={{ '--home-hero-image': `url(${homeHeroImage})` }}
       >
         <div className="container hero__content">
-          <p className="section-tag">Island journeys with style</p>
           <h1>Discover the Beauty of Zanzibar</h1>
           <p>
             Zanzibar Excursion Company Ltd curates memorable beach escapes, cultural
