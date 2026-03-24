@@ -82,10 +82,22 @@ main {
   margin-bottom: 2.5rem;
 }
 
+.section-heading h2 {
+  font-size: clamp(1.75rem, 4vw, 3rem);
+}
+
 .section-heading--center {
   text-align: center;
   margin-inline: auto;
   margin-bottom: 3rem;
+}
+
+.section-heading--compact h2 {
+  font-size: clamp(1.45rem, 3vw, 2.35rem);
+}
+
+.home-section-title--compact {
+  font-size: clamp(1.5rem, 3.2vw, 2.4rem);
 }
 
 h1,

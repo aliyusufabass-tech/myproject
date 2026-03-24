@@ -64,6 +64,7 @@ function HomePage() {
           <SectionHeading
             eyebrow="Why Choose Us"
             title="Travel support that feels personal, reliable, and deeply rooted in local knowledge"
+            className="section-heading--compact"
             align="center"
           />
           <div className="grid grid--three">
@@ -82,7 +83,9 @@ function HomePage() {
         <div className="container split">
           <div>
             <p className="section-tag">Plan with confidence</p>
-            <h2>Need transfers, tours, and quick local guidance in one place?</h2>
+            <h2 className="home-section-title--compact">
+              Need transfers, tours, and quick local guidance in one place?
+            </h2>
             <p className="muted">
               We help guests move smoothly from airport arrival to hotel check-in, then
               into unforgettable island experiences without the usual coordination stress.
