@@ -1,202 +1,123 @@
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import PageMeta from '../components/PageMeta'
 import { safariTours, zanzibarTours } from '../data/tours'
 
-function ToursPage() {
-  const [tourFilter, setTourFilter] = useState('all')
-  const [safariFilter, setSafariFilter] = useState('all')
-  const [searchTerm, setSearchTerm] = useState('')
+const filters = [
+  { key: 'all', label: 'All' },
+  { key: 'half', label: 'Half-day Excursions' },
+  { key: 'full', label: 'Full-day Excursions' },
+  { key: 'one-day', label: 'One Day Safari' },
+  { key: 'multi-day', label: 'Three Days Safari' },
+]
 
-  const visibleZanzibarTours = zanzibarTours.filter((tour) => {
-    if (tourFilter === 'all') {
-      return true
+const getSafariCategory = (duration) => {
+  if (duration === '1 Day') {
+    return 'one-day'
+  }
+
+  return 'multi-day'
+}
+
+const normalizeSafariCard = (tour) => ({
+  id: tour.id,
+  type: 'safari',
+  filterKey: getSafariCategory(tour.duration),
+  badge: tour.origin,
+  title: tour.title,
+  summary: tour.summary,
+  image: tour.image,
+  price: tour.price,
+  rating: tour.rating,
+  detailUrl: tour.detailUrl || '/contact',
+})
+
+const normalizeExcursionCard = (tour) => ({
+  id: tour.id,
+  type: 'excursion',
+  filterKey: tour.type,
+  badge: tour.type === 'half' ? 'Half-day Excursions' : 'Full-day Excursions',
+  title: tour.title,
+  summary: tour.summary,
+  image: tour.image,
+  price: tour.price,
+  rating: tour.rating,
+  detailUrl: tour.detailUrl,
+})
+
+function ToursPage() {
+  const [activeFilter, setActiveFilter] = useState('all')
+
+  const tourCards = useMemo(() => {
+    const excursionCards = zanzibarTours.map(normalizeExcursionCard)
+    const safariCards = safariTours.map(normalizeSafariCard)
+    return [...excursionCards, ...safariCards]
+  }, [])
+
+  const visibleCards = useMemo(() => {
+    if (activeFilter === 'all') {
+      return tourCards
     }
 
-    return tour.type === tourFilter
-  })
-
-  const visibleSafaris = safariTours.filter((tour) => {
-    const matchesOrigin =
-      safariFilter === 'all' ||
-      (safariFilter === 'zanzibar' && tour.origin === 'From Zanzibar') ||
-      (safariFilter === 'arusha' && tour.origin === 'From Arusha')
-
-    const query = searchTerm.trim().toLowerCase()
-    const haystack = [tour.title, tour.summary, tour.origin, ...tour.tags].join(' ').toLowerCase()
-    const matchesSearch = query === '' || haystack.includes(query)
-
-    return matchesOrigin && matchesSearch
-  })
+    return tourCards.filter((card) => card.filterKey === activeFilter)
+  }, [activeFilter, tourCards])
 
   return (
     <>
       <PageMeta
         title="Tours"
-        description="Browse Zanzibar tours and wildlife safaris with full-day, half-day, and safari finder filters."
+        description="Browse Zanzibar excursions and safari packages in a modern card layout with quick filters."
       />
 
       <section className="page-hero page-hero--tours">
         <div className="container">
-          <p className="section-tag">Tours</p>
-          <h1>Explore island escapes and wildlife journeys built around your pace.</h1>
+          <p className="section-tag">Tours & Safaris</p>
+          <h1>Choose the Zanzibar escape or wildlife journey that fits your mood.</h1>
         </div>
       </section>
 
-      <section className="section">
+      <section className="section tours-format-section">
         <div className="container">
-          <div className="tours-header">
-            <p className="section-tag">Zanzibar Day Tours</p>
-            <h2>Choose from curated full-day and half-day island experiences</h2>
+          <div className="tour-filter-shell">
+            <div className="tour-chip-row">
+              {filters.map((filter) => (
+                <button
+                  key={filter.key}
+                  className={`tour-chip ${activeFilter === filter.key ? 'tour-chip--active' : ''}`}
+                  type="button"
+                  onClick={() => setActiveFilter(filter.key)}
+                >
+                  {filter.label}
+                </button>
+              ))}
+            </div>
           </div>
 
-          <div className="filter-btns">
-            <button
-              className={`filter-btn ${tourFilter === 'all' ? 'active' : ''}`}
-              type="button"
-              onClick={() => setTourFilter('all')}
-            >
-              All Tours
-            </button>
-            <button
-              className={`filter-btn ${tourFilter === 'full' ? 'active' : ''}`}
-              type="button"
-              onClick={() => setTourFilter('full')}
-            >
-              Full Day
-            </button>
-            <button
-              className={`filter-btn ${tourFilter === 'half' ? 'active' : ''}`}
-              type="button"
-              onClick={() => setTourFilter('half')}
-            >
-              Half Day
-            </button>
-          </div>
-
-          <div className="tour-grid">
-            {visibleZanzibarTours.map((tour) => (
-              <article className="tour-showcase-card" key={tour.id}>
-                <img src={tour.image} alt={tour.title} />
-                <div className="tour-showcase-card__content">
-                  <div className="tour-card-top">
-                    <span className="safari-origin safari-origin--tour">{tour.duration}</span>
-                    <div className="tour-tags">
-                      {tour.tags.map((tag) => (
-                        <span key={tag}>{tag}</span>
-                      ))}
-                    </div>
-                    <div className="tour-info">
-                      <span>{tour.maxGuests}</span>
-                      <span>{tour.reviews}</span>
-                    </div>
+          <div className="tour-format-grid">
+            {visibleCards.map((card) => (
+              <article className="tour-format-card" key={card.id}>
+                <div className="tour-format-card__media">
+                  <img src={card.image} alt={card.title} />
+                  <div className="tour-format-card__overlay">
+                    <span className="tour-format-pill">{card.badge}</span>
+                    <span className="tour-rating-pill">
+                      <span className="tour-rating-pill__star">*</span>
+                      {card.rating}
+                    </span>
                   </div>
+                </div>
 
-                  <h3>{tour.title}</h3>
-                  <p>{tour.summary}</p>
-
-                  <div className="tour-price">{tour.price}</div>
-
-                  <div className="tour-button">
-                    <a href={tour.detailUrl} target="_blank" rel="noreferrer">
+                <div className="tour-format-card__body">
+                  <h3>{card.title}</h3>
+                  <p>{card.summary}</p>
+                  <div className="tour-format-card__footer">
+                    <strong>{card.price}</strong>
+                    <a href={card.detailUrl} target="_blank" rel="noreferrer">
                       View Details
                     </a>
                   </div>
                 </div>
               </article>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section section--accent">
-        <div className="container">
-          <div className="safari-shell">
-            <div className="safari-header">
-              <div>
-                <p className="section-tag">Wildlife Experiences</p>
-                <h2>Find the right wildlife experience</h2>
-                <p>
-                  Search Mikumi, Serengeti, Ngorongoro, Tarangire, or browse by
-                  departure point to quickly narrow the best safari option.
-                </p>
-              </div>
-
-              <div className="safari-controls">
-                <input
-                  className="safari-search"
-                  type="search"
-                  placeholder="Search Mikumi, Serengeti, Ngorongoro..."
-                  value={searchTerm}
-                  onChange={(event) => setSearchTerm(event.target.value)}
-                />
-
-                <div className="safari-filter-row">
-                  <button
-                    className={`filter-btn ${safariFilter === 'all' ? 'active' : ''}`}
-                    type="button"
-                    onClick={() => setSafariFilter('all')}
-                  >
-                    All Safaris
-                  </button>
-                  <button
-                    className={`filter-btn ${safariFilter === 'zanzibar' ? 'active' : ''}`}
-                    type="button"
-                    onClick={() => setSafariFilter('zanzibar')}
-                  >
-                    From Zanzibar
-                  </button>
-                  <button
-                    className={`filter-btn ${safariFilter === 'arusha' ? 'active' : ''}`}
-                    type="button"
-                    onClick={() => setSafariFilter('arusha')}
-                  >
-                    From Arusha
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            <div className="tour-grid safari-grid">
-              {visibleSafaris.map((tour) => (
-                <article className="tour-showcase-card safari-card" key={tour.id}>
-                  <img src={tour.image} alt={tour.title} />
-                  <div className="tour-showcase-card__content">
-                    <div className="tour-card-top">
-                      <span className="safari-origin">{tour.origin}</span>
-                      <div className="tour-tags">
-                        {tour.tags.map((tag) => (
-                          <span key={tag}>{tag}</span>
-                        ))}
-                      </div>
-
-                      <div className="tour-info">
-                        <span>{tour.duration}</span>
-                        <span>{tour.origin}</span>
-                      </div>
-                    </div>
-
-                    <h3>{tour.title}</h3>
-                    <p>{tour.summary}</p>
-
-                    <div className="safari-price-block">
-                      <strong>{tour.price}</strong>
-                      <span>per person</span>
-                    </div>
-
-                    <div className="tour-button">
-                      <a href="/contact">View Details</a>
-                    </div>
-                  </div>
-                </article>
-              ))}
-            </div>
-
-            {visibleSafaris.length === 0 ? (
-              <div className="empty-state">
-                <h3>No safaris match that search yet.</h3>
-                <p>Try a destination name like Mikumi or switch the departure filter.</p>
-              </div>
-            ) : null}
           </div>
         </div>
       </section>
