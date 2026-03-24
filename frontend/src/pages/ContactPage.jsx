@@ -33,7 +33,7 @@ function ContactPage() {
       <section className="page-hero page-hero--contact">
         <div className="container">
           <p className="section-tag">Contact</p>
-          <h1>Let’s plan your Zanzibar stay, transfer, or private excursion.</h1>
+          <h1>Let's plan your Zanzibar stay, transfer, or private excursion.</h1>
         </div>
       </section>
 
@@ -42,7 +42,7 @@ function ContactPage() {
           <div>
             <SectionHeading
               eyebrow="Get In Touch"
-              title="Send us your travel ideas and we’ll help shape the right experience"
+              title="Send us your travel ideas and we'll help shape the right experience"
             />
             <div className="contact-stack">
               <p><strong>Phone:</strong> +255 777 123 456</p>

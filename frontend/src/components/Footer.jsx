@@ -26,7 +26,7 @@ function Footer() {
         </div>
       </div>
       <div className="container footer__bottom">
-        <p>© 2026 Zanzibar Excursion. Crafted for memorable journeys.</p>
+        <p>(c) 2026 Zanzibar Excursion. Crafted for memorable journeys.</p>
       </div>
     </footer>
   )
