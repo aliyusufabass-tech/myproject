@@ -4,6 +4,7 @@ import PageMeta from '../components/PageMeta'
 import SectionHeading from '../components/SectionHeading'
 import TourCard from '../components/TourCard'
 import { testimonials, tours } from '../data/tours'
+import homeHeroImage from '../assets/image.jpeg'
 
 const reasons = [
   {
@@ -27,7 +28,10 @@ function HomePage() {
         title="Home"
         description="Discover tours, transfers, and tailored island experiences with Zanzibar Excursion Company Ltd."
       />
-      <section className="hero">
+      <section
+        className="hero hero--home"
+        style={{ '--home-hero-image': `url(${homeHeroImage})` }}
+      >
         <div className="container hero__content">
           <p className="section-tag">Island journeys with style</p>
           <h1>Discover the Beauty of Zanzibar</h1>
