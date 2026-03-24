@@ -1163,8 +1163,8 @@ p {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  min-height: 3rem;
-  padding: 0.65rem 1.1rem;
+  min-height: 2.45rem;
+  padding: 0.45rem 0.85rem;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.96);
   box-shadow: 0 10px 24px rgba(18, 50, 60, 0.14);
@@ -1175,18 +1175,18 @@ p {
   color: #0a82cf;
   text-transform: uppercase;
   letter-spacing: 0.04em;
-  font-size: 0.78rem;
+  font-size: 0.66rem;
 }
 
 .tour-rating-pill {
   color: #1b2430;
   white-space: nowrap;
-  font-size: 0.78rem;
+  font-size: 0.68rem;
 }
 
 .tour-rating-pill__star {
   color: #f5b301;
-  font-size: 1.25rem;
+  font-size: 0.95rem;
   line-height: 1;
 }
 
