@@ -78,20 +78,21 @@ function ToursPage() {
               <article className="tour-showcase-card" key={tour.id}>
                 <img src={tour.image} alt={tour.title} />
                 <div className="tour-showcase-card__content">
+                  <div className="tour-card-top">
+                    <span className="safari-origin safari-origin--tour">{tour.duration}</span>
+                    <div className="tour-tags">
+                      {tour.tags.map((tag) => (
+                        <span key={tag}>{tag}</span>
+                      ))}
+                    </div>
+                    <div className="tour-info">
+                      <span>{tour.maxGuests}</span>
+                      <span>{tour.reviews}</span>
+                    </div>
+                  </div>
+
                   <h3>{tour.title}</h3>
                   <p>{tour.summary}</p>
-
-                  <div className="tour-tags">
-                    {tour.tags.map((tag) => (
-                      <span key={tag}>{tag}</span>
-                    ))}
-                  </div>
-
-                  <div className="tour-info">
-                    <span>{tour.duration}</span>
-                    <span>{tour.maxGuests}</span>
-                    <span>{tour.reviews}</span>
-                  </div>
 
                   <div className="tour-price">{tour.price}</div>
 
@@ -160,20 +161,22 @@ function ToursPage() {
                 <article className="tour-showcase-card safari-card" key={tour.id}>
                   <img src={tour.image} alt={tour.title} />
                   <div className="tour-showcase-card__content">
-                    <span className="safari-origin">{tour.origin}</span>
+                    <div className="tour-card-top">
+                      <span className="safari-origin">{tour.origin}</span>
+                      <div className="tour-tags">
+                        {tour.tags.map((tag) => (
+                          <span key={tag}>{tag}</span>
+                        ))}
+                      </div>
+
+                      <div className="tour-info">
+                        <span>{tour.duration}</span>
+                        <span>{tour.origin}</span>
+                      </div>
+                    </div>
+
                     <h3>{tour.title}</h3>
                     <p>{tour.summary}</p>
-
-                    <div className="tour-tags">
-                      {tour.tags.map((tag) => (
-                        <span key={tag}>{tag}</span>
-                      ))}
-                    </div>
-
-                    <div className="tour-info">
-                      <span>{tour.duration}</span>
-                      <span>{tour.origin}</span>
-                    </div>
 
                     <div className="safari-price-block">
                       <strong>{tour.price}</strong>

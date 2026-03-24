@@ -604,6 +604,12 @@ p {
   padding: 1rem;
 }
 
+.tour-card-top {
+  display: grid;
+  gap: 0.7rem;
+  margin-bottom: 0.9rem;
+}
+
 .tour-showcase-card__content h3 {
   margin: 0 0 0.5rem;
   color: black;
@@ -703,6 +709,11 @@ p {
   border-radius: 999px;
   font-size: 0.74rem;
   font-weight: 700;
+}
+
+.safari-origin--tour {
+  background: #e7f1ff;
+  color: black;
 }
 
 .safari-price-block {
