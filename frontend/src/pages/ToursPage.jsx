@@ -27,7 +27,7 @@ const normalizeExcursionCard = (tour) => ({
   id: tour.id,
   type: 'excursion',
   filterKey: tour.type,
-  badge: tour.type === 'half' ? 'Half-day Excursions' : 'Full-day Excursions',
+  badge: tour.type === 'half' ? 'Half-day' : 'Full-day',
   title: tour.title,
   summary: tour.summary,
   image: tour.image,
