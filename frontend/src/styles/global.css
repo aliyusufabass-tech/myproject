@@ -443,6 +443,10 @@ p {
       center/cover;
 }
 
+.page-hero--tours h1 {
+  font-size: clamp(2rem, 4.6vw, 3.6rem);
+}
+
 .page-hero--transfers::before {
   background:
     linear-gradient(120deg, rgba(4, 36, 46, 0.74), rgba(6, 77, 89, 0.48)),
