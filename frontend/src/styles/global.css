@@ -629,8 +629,8 @@ p {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  min-height: 3.6rem;
-  padding: 0.8rem 1.45rem;
+  min-height: 3rem;
+  padding: 0.65rem 1.1rem;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.96);
   box-shadow: 0 10px 24px rgba(18, 50, 60, 0.14);
@@ -641,11 +641,13 @@ p {
   color: #0a82cf;
   text-transform: uppercase;
   letter-spacing: 0.04em;
+  font-size: 0.78rem;
 }
 
 .tour-rating-pill {
   color: #1b2430;
   white-space: nowrap;
+  font-size: 0.78rem;
 }
 
 .tour-rating-pill__star {
