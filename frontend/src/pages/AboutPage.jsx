@@ -1,82 +1,91 @@
+import { Link } from 'react-router-dom'
 import PageMeta from '../components/PageMeta'
-import SectionHeading from '../components/SectionHeading'
-import { galleryImages, team } from '../data/tours'
+
+const stats = [
+  { value: '500+', label: 'Happy Clients' },
+  { value: '50+', label: 'Tour Packages' },
+  { value: '5+', label: 'Years Experience' },
+]
+
+const services = [
+  {
+    title: 'Beach Tours',
+    text: 'Enjoy the beauty of Zanzibar beaches, sandbanks, and island escapes.',
+  },
+  {
+    title: 'Safari Trips',
+    text: 'Experience wildlife adventures in Tanzania national parks and reserves.',
+  },
+  {
+    title: 'Transfers',
+    text: 'Reliable airport and hotel transport with friendly local coordination.',
+  },
+]
 
 function AboutPage() {
   return (
     <>
       <PageMeta
         title="About"
-        description="Learn about Zanzibar Excursion, our mission, team, and guest-focused travel services."
+        description="Discover Zanzibar Excursion, our story, services, and trusted travel experience."
       />
-      <section className="page-hero page-hero--about">
-        <div className="container">
-          <p className="section-tag">About Us</p>
-          <h1>We design Zanzibar experiences with warmth, ease, and island insight.</h1>
+
+      <section className="about-hero">
+        <div className="container about-hero__content">
+          <h1>Discover Zanzibar With Us</h1>
+          <p>Your trusted travel partner for unforgettable experiences</p>
         </div>
       </section>
 
-      <section className="section">
-        <div className="container split">
-          <div>
-            <SectionHeading
-              eyebrow="Mission & Vision"
-              title="Helping every visitor experience Zanzibar beyond the brochure"
-              text="Our mission is to make travel in Zanzibar feel seamless and inspiring through trusted tours, reliable transfers, and genuine local connection."
+      <section className="section about-page-section">
+        <div className="container about-page-container">
+          <div className="about-grid">
+            <img
+              src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80"
+              alt="Zanzibar ocean experience"
             />
-          </div>
-          <div className="feature-panel">
-            <div>
-              <strong>Mission</strong>
-              <p>Deliver safe, beautiful, and guest-centered excursions with local expertise.</p>
-            </div>
-            <div>
-              <strong>Vision</strong>
-              <p>Become the most trusted island travel partner for memorable and meaningful journeys.</p>
-            </div>
-            <div>
-              <strong>Services</strong>
-              <p>Tours, airport transfers, hotel pickup, custom itineraries, and concierge support.</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <section className="section section--accent">
-        <div className="container">
-          <SectionHeading
-            eyebrow="Our Team"
-            title="Friendly experts behind every transfer and excursion"
-          />
-          <div className="grid grid--three">
-            {team.map((member) => (
-              <article className="team-card" key={member.name}>
-                <div
-                  className="team-card__image"
-                  style={{ backgroundImage: `url(${member.image})` }}
-                />
-                <h3>{member.name}</h3>
-                <p>{member.role}</p>
-              </article>
+            <div className="about-text">
+              <h2>About Zanzibar Excursion</h2>
+              <p>
+                Zanzibar Excursion is a professional tourism company offering the best
+                travel experiences across Zanzibar and Tanzania. From beach holidays to
+                wildlife safaris, we make every journey unforgettable.
+              </p>
+              <p>
+                We focus on quality service, safety, and customer satisfaction while
+                showcasing the beauty of nature, culture, and coastal adventure.
+              </p>
+            </div>
+          </div>
+
+          <div className="about-stats">
+            {stats.map((stat) => (
+              <div className="about-stat" key={stat.label}>
+                <h2>{stat.value}</h2>
+                <p>{stat.label}</p>
+              </div>
             ))}
           </div>
-        </div>
-      </section>
 
-      <section className="section">
-        <div className="container">
-          <SectionHeading
-            eyebrow="Gallery"
-            title="A glimpse of the coast, culture, and calm we share with our guests"
-          />
-          <div className="gallery-grid">
-            {galleryImages.map((image) => (
-              <div
-                key={image}
-                className="gallery-grid__item"
-                style={{ backgroundImage: `url(${image})` }}
-              />
-            ))}
+          <div className="about-services">
+            <h2>What We Offer</h2>
+            <div className="about-service-boxes">
+              {services.map((service) => (
+                <article className="about-service-card" key={service.title}>
+                  <h3>{service.title}</h3>
+                  <p>{service.text}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+
+          <div className="about-cta">
+            <h2>Start Your Journey Today</h2>
+            <p>Book your tour now and explore Zanzibar like never before</p>
+            <Link className="about-cta__button" to="/contact">
+              Book Now
+            </Link>
           </div>
         </div>
       </section>

@@ -278,6 +278,157 @@ p {
       center/cover;
 }
 
+.about-hero {
+  min-height: 70vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.about-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1800&q=80')
+      center/cover;
+}
+
+.about-hero__content {
+  position: relative;
+  z-index: 1;
+}
+
+.about-hero__content h1 {
+  font-size: clamp(2.6rem, 6vw, 4.6rem);
+}
+
+.about-hero__content p {
+  margin-top: 0.75rem;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 1.15rem;
+}
+
+.about-page-section {
+  background: #f9f9f9;
+}
+
+.about-page-container {
+  max-width: 1100px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.about-grid img {
+  width: 100%;
+  border-radius: 1rem;
+  min-height: 360px;
+  object-fit: cover;
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.14);
+}
+
+.about-text h2,
+.about-services h2,
+.about-cta h2 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 2rem;
+  color: #0096c7;
+}
+
+.about-text p {
+  margin-bottom: 1rem;
+}
+
+.about-stats {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.about-stat h2 {
+  margin-bottom: 0.4rem;
+  color: #0096c7;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 2.5rem;
+}
+
+.about-stat p {
+  font-weight: 700;
+  color: #333;
+}
+
+.about-services {
+  margin-top: 5rem;
+}
+
+.about-services h2 {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.about-service-boxes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.about-service-card {
+  background: #fff;
+  padding: 1.6rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 180ms ease;
+}
+
+.about-service-card:hover {
+  transform: translateY(-10px);
+}
+
+.about-service-card h3 {
+  font-family: 'DM Sans', sans-serif;
+  margin-bottom: 0.6rem;
+  color: #111827;
+}
+
+.about-cta {
+  margin-top: 5rem;
+  background: #0096c7;
+  color: white;
+  padding: 3.2rem 2rem;
+  text-align: center;
+  border-radius: 1rem;
+}
+
+.about-cta h2,
+.about-cta p {
+  color: white;
+}
+
+.about-cta__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.2rem;
+  padding: 0.85rem 1.5rem;
+  border-radius: 999px;
+  background: white;
+  color: #0096c7;
+  font-weight: 700;
+}
+
 .page-hero--tours::before {
   background:
     linear-gradient(120deg, rgba(4, 36, 46, 0.72), rgba(6, 77, 89, 0.48)),
@@ -714,7 +865,9 @@ p {
   .split,
   .footer__grid,
   .gallery-grid,
-  .tour-format-grid {
+  .tour-format-grid,
+  .about-grid,
+  .about-service-boxes {
     grid-template-columns: 1fr;
   }
 
@@ -781,6 +934,14 @@ p {
 
   .tour-chip {
     width: 100%;
+  }
+
+  .about-hero {
+    min-height: 56vh;
+  }
+
+  .about-hero__content h1 {
+    font-size: 2.3rem;
   }
 
   .tour-format-card__overlay {
