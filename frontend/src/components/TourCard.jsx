@@ -13,7 +13,6 @@ function TourCard({ tour }) {
       </div>
       <div className="tour-card__content">
         <div className="tour-card__meta">
-          <span>{tour.duration}</span>
           <span>{tour.category}</span>
         </div>
         <h3>{tour.title}</h3>
