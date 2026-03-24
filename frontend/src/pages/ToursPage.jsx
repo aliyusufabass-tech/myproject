@@ -62,7 +62,6 @@ function ToursPage() {
 
       <section className="page-hero page-hero--tours">
         <div className="container">
-          <p className="section-tag">Tours & Safaris</p>
           <h1>Choose the Zanzibar escape or wildlife journey that best suits your travel style.</h1>
         </div>
       </section>
