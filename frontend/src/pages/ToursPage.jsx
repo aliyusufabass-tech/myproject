@@ -6,22 +6,14 @@ const filters = [
   { key: 'all', label: 'All' },
   { key: 'half', label: 'Half-day Excursions' },
   { key: 'full', label: 'Full-day Excursions' },
-  { key: 'one-day', label: 'One Day Safari' },
-  { key: 'multi-day', label: 'Three Days Safari' },
+  { key: 'zanzibar', label: 'From Zanzibar' },
+  { key: 'arusha', label: 'From Arusha' },
 ]
-
-const getSafariCategory = (duration) => {
-  if (duration === '1 Day') {
-    return 'one-day'
-  }
-
-  return 'multi-day'
-}
 
 const normalizeSafariCard = (tour) => ({
   id: tour.id,
   type: 'safari',
-  filterKey: getSafariCategory(tour.duration),
+  filterKey: tour.origin === 'From Arusha' ? 'arusha' : 'zanzibar',
   badge: tour.origin,
   title: tour.title,
   summary: tour.summary,
