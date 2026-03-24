@@ -57,13 +57,13 @@ function ToursPage() {
     <>
       <PageMeta
         title="Tours"
-        description="Browse Zanzibar excursions and safari packages in a modern card layout with quick filters."
+        description="Browse Zanzibar excursions and safari packages through a polished card layout with quick filters."
       />
 
       <section className="page-hero page-hero--tours">
         <div className="container">
           <p className="section-tag">Tours & Safaris</p>
-          <h1>Choose the Zanzibar escape or wildlife journey that fits your mood.</h1>
+          <h1>Choose the Zanzibar escape or wildlife journey that best suits your travel style.</h1>
         </div>
       </section>
 

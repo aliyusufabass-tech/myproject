@@ -6,16 +6,16 @@ function GalleryPage() {
     <>
       <PageMeta
         title="Gallery"
-        description="Browse Zanzibar Excursion Company Ltd moments from beaches, island views, and unforgettable experiences."
+        description="Explore Zanzibar Excursion Company Ltd moments through beaches, island scenery, and memorable travel experiences."
       />
 
       <section className="gallery-page-hero">
         <div className="container gallery-page-hero__content">
           <p className="section-tag">Gallery</p>
-          <h1>See the coast, colors, and calm behind every Zanzibar journey.</h1>
+          <h1>See the coastline, colours, and calm that define every Zanzibar journey.</h1>
           <p>
-            A quick visual look at the beaches, ocean scenes, and island atmosphere
-            that shape our tours and transfers.
+            Explore a visual collection of beaches, ocean scenes, and island moments
+            that shape our tours, transfers, and travel experiences.
           </p>
         </div>
       </section>
@@ -25,8 +25,8 @@ function GalleryPage() {
           <div className="gallery-page-intro">
             <h2>Island moments worth remembering</h2>
             <p>
-              From turquoise water and dhow rides to quiet beach afternoons, this
-              gallery gives a glimpse of the experiences we help create across Zanzibar.
+              From turquoise waters and dhow rides to peaceful beach afternoons, this
+              gallery offers a glimpse of the experiences we help create across Zanzibar.
             </p>
           </div>
 

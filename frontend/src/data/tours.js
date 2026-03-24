@@ -1,45 +1,45 @@
 export const tours = [
   {
     id: 1,
-    title: 'Mnemba Snorkeling and Dolphins',
+    title: 'Mnemba Reef Snorkeling',
     duration: 'Half day tour',
     price: '$42 / person',
     category: 'Half Day',
     description:
-      'Enjoy Zanzibar clear waters through snorkeling, marine encounters, and possible dolphin sightings.',
+      'Enjoy clear Zanzibar waters with reef snorkeling, marine encounters, and possible dolphin sightings.',
     image:
       'https://www.yazantours.co.tz/wp-content/uploads/2025/12/mnemba-1.jpg',
   },
   {
     id: 2,
-    title: 'Stone Town Tour',
+    title: 'Stone Town Heritage Walk',
     duration: 'Half day tour',
     price: '$25 / person',
     category: 'Half Day',
     description:
-      'Walk through historic Stone Town and experience its culture, famous sites, and local stories.',
+      'Walk through historic Stone Town and enjoy its culture, landmarks, and everyday stories.',
     image:
       'https://www.yazantours.co.tz/wp-content/uploads/2025/12/stone-5.jpg',
   },
   {
     id: 3,
-    title: 'Blue Safari',
+    title: 'Safari Blue Cruise',
     duration: 'Full day tour',
     price: '$57 / person',
     category: 'Full Day',
     description:
-      "Spend a full day exploring Zanzibar's marine side with a dhow trip and snorkeling from Fumba.",
+      "Spend the day exploring Zanzibar's marine side with a dhow cruise and snorkeling from Fumba.",
     image:
       'https://www.yazantours.co.tz/wp-content/uploads/2025/12/Safari-Blue.jpg',
   },
   {
     id: 4,
-    title: 'Spice Farm and Spice Cooking',
+    title: 'Spice Farm Cooking Experience',
     duration: 'Full day tour',
     price: '$45 / person',
     category: 'Full Day',
     description:
-      'Experience Zanzibar spices, scents, and traditions through an interactive cooking journey.',
+      'Experience Zanzibar spices, aromas, and traditions through an engaging cooking journey.',
     image:
       'https://www.yazantours.co.tz/wp-content/uploads/2026/01/cooking.jpg',
   },
@@ -445,15 +445,15 @@ export const safariTours = [
 export const transferOptions = [
   {
     name: 'Airport Pickup',
-    detail: 'We provide timely airport pickup services with reliable local coordination.',
+    detail: 'We provide punctual airport pickup services supported by dependable local coordination.',
   },
   {
     name: 'Hotel Transfers',
-    detail: 'Comfortable transport to your hotel, resort, or villa anywhere in Zanzibar.',
+    detail: 'Enjoy comfortable transport to your hotel, resort, or villa anywhere in Zanzibar.',
   },
   {
     name: 'Private Trips',
-    detail: 'Travel anywhere in Zanzibar privately with flexible timing and direct routes.',
+    detail: 'Travel privately across Zanzibar with flexible timing and direct point-to-point service.',
   },
 ]
 

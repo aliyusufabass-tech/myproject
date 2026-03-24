@@ -10,15 +10,15 @@ const stats = [
 const services = [
   {
     title: 'Beach Tours',
-    text: 'Enjoy the beauty of Zanzibar beaches, sandbanks, and island escapes.',
+    text: 'Experience Zanzibar beaches, sandbanks, and island escapes through carefully planned coastal tours.',
   },
   {
     title: 'Safari Trips',
-    text: 'Experience wildlife adventures in Tanzania national parks and reserves.',
+    text: 'Discover Tanzania wildlife through well-organised safari journeys across leading parks and reserves.',
   },
   {
     title: 'Transfers',
-    text: 'Reliable airport and hotel transport with friendly local coordination.',
+    text: 'Travel comfortably with reliable airport and hotel transfers supported by friendly local coordination.',
   },
 ]
 
@@ -33,7 +33,7 @@ function AboutPage() {
       <section className="about-hero">
         <div className="container about-hero__content">
           <h1>Discover Zanzibar With Us</h1>
-          <p>Your trusted travel partner for unforgettable experiences</p>
+          <p>Your trusted travel partner for meaningful and memorable experiences</p>
         </div>
       </section>
 
@@ -48,13 +48,13 @@ function AboutPage() {
             <div className="about-text">
               <h2>About Zanzibar Excursion Company Ltd</h2>
               <p>
-                Zanzibar Excursion Company Ltd is a professional tourism company offering the best
-                travel experiences across Zanzibar and Tanzania. From beach holidays to
-                wildlife safaris, we make every journey unforgettable.
+                Zanzibar Excursion Company Ltd is a professional tourism company offering
+                thoughtfully planned travel experiences across Zanzibar and Tanzania. From
+                beach holidays to wildlife safaris, we aim to make every journey memorable.
               </p>
               <p>
-                We focus on quality service, safety, and customer satisfaction while
-                showcasing the beauty of nature, culture, and coastal adventure.
+                We focus on service quality, safety, and guest satisfaction while
+                showcasing the best of nature, culture, and coastal adventure.
               </p>
             </div>
           </div>
@@ -82,7 +82,7 @@ function AboutPage() {
 
           <div className="about-cta">
             <h2>Start Your Journey Today</h2>
-            <p>Book your tour now and explore Zanzibar like never before</p>
+            <p>Book your experience today and discover Zanzibar with confidence</p>
             <Link className="about-cta__button" to="/tours">
               Book Now
             </Link>

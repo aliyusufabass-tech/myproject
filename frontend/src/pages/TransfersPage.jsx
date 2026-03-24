@@ -32,12 +32,12 @@ function TransfersPage() {
     <>
       <PageMeta
         title="Transfers"
-        description="Airport pickup, hotel transfers, private trips, and Zanzibar vehicle booking services."
+        description="Professional airport pickup, hotel transfers, private trips, and vehicle booking services across Zanzibar."
       />
 
       <section className="transfers-hero">
         <div className="container transfers-hero__content">
-          <h1>Transfers Service</h1>
+          <h1>Transfer Services</h1>
         </div>
       </section>
 
@@ -179,7 +179,7 @@ function TransfersPage() {
               </button>
 
               {submitted ? (
-                <p className="form-success">Booking request captured successfully.</p>
+                <p className="form-success">Your booking request has been received successfully.</p>
               ) : null}
             </form>
           </div>

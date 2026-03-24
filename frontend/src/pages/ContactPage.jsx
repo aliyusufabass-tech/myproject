@@ -26,7 +26,7 @@ function ContactPage() {
     <>
       <PageMeta
         title="Contact"
-        description="Contact Zanzibar Excursion Company Ltd for bookings, travel support, and Zanzibar trip planning."
+        description="Contact Zanzibar Excursion Company Ltd for bookings, travel guidance, and personalised Zanzibar trip planning."
       />
 
       <section className="contact-hero">
@@ -82,7 +82,7 @@ function ContactPage() {
                   Send Message
                 </button>
 
-                {sent ? <p className="form-success">Message sent successfully.</p> : null}
+                {sent ? <p className="form-success">Your message has been sent successfully.</p> : null}
               </form>
             </div>
 

@@ -8,15 +8,15 @@ import { testimonials, tours } from '../data/tours'
 const reasons = [
   {
     title: 'Local Expertise',
-    text: 'Our guides blend warm hospitality with real island knowledge and tailored recommendations.',
+    text: 'Our team combines genuine hospitality with strong local knowledge and well-considered recommendations.',
   },
   {
     title: 'Flexible Planning',
-    text: 'Choose private experiences, family itineraries, or simple point-to-point bookings with ease.',
+    text: 'Choose private experiences, family-friendly itineraries, or straightforward transfers with confidence.',
   },
   {
     title: 'Trusted Service',
-    text: 'Clear communication, on-time pickups, and thoughtful details from first message to farewell.',
+    text: 'Count on clear communication, punctual service, and attentive support from arrival to departure.',
   },
 ]
 
@@ -32,8 +32,8 @@ function HomePage() {
           <p className="section-tag">Island journeys with style</p>
           <h1>Discover the Beauty of Zanzibar</h1>
           <p>
-            Zanzibar Excursion Company Ltd curates beach escapes, cultural tours, and smooth
-            transfers for travelers who want the island to feel effortless and unforgettable.
+            Zanzibar Excursion Company Ltd curates memorable beach escapes, cultural
+            experiences, and dependable transfers for guests who want to explore the island with ease.
           </p>
           <div className="hero__actions">
             <Button to="/tours">Explore Tours</Button>
@@ -62,8 +62,8 @@ function HomePage() {
         <div className="container">
           <SectionHeading
             eyebrow="Featured Tours"
-            title="Handpicked experiences for sea lovers, explorers, and culture seekers"
-            text="From reef adventures to Stone Town stories, our most-loved tours are designed to show Zanzibar from every angle."
+            title="Signature experiences for ocean lovers, explorers, and culture seekers"
+            text="From reef adventures to historic town walks, these guest favourites reveal Zanzibar from several memorable perspectives."
           />
           <div className="grid grid--three">
             {tours.slice(0, 3).map((tour) => (
@@ -77,7 +77,7 @@ function HomePage() {
         <div className="container">
           <SectionHeading
             eyebrow="Why Choose Us"
-            title="Travel support that feels polished, personal, and deeply local"
+            title="Travel support that feels personal, reliable, and deeply rooted in local knowledge"
             align="center"
           />
           <div className="grid grid--three">
@@ -98,8 +98,8 @@ function HomePage() {
             <p className="section-tag">Plan with confidence</p>
             <h2>Need transfers, tours, and quick local guidance in one place?</h2>
             <p className="muted">
-              We help guests move smoothly from the airport to their hotel, then into
-              memorable island experiences without the usual coordination stress.
+              We help guests move smoothly from airport arrival to hotel check-in, then
+              into unforgettable island experiences without the usual coordination stress.
             </p>
             <Link className="text-link" to="/transfers">
               See transfer options
@@ -108,15 +108,15 @@ function HomePage() {
           <div className="feature-panel">
             <div>
               <strong>Airport pickup</strong>
-              <p>Meet-and-greet arrivals with luggage support and hotel drop-off.</p>
+              <p>Professional meet-and-greet service with luggage support and direct hotel drop-off.</p>
             </div>
             <div>
               <strong>Custom combinations</strong>
-              <p>Pair snorkeling, cultural stops, and dinner cruises in one itinerary.</p>
+              <p>Combine snorkeling, cultural visits, and sunset experiences within one itinerary.</p>
             </div>
             <div>
               <strong>Fast response</strong>
-              <p>Friendly coordination for last-minute bookings and travel adjustments.</p>
+              <p>Responsive support for last-minute bookings, schedule changes, and travel updates.</p>
             </div>
           </div>
         </div>
@@ -126,7 +126,7 @@ function HomePage() {
         <div className="container">
           <SectionHeading
             eyebrow="Testimonials"
-            title="What our guests remember most"
+            title="What guests value most about travelling with us"
             align="center"
           />
           <div className="grid grid--three">
