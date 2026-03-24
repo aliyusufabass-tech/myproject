@@ -26,6 +26,16 @@ export const tours = [
   },
   {
     id: 3,
+    title: 'Jozani Forest Discovery',
+    duration: 'Half day tour',
+    price: '$29 / person',
+    category: 'Half Day',
+    description:
+      "Visit Zanzibar's only national park and discover red colobus monkeys, mangroves, and lush forest scenery.",
+    image: jozaniImageTwo,
+  },
+  {
+    id: 4,
     title: 'Safari Blue Cruise',
     duration: 'Full day tour',
     price: '$57 / person',
@@ -34,17 +44,6 @@ export const tours = [
       "Spend the day exploring Zanzibar's marine side with a dhow cruise and snorkeling from Fumba.",
     image:
       'https://www.yazantours.co.tz/wp-content/uploads/2025/12/Safari-Blue.jpg',
-  },
-  {
-    id: 4,
-    title: 'Spice Farm Cooking Experience',
-    duration: 'Full day tour',
-    price: '$45 / person',
-    category: 'Full Day',
-    description:
-      'Experience Zanzibar spices, aromas, and traditions through an engaging cooking journey.',
-    image:
-      'https://www.yazantours.co.tz/wp-content/uploads/2026/01/cooking.jpg',
   },
 ]
 
