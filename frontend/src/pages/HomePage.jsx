@@ -44,20 +44,6 @@ function HomePage() {
               Book Now
             </Button>
           </div>
-          <div className="hero__stats">
-            <div>
-              <strong>20+</strong>
-              <span>signature experiences</span>
-            </div>
-            <div>
-              <strong>4.9/5</strong>
-              <span>guest satisfaction</span>
-            </div>
-            <div>
-              <strong>24/7</strong>
-              <span>travel support</span>
-            </div>
-          </div>
         </div>
       </section>
 
