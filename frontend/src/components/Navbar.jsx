@@ -34,8 +34,8 @@ function Navbar() {
         <NavLink className="brand" to="/">
           <img className="brand__logo" src={logo} alt="Zanzibar Excursion Company Ltd" />
           <span>
-            Zanzibar
-            <strong> Excursion</strong>
+            Zanzibar Excursion
+            <strong> Company Ltd</strong>
           </span>
         </NavLink>
 

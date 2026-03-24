@@ -7,7 +7,7 @@ function Footer() {
       <div className="container footer__grid">
         <div>
           <img className="footer__logo" src={logo} alt="Zanzibar Excursion Company Ltd" />
-          <p className="section-tag">Zanzibar Excursion</p>
+          <p className="section-tag">Zanzibar Excursion Company Ltd</p>
           <h3>Escape into island stories, ocean air, and seamless travel.</h3>
         </div>
         <div>
@@ -29,7 +29,7 @@ function Footer() {
         </div>
       </div>
       <div className="container footer__bottom">
-        <p>(c) 2026 Zanzibar Excursion. Crafted for memorable journeys.</p>
+        <p>(c) 2026 Zanzibar Excursion Company Ltd. Crafted for memorable journeys.</p>
       </div>
     </footer>
   )

@@ -25,14 +25,14 @@ function HomePage() {
     <>
       <PageMeta
         title="Home"
-        description="Discover tours, transfers, and tailored island experiences with Zanzibar Excursion."
+        description="Discover tours, transfers, and tailored island experiences with Zanzibar Excursion Company Ltd."
       />
       <section className="hero">
         <div className="container hero__content">
           <p className="section-tag">Island journeys with style</p>
           <h1>Discover the Beauty of Zanzibar</h1>
           <p>
-            Zanzibar Excursion curates beach escapes, cultural tours, and smooth
+            Zanzibar Excursion Company Ltd curates beach escapes, cultural tours, and smooth
             transfers for travelers who want the island to feel effortless and unforgettable.
           </p>
           <div className="hero__actions">

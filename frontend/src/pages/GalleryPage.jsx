@@ -6,7 +6,7 @@ function GalleryPage() {
     <>
       <PageMeta
         title="Gallery"
-        description="Browse Zanzibar Excursion moments from beaches, island views, and unforgettable experiences."
+        description="Browse Zanzibar Excursion Company Ltd moments from beaches, island views, and unforgettable experiences."
       />
 
       <section className="gallery-page-hero">

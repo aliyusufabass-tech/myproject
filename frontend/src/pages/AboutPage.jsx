@@ -27,7 +27,7 @@ function AboutPage() {
     <>
       <PageMeta
         title="About"
-        description="Discover Zanzibar Excursion, our story, services, and trusted travel experience."
+        description="Discover Zanzibar Excursion Company Ltd, our story, services, and trusted travel experience."
       />
 
       <section className="about-hero">
@@ -46,9 +46,9 @@ function AboutPage() {
             />
 
             <div className="about-text">
-              <h2>About Zanzibar Excursion</h2>
+              <h2>About Zanzibar Excursion Company Ltd</h2>
               <p>
-                Zanzibar Excursion is a professional tourism company offering the best
+                Zanzibar Excursion Company Ltd is a professional tourism company offering the best
                 travel experiences across Zanzibar and Tanzania. From beach holidays to
                 wildlife safaris, we make every journey unforgettable.
               </p>

@@ -26,7 +26,7 @@ function ContactPage() {
     <>
       <PageMeta
         title="Contact"
-        description="Contact Zanzibar Excursion for bookings, travel support, and Zanzibar trip planning."
+        description="Contact Zanzibar Excursion Company Ltd for bookings, travel support, and Zanzibar trip planning."
       />
 
       <section className="contact-hero">
