@@ -58,7 +58,7 @@ export const zanzibarTours = [
     reviews: '234 reviews',
     price: '$45 / person',
     rating: '4.9',
-    image: 'https://www.yazantours.co.tz/wp-content/uploads/2026/01/cooking.jpg',
+    image: 'https://picsum.photos/seed/full1/1200/800',
     detailUrl: 'https://www.yazantours.co.tz/spice-farm-cooking-class-tour/',
   },
   {
@@ -73,7 +73,7 @@ export const zanzibarTours = [
     reviews: '57 reviews',
     price: '$54 / person',
     rating: '4.8',
-    image: 'https://www.yazantours.co.tz/wp-content/uploads/2025/12/stone-5.jpg',
+    image: 'https://picsum.photos/seed/full2/1200/800',
     detailUrl: 'https://www.yazantours.co.tz/spice-farm-stonetown-tour/',
   },
   {
@@ -88,7 +88,7 @@ export const zanzibarTours = [
     reviews: '118 reviews',
     price: '$67 / person',
     rating: '4.7',
-    image: 'https://www.yazantours.co.tz/wp-content/uploads/2025/12/jonzani-forest.jpg',
+    image: 'https://picsum.photos/seed/full3/1200/800',
     detailUrl: 'https://www.yazantours.co.tz/jozani-forestspice-farm-stone-town/',
   },
   {
@@ -103,7 +103,7 @@ export const zanzibarTours = [
     reviews: '350 reviews',
     price: '$69 / person',
     rating: '4.9',
-    image: 'https://www.yazantours.co.tz/wp-content/uploads/2025/12/Nakupenda-sandbank.jpg',
+    image: 'https://picsum.photos/seed/full4/1200/800',
     detailUrl:
       'https://www.yazantours.co.tz/nakupenda-sandbank-prison-island-stonetown-tour/',
   },
@@ -119,7 +119,7 @@ export const zanzibarTours = [
     reviews: '102 reviews',
     price: '$57 / person',
     rating: '4.8',
-    image: 'https://www.yazantours.co.tz/wp-content/uploads/2025/12/Safari-Blue.jpg',
+    image: 'https://picsum.photos/seed/full5/1200/800',
     detailUrl: 'https://www.yazantours.co.tz/blue-safari-tour/',
   },
   {
@@ -134,7 +134,7 @@ export const zanzibarTours = [
     reviews: '110 reviews',
     price: '$82 / person',
     rating: '4.7',
-    image: 'https://www.yazantours.co.tz/wp-content/uploads/2025/12/pungume.jpg',
+    image: 'https://picsum.photos/seed/full6/1200/800',
     detailUrl: 'https://www.yazantours.co.tz/kizimkazi-dolphins-snorkeling-tour/',
   },
   {
@@ -149,7 +149,7 @@ export const zanzibarTours = [
     reviews: '200 reviews',
     price: '$82 / person',
     rating: '4.9',
-    image: 'https://www.yazantours.co.tz/wp-content/uploads/2025/12/mnemba.jpg',
+    image: 'https://picsum.photos/seed/full7/1200/800',
     detailUrl:
       'https://www.yazantours.co.tz/mnemba-snorkeling-swimming-with-dolphins-and-turtles-kendwa-beach/',
   },
@@ -165,7 +165,7 @@ export const zanzibarTours = [
     reviews: '120 reviews',
     price: '$74 / person',
     rating: '4.6',
-    image: 'https://www.yazantours.co.tz/wp-content/uploads/2025/12/kuza-cave.jpg',
+    image: 'https://picsum.photos/seed/full8/1200/800',
     detailUrl:
       'https://www.yazantours.co.tz/jozani-forestkuza-cave-paje-beach-the-rock-restaurant/',
   },
@@ -181,7 +181,7 @@ export const zanzibarTours = [
     reviews: '150 reviews',
     price: '$76 / person',
     rating: '4.8',
-    image: 'https://www.yazantours.co.tz/wp-content/uploads/2025/12/maalum-cave.jpg',
+    image: 'https://picsum.photos/seed/full9/1200/800',
     detailUrl:
       'https://www.yazantours.co.tz/maalum-cave-mtende-beach-paje-beach-rock-restaurant/',
   },
@@ -197,7 +197,7 @@ export const zanzibarTours = [
     reviews: 'Reviews',
     price: '$25 / person',
     rating: '4.7',
-    image: 'https://www.yazantours.co.tz/wp-content/uploads/2025/12/stone-5.jpg',
+    image: 'https://picsum.photos/seed/half1/1200/800',
     detailUrl: 'https://www.yazantours.co.tz/stone-town-tour/',
   },
   {
@@ -212,8 +212,7 @@ export const zanzibarTours = [
     reviews: 'Reviews',
     price: '$20 / person',
     rating: '4.6',
-    image:
-      'https://www.yazantours.co.tz/wp-content/uploads/2025/12/WEB_PICHA_KIPIMO1-copy.jpg',
+    image: 'https://picsum.photos/seed/half2/1200/800',
     detailUrl: 'https://www.yazantours.co.tz/spice-farm-tour/',
   },
   {
@@ -228,7 +227,7 @@ export const zanzibarTours = [
     reviews: 'Reviews',
     price: '$29 / person',
     rating: '4.8',
-    image: 'https://www.yazantours.co.tz/wp-content/uploads/2025/12/jozani.jpg',
+    image: 'https://picsum.photos/seed/half3/1200/800',
     detailUrl: 'https://www.yazantours.co.tz/jozani-forest/',
   },
   {
@@ -243,7 +242,7 @@ export const zanzibarTours = [
     reviews: 'Reviews',
     price: '$35 / person',
     rating: '4.9',
-    image: 'https://www.yazantours.co.tz/wp-content/uploads/2025/12/nakupenda.jpg',
+    image: 'https://picsum.photos/seed/half4/1200/800',
     detailUrl: 'https://www.yazantours.co.tz/nakupenda-sandbank/',
   },
   {
@@ -258,7 +257,7 @@ export const zanzibarTours = [
     reviews: 'Reviews',
     price: '$37 / person',
     rating: '4.8',
-    image: 'https://www.yazantours.co.tz/wp-content/uploads/2025/12/prison.jpg',
+    image: 'https://picsum.photos/seed/half5/1200/800',
     detailUrl: 'https://www.yazantours.co.tz/prison-island-tour/',
   },
   {
@@ -273,7 +272,7 @@ export const zanzibarTours = [
     reviews: 'Reviews',
     price: '$24 / person',
     rating: '4.6',
-    image: 'https://www.yazantours.co.tz/wp-content/uploads/2025/12/sunset.jpg',
+    image: 'https://picsum.photos/seed/half6/1200/800',
     detailUrl: 'https://www.yazantours.co.tz/sunset-dhow-cruise/',
   },
   {
@@ -288,7 +287,7 @@ export const zanzibarTours = [
     reviews: 'Reviews',
     price: '$38 / person',
     rating: '4.7',
-    image: 'https://www.yazantours.co.tz/wp-content/uploads/2025/12/starfish.jpg',
+    image: 'https://picsum.photos/seed/half7/1200/800',
     detailUrl: 'https://www.yazantours.co.tz/blue-lagoon-starfish/',
   },
   {
@@ -303,7 +302,7 @@ export const zanzibarTours = [
     reviews: 'Reviews',
     price: '$42 / person',
     rating: '4.9',
-    image: 'https://www.yazantours.co.tz/wp-content/uploads/2025/12/mnemba-1.jpg',
+    image: 'https://picsum.photos/seed/half8/1200/800',
     detailUrl: 'https://www.yazantours.co.tz/mnemba-snorkeling-dolphins/',
   },
   {
@@ -318,7 +317,7 @@ export const zanzibarTours = [
     reviews: 'Reviews',
     price: '$55 / person',
     rating: '4.8',
-    image: 'https://www.yazantours.co.tz/wp-content/uploads/2025/12/tumbatu.jpg',
+    image: 'https://picsum.photos/seed/half9/1200/800',
     detailUrl: 'https://www.yazantours.co.tz/snorkeling-tour-near-tumbatu-island/',
   },
 ]
@@ -335,8 +334,7 @@ export const safariTours = [
     price: 'From $450',
     rating: '4.9',
     detailUrl: '/contact',
-    image:
-      'https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://picsum.photos/seed/safari1/1200/800',
   },
   {
     id: 'safari-2',
@@ -349,8 +347,7 @@ export const safariTours = [
     price: 'From $460',
     rating: '4.8',
     detailUrl: '/contact',
-    image:
-      'https://images.unsplash.com/photo-1549366021-9f761d450615?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://picsum.photos/seed/safari2/1200/800',
   },
   {
     id: 'safari-3',
@@ -363,8 +360,7 @@ export const safariTours = [
     price: 'From $700',
     rating: '4.7',
     detailUrl: '/contact',
-    image:
-      'https://images.unsplash.com/photo-1508672019048-805c876b67e2?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://picsum.photos/seed/safari3/1200/800',
   },
   {
     id: 'safari-4',
@@ -377,8 +373,7 @@ export const safariTours = [
     price: 'From $600',
     rating: '4.6',
     detailUrl: '/contact',
-    image:
-      'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://picsum.photos/seed/safari4/1200/800',
   },
   {
     id: 'safari-5',
@@ -391,8 +386,7 @@ export const safariTours = [
     price: 'From $550',
     rating: '4.8',
     detailUrl: '/contact',
-    image:
-      'https://images.unsplash.com/photo-1489392191049-fc10c97e64b6?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://picsum.photos/seed/safari5/1200/800',
   },
   {
     id: 'safari-6',
@@ -405,8 +399,7 @@ export const safariTours = [
     price: 'From $650',
     rating: '4.7',
     detailUrl: '/contact',
-    image:
-      'https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://picsum.photos/seed/safari6/1200/800',
   },
   {
     id: 'safari-7',
@@ -419,8 +412,7 @@ export const safariTours = [
     price: 'From $1470',
     rating: '4.9',
     detailUrl: '/contact',
-    image:
-      'https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://picsum.photos/seed/safari7/1200/800',
   },
   {
     id: 'safari-8',
@@ -433,8 +425,7 @@ export const safariTours = [
     price: 'From $650',
     rating: '4.7',
     detailUrl: '/contact',
-    image:
-      'https://images.unsplash.com/photo-1527169402691-a7f922d7e6f0?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://picsum.photos/seed/safari8/1200/800',
   },
   {
     id: 'safari-9',
@@ -447,8 +438,7 @@ export const safariTours = [
     price: 'From $1700',
     rating: '4.9',
     detailUrl: '/contact',
-    image:
-      'https://images.unsplash.com/photo-1576487248805-cf45f6bcc67f?auto=format&fit=crop&w=1200&q=80',
+    image: 'https://picsum.photos/seed/safari9/1200/800',
   },
 ]
 
