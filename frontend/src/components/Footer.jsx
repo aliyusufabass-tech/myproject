@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom'
+import logo from '../assets/ZANZIBAR EXCURSION COMPANY LTD copy.jpg'
 
 function Footer() {
   return (
     <footer className="footer">
       <div className="container footer__grid">
         <div>
+          <img className="footer__logo" src={logo} alt="Zanzibar Excursion Company Ltd" />
           <p className="section-tag">Zanzibar Excursion</p>
           <h3>Escape into island stories, ocean air, and seamless travel.</h3>
         </div>

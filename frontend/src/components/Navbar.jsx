@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
+import logo from '../assets/ZANZIBAR EXCURSION COMPANY LTD copy.jpg'
 
 const navLinks = [
   { to: '/', label: 'Home' },
@@ -31,7 +32,7 @@ function Navbar() {
     <header className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
       <div className="container navbar__inner">
         <NavLink className="brand" to="/">
-          <span className="brand__mark">ZE</span>
+          <img className="brand__logo" src={logo} alt="Zanzibar Excursion Company Ltd" />
           <span>
             Zanzibar
             <strong> Excursion</strong>
