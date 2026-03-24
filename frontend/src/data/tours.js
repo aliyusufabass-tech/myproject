@@ -444,22 +444,37 @@ export const safariTours = [
 
 export const transferOptions = [
   {
-    name: 'Private Car',
-    capacity: '1-3 guests',
-    price: 'From $25',
-    detail: 'Comfortable airport or hotel transfer for couples and solo travelers.',
+    name: 'Airport Pickup',
+    detail: 'We provide timely airport pickup services with reliable local coordination.',
   },
   {
-    name: 'Executive Van',
-    capacity: '4-8 guests',
-    price: 'From $45',
-    detail: 'Ideal for families and small groups with luggage space and hotel drop-off.',
+    name: 'Hotel Transfers',
+    detail: 'Comfortable transport to your hotel, resort, or villa anywhere in Zanzibar.',
   },
   {
-    name: 'Mini Bus',
-    capacity: '9-16 guests',
-    price: 'From $75',
-    detail: 'Reliable group transport for events, excursions, and coordinated pickups.',
+    name: 'Private Trips',
+    detail: 'Travel anywhere in Zanzibar privately with flexible timing and direct routes.',
+  },
+]
+
+export const transferVehicles = [
+  {
+    name: 'Standard Car',
+    capacity: 'Up to 3 passengers',
+    image:
+      'https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=1200&q=80',
+  },
+  {
+    name: 'Minivan',
+    capacity: 'Up to 6 passengers',
+    image:
+      'https://images.unsplash.com/photo-1583267746897-2cf415887172?auto=format&fit=crop&w=1200&q=80',
+  },
+  {
+    name: 'Bus',
+    capacity: 'Up to 20 passengers',
+    image:
+      'https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=1200&q=80',
   },
 ]
 
