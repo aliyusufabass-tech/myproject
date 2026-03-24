@@ -6,6 +6,7 @@ import HomePage from './pages/HomePage'
 import AboutPage from './pages/AboutPage'
 import ToursPage from './pages/ToursPage'
 import TransfersPage from './pages/TransfersPage'
+import GalleryPage from './pages/GalleryPage'
 import ContactPage from './pages/ContactPage'
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
             <Route path="/about" element={<AboutPage />} />
             <Route path="/tours" element={<ToursPage />} />
             <Route path="/transfers" element={<TransfersPage />} />
+            <Route path="/gallery" element={<GalleryPage />} />
             <Route path="/contact" element={<ContactPage />} />
           </Routes>
         </main>

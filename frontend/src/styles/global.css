@@ -744,6 +744,72 @@ p {
   border: 0;
 }
 
+.gallery-page-hero {
+  min-height: 52vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.gallery-page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.48), rgba(0, 0, 0, 0.48)),
+    url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1800&q=80')
+      center/cover;
+}
+
+.gallery-page-hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+}
+
+.gallery-page-hero__content p {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.gallery-page-section {
+  background: linear-gradient(180deg, #f4f7fb 0%, #eef5f7 100%);
+}
+
+.gallery-page-intro {
+  max-width: 720px;
+  margin-bottom: 2rem;
+}
+
+.gallery-page-intro h2 {
+  font-family: 'DM Sans', sans-serif;
+  color: #0077b6;
+  font-size: 2rem;
+}
+
+.gallery-page-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.1rem;
+  grid-auto-rows: 220px;
+}
+
+.gallery-page-grid__item {
+  border-radius: 1rem;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+.gallery-page-grid__item--1,
+.gallery-page-grid__item--4 {
+  grid-row: span 2;
+}
+
+.gallery-page-grid__item--3 {
+  grid-column: span 2;
+}
+
 .hero__content,
 .page-hero .container {
   position: relative;
@@ -1164,7 +1230,8 @@ p {
   .about-service-boxes,
   .transfers-card-grid,
   .transfers-vehicle-grid,
-  .contact-page-grid {
+  .contact-page-grid,
+  .gallery-page-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1243,6 +1310,17 @@ p {
 
   .contact-hero {
     min-height: 40vh;
+  }
+
+  .gallery-page-hero {
+    min-height: 42vh;
+  }
+
+  .gallery-page-grid__item--1,
+  .gallery-page-grid__item--3,
+  .gallery-page-grid__item--4 {
+    grid-column: auto;
+    grid-row: auto;
   }
 
   .about-hero {

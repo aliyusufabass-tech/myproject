@@ -15,6 +15,7 @@ function Footer() {
             <Link to="/about">About</Link>
             <Link to="/tours">Tours</Link>
             <Link to="/transfers">Transfers</Link>
+            <Link to="/gallery">Gallery</Link>
             <Link to="/contact">Contact</Link>
           </div>
         </div>
