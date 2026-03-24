@@ -11,12 +11,7 @@ function GalleryPage() {
 
       <section className="gallery-page-hero">
         <div className="container gallery-page-hero__content">
-          <p className="section-tag">Gallery</p>
-          <h1>See the coastline, colours, and calm that define every Zanzibar journey.</h1>
-          <p>
-            Explore a visual collection of beaches, ocean scenes, and island moments
-            that shape our tours, transfers, and travel experiences.
-          </p>
+          <h1>ZANZIBAR EXCURSION COMPANY LTD GALLERY</h1>
         </div>
       </section>
 
