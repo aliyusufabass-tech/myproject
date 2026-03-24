@@ -6,7 +6,7 @@ export const tours = [
     price: '$42 / person',
     category: 'Half Day',
     description:
-      "Discover Zanzibar's turquoise waters with snorkeling, marine life, and a chance to spot dolphins.",
+      'Enjoy Zanzibar clear waters through snorkeling, marine encounters, and possible dolphin sightings.',
     image:
       'https://www.yazantours.co.tz/wp-content/uploads/2025/12/mnemba-1.jpg',
   },
@@ -17,7 +17,7 @@ export const tours = [
     price: '$25 / person',
     category: 'Half Day',
     description:
-      'Explore the historic streets of Stone Town and discover its culture, landmarks, and stories.',
+      'Walk through historic Stone Town and experience its culture, famous sites, and local stories.',
     image:
       'https://www.yazantours.co.tz/wp-content/uploads/2025/12/stone-5.jpg',
   },
@@ -28,7 +28,7 @@ export const tours = [
     price: '$57 / person',
     category: 'Full Day',
     description:
-      "Discover Zanzibar's marine beauty on a full-day dhow and snorkeling excursion from Fumba.",
+      "Spend a full day exploring Zanzibar's marine side with a dhow trip and snorkeling from Fumba.",
     image:
       'https://www.yazantours.co.tz/wp-content/uploads/2025/12/Safari-Blue.jpg',
   },
@@ -39,7 +39,7 @@ export const tours = [
     price: '$45 / person',
     category: 'Full Day',
     description:
-      'Immerse yourself in Zanzibar flavors, aromas, and traditions with a hands-on cooking experience.',
+      'Experience Zanzibar spices, scents, and traditions through an interactive cooking journey.',
     image:
       'https://www.yazantours.co.tz/wp-content/uploads/2026/01/cooking.jpg',
   },
@@ -51,7 +51,7 @@ export const zanzibarTours = [
     type: 'full',
     title: 'Spice Farm and Spice Cooking',
     summary:
-      'Immerse yourself in the authentic flavors, aromas, and traditions of Zanzibar with our unique Spice Farm and Cooking experience.',
+      'Step into Zanzibar food culture with a spice farm visit and a hands-on local cooking experience.',
     tags: ['Cooking Class', 'Spice Market Visit', 'Aromatic Tasting'],
     duration: 'Full day tour',
     maxGuests: 'Max 30',
@@ -66,7 +66,7 @@ export const zanzibarTours = [
     type: 'full',
     title: 'Spice Farm and Stonetown',
     summary:
-      'Enjoy a full-day Zanzibar tour that combines history, culture, and authentic local flavors.',
+      'Spend the day blending Zanzibar history, culture, and traditional island flavors in one trip.',
     tags: ['Aromatic Tasting', 'Cooking Class', 'Stonetown Walking'],
     duration: 'Full day tour',
     maxGuests: 'Max 30',
@@ -81,7 +81,7 @@ export const zanzibarTours = [
     type: 'full',
     title: 'Jozani Forest, Spice Farm and Stonetown',
     summary:
-      "Discover Zanzibar's rich nature and culture in one day with wildlife, spice farm traditions, and Stone Town heritage.",
+      'Combine Zanzibar wildlife, spice farm heritage, and Stone Town culture in one memorable day.',
     tags: ['Jozani Forest Walk', 'Aromatic Tasting', 'Stonetown Walking'],
     duration: 'Full day tour',
     maxGuests: 'Max 30',
@@ -96,7 +96,7 @@ export const zanzibarTours = [
     type: 'full',
     title: 'Nakupenda Sandbank, Prison Island and Stonetown',
     summary:
-      'Visit giant tortoises on Prison Island, relax on Nakupenda Sandbank, and finish with a Stone Town walk.',
+      'Meet giant tortoises at Prison Island, unwind on Nakupenda Sandbank, and end with Stone Town exploration.',
     tags: ['Nakupenda Beach', 'Prison Visit', 'Stonetown Walking'],
     duration: 'Full day tour',
     maxGuests: 'Max 20',
@@ -112,7 +112,7 @@ export const zanzibarTours = [
     type: 'full',
     title: 'Blue Safari',
     summary:
-      "Discover Zanzibar's marine beauty on our Blue Safari excursion with dhow cruising, snorkeling, and swimming.",
+      "Enjoy Zanzibar ocean beauty on a Blue Safari with dhow sailing, snorkeling, and swimming stops.",
     tags: ['Dhow Cruise', 'Snorkeling', 'Swimming'],
     duration: 'Full day tour',
     maxGuests: 'Max 25',
@@ -127,7 +127,7 @@ export const zanzibarTours = [
     type: 'full',
     title: 'Pungume Sandbank, Dolphins and Snorkeling',
     summary:
-      'Embark on a full-day southern Zanzibar adventure with dolphins, a sandbank stop, and vibrant marine life.',
+      'Take a full-day southern Zanzibar trip featuring dolphins, a sandbank break, and colorful marine life.',
     tags: ['Boat Ride', 'Swimming', 'Snorkeling'],
     duration: 'Full day tour',
     maxGuests: 'Max 15',
@@ -142,7 +142,7 @@ export const zanzibarTours = [
     type: 'full',
     title: 'Mnemba Snorkeling, Dolphins, Turtles Aquarium and Kendwa Beach',
     summary:
-      'Enjoy a full-day northern Zanzibar route with snorkeling, marine encounters, and a relaxing beach finale.',
+      'Explore northern Zanzibar with snorkeling, sea-life experiences, and a relaxing beach finish.',
     tags: ['Snorkeling', 'Swimming with Dolphins', 'Aquarium Visit'],
     duration: 'Full day tour',
     maxGuests: 'Max 30',
@@ -158,7 +158,7 @@ export const zanzibarTours = [
     type: 'full',
     title: 'Jozani Forest, Kuza Cave, Paje Beach and Rock Restaurant',
     summary:
-      "Enjoy a full-day adventure on Zanzibar's eastern coast with nature, caves, beach time, and a signature dining stop.",
+      "Discover Zanzibar's east coast through nature, cave visits, beach relaxation, and a signature dining stop.",
     tags: ['Jozani Forest Walk', 'Kuza Cave Visit', 'Paje Beach', 'Rock Restaurant'],
     duration: 'Full day tour',
     maxGuests: 'Max 20',
@@ -174,7 +174,7 @@ export const zanzibarTours = [
     type: 'full',
     title: 'Maalum Cave, Mtende Beach, Paje Beach and Rock Restaurant',
     summary:
-      "Explore Zanzibar's east and south coast with cave swimming, scenic beaches, and a Rock Restaurant stop.",
+      "See Zanzibar's east and south coast with cave swimming, scenic beach visits, and a Rock Restaurant stop.",
     tags: ['Maalum Cave Visit', 'Mtende Beach', 'Paje Beach', 'Rock Restaurant'],
     duration: 'Full day tour',
     maxGuests: 'Max 30',
@@ -190,7 +190,7 @@ export const zanzibarTours = [
     type: 'half',
     title: 'Stone Town Tour',
     summary:
-      'Explore the historic streets of Stone Town, a UNESCO World Heritage Site, with iconic landmarks and culture.',
+      'Discover Stone Town streets, heritage landmarks, and culture in this UNESCO-listed island setting.',
     tags: ['City Walk', 'History', 'Culture'],
     duration: 'Half day tour',
     maxGuests: 'Max 30',
@@ -205,7 +205,7 @@ export const zanzibarTours = [
     type: 'half',
     title: 'Spice Farm Tour',
     summary:
-      'Discover Zanzibar, the Spice Island, on a guided tour through farms full of aromas, flavors, and rainforest beauty.',
+      'Visit Zanzibar spice farms and enjoy the aromas, tastes, and lush natural surroundings of the island.',
     tags: ['Spice Tour', 'Tasting', 'Nature'],
     duration: 'Half day tour',
     maxGuests: 'Max 30',
@@ -220,7 +220,7 @@ export const zanzibarTours = [
     type: 'half',
     title: 'Jozani Forest',
     summary:
-      "Explore Zanzibar's only national park, home to red colobus monkeys, mangroves, and diverse wildlife.",
+      "Visit Zanzibar's only national park and encounter red colobus monkeys, mangroves, and rich wildlife.",
     tags: ['Forest Walk', 'Wildlife', 'Nature'],
     duration: 'Half day tour',
     maxGuests: 'Max 25',
@@ -235,7 +235,7 @@ export const zanzibarTours = [
     type: 'half',
     title: 'Nakupenda Sandbank',
     summary:
-      'Visit the stunning Nakupenda Sandbank for swimming, sunbathing, and a fresh seafood beach experience.',
+      'Head to Nakupenda Sandbank for swimming, sunbathing, and a fresh beachside seafood experience.',
     tags: ['Sandbank', 'Swimming', 'Beach'],
     duration: 'Half day tour',
     maxGuests: 'Max 20',
@@ -250,7 +250,7 @@ export const zanzibarTours = [
     type: 'half',
     title: 'Prison Island Tour',
     summary:
-      'Take a short boat ride from Stone Town to Prison Island and meet giant Aldabra tortoises.',
+      'Enjoy a short boat trip from Stone Town to Prison Island and see the giant Aldabra tortoises.',
     tags: ['Island Tour', 'Tortoises', 'Boat Ride'],
     duration: 'Half day tour',
     maxGuests: 'Max 20',
@@ -265,7 +265,7 @@ export const zanzibarTours = [
     type: 'half',
     title: 'Sunset Dhow Cruise',
     summary:
-      "Enjoy a half-day sunset cruise on a traditional wooden dhow along Zanzibar's scenic coastline.",
+      "Sail Zanzibar's coast on a traditional dhow and enjoy a relaxed half-day sunset experience.",
     tags: ['Dhow Cruise', 'Sunset', 'Relax'],
     duration: 'Half day tour',
     maxGuests: 'Max 25',
@@ -280,7 +280,7 @@ export const zanzibarTours = [
     type: 'half',
     title: 'Blue Lagoon and Starfish',
     summary:
-      'Boat from Pingwe Beach to Blue Lagoon for snorkeling, starfish spotting, and clear-water relaxation.',
+      'Travel by boat from Pingwe Beach to Blue Lagoon for snorkeling, starfish viewing, and calm water relaxation.',
     tags: ['Blue Lagoon', 'Starfish', 'Snorkeling'],
     duration: 'Half day tour',
     maxGuests: 'Max 20',
@@ -295,7 +295,7 @@ export const zanzibarTours = [
     type: 'half',
     title: 'Mnemba Snorkeling and Dolphins',
     summary:
-      "Cruise from Muyuni Beach for snorkeling at Mnemba Atoll with a chance to see dolphins and marine life.",
+      'Depart from Muyuni Beach for Mnemba snorkeling with opportunities to spot dolphins and marine life.',
     tags: ['Snorkeling', 'Dolphins', 'Marine Life'],
     duration: 'Half day tour',
     maxGuests: 'Max 25',
@@ -310,7 +310,7 @@ export const zanzibarTours = [
     type: 'half',
     title: 'Snorkeling Tour Near Tumbatu Island',
     summary:
-      'Explore the marine life around Tumbatu Island on a flexible snorkeling trip filled with coral reef beauty.',
+      'Enjoy a snorkeling outing near Tumbatu Island surrounded by coral reefs and vibrant marine life.',
     tags: ['Snorkeling', 'Coral Reef', 'Boat Trip'],
     duration: 'Half day tour',
     maxGuests: 'Max 20',
@@ -327,7 +327,7 @@ export const safariTours = [
     id: 'safari-1',
     title: 'Mikumi Day Trip Safari From Zanzibar',
     summary:
-      'Escape to the heart of wild Africa with a Mikumi Park safari day trip from Zanzibar and return in the evening.',
+      'Take a day safari from Zanzibar to Mikumi and return the same evening after a rewarding wildlife experience.',
     tags: ['Game Drive', 'Day Trip', 'Mikumi'],
     duration: '1 Day',
     origin: 'From Zanzibar',
@@ -340,7 +340,7 @@ export const safariTours = [
     id: 'safari-2',
     title: 'Selous Day Trip Safari From Zanzibar',
     summary:
-      'Fly from Zanzibar for a full-day safari in Selous with morning and afternoon game drives and lunch in the wild.',
+      'Fly from Zanzibar to Selous for a full safari day with game drives and lunch surrounded by nature.',
     tags: ['Flight', 'Selous', 'Day Trip'],
     duration: '1 Day',
     origin: 'From Zanzibar',
@@ -353,7 +353,7 @@ export const safariTours = [
     id: 'safari-3',
     title: '2 Days 1 Night Safari - Selous From Zanzibar',
     summary:
-      'Experience the beauty of Selous on a 2-day safari from Zanzibar with scenic flight, game drive, and overnight stay.',
+      'See the beauty of Selous on a 2-day safari from Zanzibar with a scenic flight, game drive, and overnight stay.',
     tags: ['Selous', 'Overnight', 'Flight'],
     duration: '2 Days / 1 Night',
     origin: 'From Zanzibar',
@@ -366,7 +366,7 @@ export const safariTours = [
     id: 'safari-4',
     title: '2 Days 1 Night Safari - Mikumi From Zanzibar',
     summary:
-      "Experience Tanzania's countryside on a 2-day Mikumi safari from Zanzibar via boat and SGR train.",
+      "Travel through Tanzania's countryside on a 2-day Mikumi safari from Zanzibar by boat and SGR train.",
     tags: ['Mikumi', 'Boat', 'SGR Train'],
     duration: '2 Days / 1 Night',
     origin: 'From Zanzibar',
@@ -379,7 +379,7 @@ export const safariTours = [
     id: 'safari-5',
     title: '2 Days 1 Night Safari - Ngorongoro Crater and Tarangire',
     summary:
-      'This 2-day safari from Arusha explores Tarangire National Park and Ngorongoro Crater with unforgettable wildlife.',
+      'This 2-day safari from Arusha covers Tarangire and Ngorongoro for memorable wildlife viewing.',
     tags: ['Ngorongoro', 'Tarangire', 'Arusha'],
     duration: '2 Days / 1 Night',
     origin: 'From Arusha',
@@ -392,7 +392,7 @@ export const safariTours = [
     id: 'safari-6',
     title: '3 Days 2 Nights Safari - Mikumi From Zanzibar',
     summary:
-      'Start with a Maasai village cultural visit, then continue with exciting game drives in Mikumi.',
+      'Begin with a Maasai village visit before continuing into Mikumi for exciting game drive experiences.',
     tags: ['Mikumi', 'Maasai Village', 'Cultural Experience'],
     duration: '3 Days / 2 Nights',
     origin: 'From Zanzibar',
@@ -405,7 +405,7 @@ export const safariTours = [
     id: 'safari-7',
     title: '3 Days 2 Nights Safari - Serengeti and Ngorongoro From Zanzibar',
     summary:
-      'Experience an unforgettable 3-day safari from Zanzibar exploring Serengeti and Ngorongoro with thrilling game drives.',
+      'Enjoy a 3-day safari from Zanzibar across Serengeti and Ngorongoro with exciting wildlife game drives.',
     tags: ['Serengeti', 'Ngorongoro', 'Big Five'],
     duration: '3 Days / 2 Nights',
     origin: 'From Zanzibar',
@@ -418,7 +418,7 @@ export const safariTours = [
     id: 'safari-8',
     title: '3 Days 2 Nights Safari - Tarangire and Ngorongoro From Zanzibar',
     summary:
-      'Embark on a thrilling 3-day safari from Zanzibar to Tarangire and Ngorongoro with elephants and crater wildlife.',
+      'Set out on a 3-day Zanzibar safari to Tarangire and Ngorongoro with elephants and crater wildlife encounters.',
     tags: ['Tarangire', 'Ngorongoro', 'Wildlife'],
     duration: '3 Days / 2 Nights',
     origin: 'From Zanzibar',
@@ -431,7 +431,7 @@ export const safariTours = [
     id: 'safari-9',
     title: '4 Days 3 Nights Safari - Serengeti, Ngorongoro and Tarangire',
     summary:
-      "Embark on a 4-day safari through Tanzania's most iconic wildlife destinations from Arusha.",
+      "Travel from Arusha on a 4-day safari through Tanzania's best-known wildlife destinations.",
     tags: ['Serengeti', 'Ngorongoro', 'Tarangire', 'Arusha'],
     duration: '4 Days / 3 Nights',
     origin: 'From Arusha',
