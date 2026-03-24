@@ -1,10 +1,8 @@
 import { useState } from 'react'
-import Button from '../components/Button'
 import PageMeta from '../components/PageMeta'
-import SectionHeading from '../components/SectionHeading'
 
 const initialForm = {
-  name: '',
+  fullName: '',
   email: '',
   message: '',
 }
@@ -28,65 +26,99 @@ function ContactPage() {
     <>
       <PageMeta
         title="Contact"
-        description="Contact Zanzibar Excursion for tour planning, transfer bookings, and travel support."
+        description="Contact Zanzibar Excursion for bookings, travel support, and Zanzibar trip planning."
       />
-      <section className="page-hero page-hero--contact">
-        <div className="container">
-          <p className="section-tag">Contact</p>
-          <h1>Let's plan your Zanzibar stay, transfer, or private excursion.</h1>
+
+      <section className="contact-hero">
+        <div className="container contact-hero__content">
+          <h1>Contact Us</h1>
         </div>
       </section>
 
-      <section className="section">
-        <div className="container split split--wide">
-          <div>
-            <SectionHeading
-              eyebrow="Get In Touch"
-              title="Send us your travel ideas and we'll help shape the right experience"
-            />
-            <div className="contact-stack">
-              <p><strong>Phone:</strong> +255 777 123 456</p>
-              <p><strong>Email:</strong> hello@zanzibarexcursion.com</p>
-              <p><strong>Location:</strong> Stone Town, Zanzibar</p>
+      <section className="section contact-page-section">
+        <div className="container contact-page-container">
+          <div className="contact-page-grid">
+            <div className="contact-form-box">
+              <h2>Send Us a Message</h2>
+
+              <form className="contact-page-form" onSubmit={handleSubmit}>
+                <div className="contact-form-group">
+                  <label htmlFor="fullName">Full Name</label>
+                  <input
+                    id="fullName"
+                    name="fullName"
+                    type="text"
+                    value={form.fullName}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+
+                <div className="contact-form-group">
+                  <label htmlFor="email">Email Address</label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    value={form.email}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+
+                <div className="contact-form-group">
+                  <label htmlFor="message">Message</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="5"
+                    value={form.message}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+
+                <button className="contact-submit-btn" type="submit">
+                  Send Message
+                </button>
+
+                {sent ? <p className="form-success">Message sent successfully.</p> : null}
+              </form>
             </div>
-            <div className="map-frame">
-              <iframe
-                title="Zanzibar map"
-                src="https://www.google.com/maps?q=Stone%20Town%20Zanzibar&z=13&output=embed"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
+
+            <div className="contact-info-box">
+              <h2>Contact Information</h2>
+
+              <div className="contact-info-item">
+                <strong>Phone:</strong>
+                <p>+255 700 000 000</p>
+              </div>
+
+              <div className="contact-info-item">
+                <strong>Email:</strong>
+                <p>info@zanzibarexcursion.com</p>
+              </div>
+
+              <div className="contact-info-item">
+                <strong>Location:</strong>
+                <p>Zanzibar, Tanzania</p>
+              </div>
+
+              <div className="contact-info-item">
+                <strong>Working Hours:</strong>
+                <p>Mon - Sun: 8:00 AM - 8:00 PM</p>
+              </div>
             </div>
           </div>
 
-          <form className="form-card" onSubmit={handleSubmit}>
-            <label>
-              Name
-              <input name="name" value={form.name} onChange={handleChange} required />
-            </label>
-            <label>
-              Email
-              <input
-                name="email"
-                type="email"
-                value={form.email}
-                onChange={handleChange}
-                required
-              />
-            </label>
-            <label>
-              Message
-              <textarea
-                name="message"
-                rows="6"
-                value={form.message}
-                onChange={handleChange}
-                required
-              />
-            </label>
-            <Button type="submit">Send Message</Button>
-            {sent ? <p className="form-success">Message sent successfully.</p> : null}
-          </form>
+          <div className="contact-map-box">
+            <iframe
+              title="Zanzibar map"
+              src="https://www.google.com/maps?q=Zanzibar&output=embed"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
         </div>
       </section>
     </>
