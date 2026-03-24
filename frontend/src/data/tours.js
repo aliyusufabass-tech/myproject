@@ -1,4 +1,6 @@
 import mnembaImage from '../assets/image 2.jpeg'
+import jozaniImage from '../assets/jonzaniforest.jpeg'
+import stoneTownImage from '../assets/stonetown.jpeg'
 
 export const tours = [
   {
@@ -19,8 +21,7 @@ export const tours = [
     category: 'Half Day',
     description:
       'Walk through historic Stone Town and enjoy its culture, landmarks, and everyday stories.',
-    image:
-      'https://www.yazantours.co.tz/wp-content/uploads/2025/12/stone-5.jpg',
+    image: stoneTownImage,
   },
   {
     id: 3,
@@ -89,7 +90,7 @@ export const zanzibarTours = [
     reviews: '118 reviews',
     price: '$67 / person',
     rating: '4.7',
-    image: 'https://picsum.photos/seed/full3/1200/800',
+    image: jozaniImage,
     detailUrl: 'https://www.yazantours.co.tz/jozani-forestspice-farm-stone-town/',
   },
   {
@@ -198,7 +199,7 @@ export const zanzibarTours = [
     reviews: 'Reviews',
     price: '$25 / person',
     rating: '4.7',
-    image: 'https://picsum.photos/seed/half1/1200/800',
+    image: stoneTownImage,
     detailUrl: 'https://www.yazantours.co.tz/stone-town-tour/',
   },
   {
@@ -228,7 +229,7 @@ export const zanzibarTours = [
     reviews: 'Reviews',
     price: '$29 / person',
     rating: '4.8',
-    image: 'https://picsum.photos/seed/half3/1200/800',
+    image: jozaniImage,
     detailUrl: 'https://www.yazantours.co.tz/jozani-forest/',
   },
   {
