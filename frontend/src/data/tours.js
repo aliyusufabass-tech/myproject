@@ -1,5 +1,6 @@
 import mnembaImage from '../assets/image 2.jpeg'
 import jozaniImage from '../assets/jonzaniforest.jpeg'
+import jozaniImageTwo from '../assets/jonzaniforest2.jpeg'
 import stoneTownImage from '../assets/stonetown.jpeg'
 
 export const tours = [
@@ -90,7 +91,7 @@ export const zanzibarTours = [
     reviews: '118 reviews',
     price: '$67 / person',
     rating: '4.7',
-    image: jozaniImage,
+    image: jozaniImageTwo,
     detailUrl: 'https://www.yazantours.co.tz/jozani-forestspice-farm-stone-town/',
   },
   {
