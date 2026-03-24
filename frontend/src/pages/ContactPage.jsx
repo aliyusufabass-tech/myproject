@@ -25,7 +25,7 @@ function ContactPage() {
   return (
     <>
       <PageMeta
-        title="Contact"
+        title="Contact Us"
         description="Contact Zanzibar Excursion Company Ltd for bookings, travel guidance, and personalised Zanzibar trip planning."
       />
 

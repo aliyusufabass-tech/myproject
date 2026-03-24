@@ -4,11 +4,11 @@ import logo from '../assets/ZANZIBAR EXCURSION COMPANY LTD copy.jpg'
 
 const navLinks = [
   { to: '/', label: 'Home' },
-  { to: '/about', label: 'About' },
+  { to: '/about', label: 'About Us' },
   { to: '/tours', label: 'Tours' },
   { to: '/transfers', label: 'Transfers' },
   { to: '/gallery', label: 'Gallery' },
-  { to: '/contact', label: 'Contact' },
+  { to: '/contact', label: 'Contact Us' },
 ]
 
 function Navbar() {

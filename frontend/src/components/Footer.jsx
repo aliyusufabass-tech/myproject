@@ -14,11 +14,11 @@ function Footer() {
           <h4>Quick Links</h4>
           <div className="footer__links">
             <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
+            <Link to="/about">About Us</Link>
             <Link to="/tours">Tours</Link>
             <Link to="/transfers">Transfers</Link>
             <Link to="/gallery">Gallery</Link>
-            <Link to="/contact">Contact</Link>
+            <Link to="/contact">Contact Us</Link>
           </div>
         </div>
         <div>

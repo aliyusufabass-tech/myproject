@@ -26,7 +26,7 @@ function AboutPage() {
   return (
     <>
       <PageMeta
-        title="About"
+        title="About Us"
         description="Discover Zanzibar Excursion Company Ltd, our story, services, and trusted travel experience."
       />
 
