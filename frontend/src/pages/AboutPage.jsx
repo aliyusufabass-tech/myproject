@@ -83,7 +83,7 @@ function AboutPage() {
           <div className="about-cta">
             <h2>Start Your Journey Today</h2>
             <p>Book your tour now and explore Zanzibar like never before</p>
-            <Link className="about-cta__button" to="/contact">
+            <Link className="about-cta__button" to="/tours">
               Book Now
             </Link>
           </div>
