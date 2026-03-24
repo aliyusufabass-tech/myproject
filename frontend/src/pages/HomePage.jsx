@@ -40,9 +40,6 @@ function HomePage() {
           </p>
           <div className="hero__actions">
             <Button to="/tours">Explore Tours</Button>
-            <Button to="/contact" variant="secondary">
-              Book Now
-            </Button>
           </div>
         </div>
       </section>
