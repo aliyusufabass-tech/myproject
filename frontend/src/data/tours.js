@@ -26,6 +26,7 @@ export const tours = [
     description:
       'Enjoy clear Zanzibar waters with reef snorkeling, marine encounters, and possible dolphin sightings.',
     image: mnembaImage,
+    childPrice: 10,
   },
   {
     id: 2,
@@ -36,6 +37,7 @@ export const tours = [
     description:
       'Walk through historic Stone Town and enjoy its culture, landmarks, and everyday stories.',
     image: stoneTownImage,
+    childPrice: 10,
   },
   {
     id: 3,
@@ -46,6 +48,7 @@ export const tours = [
     description:
       'Combine Zanzibar wildlife, spice farm heritage, and Stone Town culture in one memorable day.',
     image: jozaniImageTwo,
+    childPrice: 10,
   },
   {
     id: 4,
@@ -56,6 +59,7 @@ export const tours = [
     description:
       "Spend the day exploring Zanzibar's marine side with a dhow cruise and snorkeling from Fumba.",
     image: blueSafariImage,
+    childPrice: 10,
   },
 ]
 
@@ -349,6 +353,7 @@ export const safariTours = [
     rating: '4.9',
     detailUrl: '/contact',
     image: 'https://picsum.photos/seed/safari1/1200/800',
+    childPrice: 20,
   },
   {
     id: 'safari-2',
@@ -362,6 +367,7 @@ export const safariTours = [
     rating: '4.8',
     detailUrl: '/contact',
     image: 'https://picsum.photos/seed/safari2/1200/800',
+    childPrice: 20,
   },
   {
     id: 'safari-3',
@@ -375,6 +381,7 @@ export const safariTours = [
     rating: '4.7',
     detailUrl: '/contact',
     image: 'https://picsum.photos/seed/safari3/1200/800',
+    childPrice: 20,
   },
   {
     id: 'safari-4',
@@ -388,6 +395,7 @@ export const safariTours = [
     rating: '4.6',
     detailUrl: '/contact',
     image: 'https://picsum.photos/seed/safari4/1200/800',
+    childPrice: 20,
   },
   {
     id: 'safari-5',
@@ -401,6 +409,7 @@ export const safariTours = [
     rating: '4.8',
     detailUrl: '/contact',
     image: 'https://picsum.photos/seed/safari5/1200/800',
+    childPrice: 20,
   },
   {
     id: 'safari-6',
@@ -414,6 +423,7 @@ export const safariTours = [
     rating: '4.7',
     detailUrl: '/contact',
     image: 'https://picsum.photos/seed/safari6/1200/800',
+    childPrice: 20,
   },
   {
     id: 'safari-7',
@@ -427,6 +437,7 @@ export const safariTours = [
     rating: '4.9',
     detailUrl: '/contact',
     image: 'https://picsum.photos/seed/safari7/1200/800',
+    childPrice: 20,
   },
   {
     id: 'safari-8',
@@ -440,6 +451,7 @@ export const safariTours = [
     rating: '4.7',
     detailUrl: '/contact',
     image: 'https://picsum.photos/seed/safari8/1200/800',
+    childPrice: 20,
   },
   {
     id: 'safari-9',
@@ -453,6 +465,7 @@ export const safariTours = [
     rating: '4.9',
     detailUrl: '/contact',
     image: 'https://picsum.photos/seed/safari9/1200/800',
+    childPrice: 20,
   },
 ]
 

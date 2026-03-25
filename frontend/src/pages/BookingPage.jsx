@@ -1,16 +1,18 @@
 import { useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { tours } from '../data/tours'
+import { tours, safariTours } from '../data/tours'
 
 function BookingPage() {
   const { tourId } = useParams()
-  const tour = tours.find((entry) => String(entry.id) === String(tourId))
+  const tour =
+    tours.find((entry) => String(entry.id) === String(tourId)) ||
+    safariTours.find((entry) => String(entry.id) === String(tourId))
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
-    guests: '1',
-    notes: '',
+    adults: '1',
+    children: '0',
   })
   const [confirmed, setConfirmed] = useState(false)
 
@@ -21,6 +23,17 @@ function BookingPage() {
       </section>
     )
   }
+
+  const childRate = tour.childPrice ?? 10
+  const basePrice = parseFloat(String(tour.price).replace(/[^0-9.]/g, '')) || 0
+  const adultsCount = Number(formData.adults) || 0
+  const childrenCount = Number(formData.children) || 0
+  const total = adultsCount * basePrice + childrenCount * childRate
+  const currency = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+  })
+  const formattedTotal = currency.format(total)
 
   const handleChange = (event) => {
     const { name, value } = event.target
@@ -77,12 +90,20 @@ function BookingPage() {
               <span>{formData.phone || '—'}</span>
             </div>
             <div className="tour-booking__summary-row">
-              <span>Guests</span>
-              <span>{formData.guests || '—'}</span>
+              <span>Adults</span>
+              <span>{formData.adults || '—'}</span>
             </div>
             <div className="tour-booking__summary-row">
-              <span>Notes</span>
-              <span>{formData.notes || '—'}</span>
+              <span>Children</span>
+              <span>{formData.children || '—'}</span>
+            </div>
+            <div className="tour-booking__summary-row">
+              <span>Child rate</span>
+              <span>{currency.format(childRate)}</span>
+            </div>
+            <div className="tour-booking__summary-row">
+              <span>Total</span>
+              <span>{formattedTotal}</span>
             </div>
           </div>
 
@@ -106,19 +127,25 @@ function BookingPage() {
               <input name="phone" type="tel" value={formData.phone} onChange={handleChange} />
             </label>
             <label>
-              Guests
+              Adults
               <input
-                name="guests"
+                name="adults"
                 type="number"
                 min="1"
-                value={formData.guests}
+                value={formData.adults}
                 onChange={handleChange}
                 required
               />
             </label>
             <label>
-              Notes / requests
-              <textarea name="notes" value={formData.notes} onChange={handleChange} rows="3" />
+              Children
+              <input
+                name="children"
+                type="number"
+                min="0"
+                value={formData.children}
+                onChange={handleChange}
+              />
             </label>
             <button className="tour-detail__form-btn" type="submit">
               Confirm Booking
@@ -127,9 +154,13 @@ function BookingPage() {
 
           {confirmed && (
             <div className="tour-detail__confirmation">
-              <p>Booking confirmed for {formData.name || 'your name'}.</p>
               <p>
-                We will contact you at <strong>{formData.email}</strong> to finalize the details.
+                Booking confirmed for {formData.name || 'your name'} ({formData.adults || 0} adults,
+                {formData.children || 0} children).
+              </p>
+              <p>
+                {`We will contact you at `}
+                <strong>{formData.email}</strong> {` and confirm the ${formattedTotal} charge.`}
               </p>
             </div>
           )}
