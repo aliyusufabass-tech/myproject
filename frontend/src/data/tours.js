@@ -2,7 +2,17 @@ import mnembaImage from '../assets/image 2.jpeg'
 import jozaniImage from '../assets/jonzaniforest.jpeg'
 import jozaniImageTwo from '../assets/jonzaniforest2.jpeg'
 import stoneTownImage from '../assets/stonetown.jpeg'
-import spiceFarmImage from '../assets/spice farm.jpeg'
+import blueLagoonImage from '../assets/Blue Lagoon and Starfish.jpeg'
+import nakupendaPrisonImage from '../assets/Nakupenda Sandbank, Prison Island and Stonetown.jpeg'
+import nakupendaSandbankImage from '../assets/Nakupenda Sandbank.jpeg'
+import pungumeImage from '../assets/Pungume Sandbank, Dolphins and Snorkeling.jpeg'
+import snorkelingTumbatuImage from '../assets/Snorkeling Tour Near Tumbatu Island.jpeg'
+import spiceFarmCookingImage from '../assets/Spice Farm and Spice Cooking.jpeg'
+import spiceFarmStonetownImage from '../assets/Spice Farm and Stonetown.jpeg'
+import spiceFarmTourImage from '../assets/Spice Farm Tour.jpeg'
+import sunsetDhowImage from '../assets/Sunset Dhow Cruise.jpeg'
+import jozaniKuzaPajeImage from '../assets/Jozani Forest, Kuza Cave, Paje Beach and Rock Restaurant.jpeg'
+import maalumCaveImage from '../assets/Maalum Cave, Mtende Beach, Paje Beach and Rock Restaurant.jpeg'
 
 export const tours = [
   {
@@ -23,7 +33,7 @@ export const tours = [
     category: 'Half Day',
     description:
       'Walk through historic Stone Town and enjoy its culture, landmarks, and everyday stories.',
-    image: spiceFarmImage,
+    image: stoneTownImage,
   },
   {
     id: 3,
@@ -43,8 +53,7 @@ export const tours = [
     category: 'Full Day',
     description:
       "Spend the day exploring Zanzibar's marine side with a dhow cruise and snorkeling from Fumba.",
-    image: spiceFarmImage,
-
+    image: blueLagoonImage,
   },
 ]
 
@@ -61,7 +70,7 @@ export const zanzibarTours = [
     reviews: '234 reviews',
     price: '$45 / person',
     rating: '4.9',
-    image: 'https://picsum.photos/seed/full1/1200/800',
+    image: spiceFarmCookingImage,
     detailUrl: 'https://www.yazantours.co.tz/spice-farm-cooking-class-tour/',
   },
   {
@@ -76,7 +85,7 @@ export const zanzibarTours = [
     reviews: '57 reviews',
     price: '$54 / person',
     rating: '4.8',
-    image: 'https://picsum.photos/seed/full2/1200/800',
+    image: spiceFarmStonetownImage,
     detailUrl: 'https://www.yazantours.co.tz/spice-farm-stonetown-tour/',
   },
   {
@@ -106,7 +115,7 @@ export const zanzibarTours = [
     reviews: '350 reviews',
     price: '$69 / person',
     rating: '4.9',
-    image: 'https://picsum.photos/seed/full4/1200/800',
+    image: nakupendaPrisonImage,
     detailUrl:
       'https://www.yazantours.co.tz/nakupenda-sandbank-prison-island-stonetown-tour/',
   },
@@ -122,7 +131,7 @@ export const zanzibarTours = [
     reviews: '102 reviews',
     price: '$57 / person',
     rating: '4.8',
-    image: 'https://picsum.photos/seed/full5/1200/800',
+    image: blueLagoonImage,
     detailUrl: 'https://www.yazantours.co.tz/blue-safari-tour/',
   },
   {
@@ -137,7 +146,7 @@ export const zanzibarTours = [
     reviews: '110 reviews',
     price: '$82 / person',
     rating: '4.7',
-    image: 'https://picsum.photos/seed/full6/1200/800',
+    image: pungumeImage,
     detailUrl: 'https://www.yazantours.co.tz/kizimkazi-dolphins-snorkeling-tour/',
   },
   {
@@ -168,7 +177,7 @@ export const zanzibarTours = [
     reviews: '120 reviews',
     price: '$74 / person',
     rating: '4.6',
-    image: 'https://picsum.photos/seed/full8/1200/800',
+    image: jozaniKuzaPajeImage,
     detailUrl:
       'https://www.yazantours.co.tz/jozani-forestkuza-cave-paje-beach-the-rock-restaurant/',
   },
@@ -184,7 +193,7 @@ export const zanzibarTours = [
     reviews: '150 reviews',
     price: '$76 / person',
     rating: '4.8',
-    image: 'https://picsum.photos/seed/full9/1200/800',
+    image: maalumCaveImage,
     detailUrl:
       'https://www.yazantours.co.tz/maalum-cave-mtende-beach-paje-beach-rock-restaurant/',
   },
@@ -215,7 +224,7 @@ export const zanzibarTours = [
     reviews: 'Reviews',
     price: '$20 / person',
     rating: '4.6',
-    image: 'https://picsum.photos/seed/half2/1200/800',
+    image: spiceFarmTourImage,
     detailUrl: 'https://www.yazantours.co.tz/spice-farm-tour/',
   },
   {
@@ -245,7 +254,7 @@ export const zanzibarTours = [
     reviews: 'Reviews',
     price: '$35 / person',
     rating: '4.9',
-    image: 'https://picsum.photos/seed/half4/1200/800',
+    image: nakupendaSandbankImage,
     detailUrl: 'https://www.yazantours.co.tz/nakupenda-sandbank/',
   },
   {
@@ -260,7 +269,7 @@ export const zanzibarTours = [
     reviews: 'Reviews',
     price: '$37 / person',
     rating: '4.8',
-    image: 'https://picsum.photos/seed/half5/1200/800',
+    image: nakupendaPrisonImage,
     detailUrl: 'https://www.yazantours.co.tz/prison-island-tour/',
   },
   {
@@ -275,7 +284,7 @@ export const zanzibarTours = [
     reviews: 'Reviews',
     price: '$24 / person',
     rating: '4.6',
-    image: 'https://picsum.photos/seed/half6/1200/800',
+    image: sunsetDhowImage,
     detailUrl: 'https://www.yazantours.co.tz/sunset-dhow-cruise/',
   },
   {
@@ -290,7 +299,7 @@ export const zanzibarTours = [
     reviews: 'Reviews',
     price: '$38 / person',
     rating: '4.7',
-    image: 'https://picsum.photos/seed/half7/1200/800',
+    image: blueLagoonImage,
     detailUrl: 'https://www.yazantours.co.tz/blue-lagoon-starfish/',
   },
   {
@@ -320,7 +329,7 @@ export const zanzibarTours = [
     reviews: 'Reviews',
     price: '$55 / person',
     rating: '4.8',
-    image: 'https://picsum.photos/seed/half9/1200/800',
+    image: snorkelingTumbatuImage,
     detailUrl: 'https://www.yazantours.co.tz/snorkeling-tour-near-tumbatu-island/',
   },
 ]

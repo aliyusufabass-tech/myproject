@@ -17,7 +17,7 @@ function TourCard({ tour }) {
         </div>
         <h3>{tour.title}</h3>
         <p>{tour.description}</p>
-        <Button to="/contact">View Details / Book Now</Button>
+        <Button to="/contact">View Details</Button>
       </div>
     </article>
   )
