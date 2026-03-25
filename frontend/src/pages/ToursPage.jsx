@@ -35,7 +35,7 @@ const normalizeExcursionCard = (tour) => ({
   image: tour.image,
   price: tour.price,
   rating: tour.rating,
-  detailUrl: tour.detailUrl,
+  detailUrl: `/tours/${tour.id}`,
 })
 
 function ToursPage() {
