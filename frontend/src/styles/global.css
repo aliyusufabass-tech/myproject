@@ -24,20 +24,36 @@
   background-position: center;
   background-size: cover;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.tour-detail__hero-label {
+.tour-detail__hero::after {
+  content: '';
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 2rem;
-  font-weight: 700;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.tour-detail__hero-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  padding: 0.85rem 1.5rem;
-  border-radius: 10px;
-  background: rgba(0, 0, 0, 0.4);
+  gap: 0.75rem;
+  max-width: 780px;
+}
+
+.tour-detail__hero-content h1 {
+  color: #050505;
+  font-weight: 900;
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  text-shadow: none;
 }
 
 .tour-detail__info-bar {
@@ -791,6 +807,25 @@ p {
 .page-hero--tours h1 {
   font-size: clamp(2rem, 4.6vw, 3.6rem);
 }
+
+.page-hero__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  padding: 5rem 1rem;
+}
+
+.page-hero__content h1 {
+  color: #050505;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
 
 .page-hero--transfers::before {
   background:

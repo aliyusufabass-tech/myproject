@@ -66,8 +66,8 @@ function ToursPage() {
         className="page-hero page-hero--tours"
         style={{ '--tours-hero-image': `url(${homeHeroImage})` }}
       >
-        <div className="container">
-          <h1>Choose the Zanzibar escape or wildlife journey that best suits your travel style.</h1>
+        <div className="page-hero__content container">
+          <h1>Spice Farm and Stonetown</h1>
         </div>
       </section>
 

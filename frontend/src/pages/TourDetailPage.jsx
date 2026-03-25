@@ -416,7 +416,11 @@ function TourDetailPage() {
         style={{
           backgroundImage: `linear-gradient(120deg, rgba(4, 36, 46, 0.8), rgba(6, 77, 89, 0.6)), url(${tour.image})`,
         }}
-      />
+      >
+        <div className="tour-detail__hero-content container">
+          <h1>{tour.title}</h1>
+        </div>
+      </div>
 
       <div className="tour-detail__info-bar">
         <div>Location: {content.location}</div>
