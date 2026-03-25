@@ -1,13 +1,13 @@
 import { Link } from 'react-router-dom'
 import logo from '../assets/ZANZIBAR EXCURSION COMPANY LTD copy.jpg'
-import footerImage from '../assets/footer.png'
+import footerImage from '../assets/picha.jpeg'
 
 function Footer() {
   return (
     <footer
       className="footer"
       style={{
-        backgroundImage: `linear-gradient(180deg, rgba(15, 47, 56, 0.92), rgba(15, 47, 56, 0.92)), url(${footerImage})`,
+    backgroundImage: `linear-gradient(180deg, rgba(4, 36, 46, 0.6), rgba(4, 36, 46, 0.8)), url(${footerImage})`,
       }}
     >
       <div className="container footer__grid">
