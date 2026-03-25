@@ -26,12 +26,12 @@ export const tours = [
   },
   {
     id: 3,
-    title: 'Jozani Forest Discovery',
-    duration: 'Half day tour',
-    price: '$29 / person',
-    category: 'Half Day',
+    title: 'Jozani Forest, Spice Farm and Stonetown',
+    duration: 'Full day tour',
+    price: '$67 / person',
+    category: 'Full Day',
     description:
-      "Visit Zanzibar's only national park and discover red colobus monkeys, mangroves, and lush forest scenery.",
+      'Combine Zanzibar wildlife, spice farm heritage, and Stone Town culture in one memorable day.',
     image: jozaniImageTwo,
   },
   {
