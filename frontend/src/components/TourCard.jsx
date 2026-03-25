@@ -17,7 +17,7 @@ function TourCard({ tour }) {
         </div>
         <h3>{tour.title}</h3>
         <p>{tour.description}</p>
-        <Button to="/contact">View Details</Button>
+        <Button to={`/tours/${tour.id}`}>View Details</Button>
       </div>
     </article>
   )

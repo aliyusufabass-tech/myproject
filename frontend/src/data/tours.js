@@ -1,4 +1,4 @@
-import mnembaImage from '../assets/image 2.jpeg'
+import mnembaImage from '../assets/Mnemba Snorkeling and Dolphins.jpeg'
 import jozaniImage from '../assets/jonzaniforest.jpeg'
 import jozaniImageTwo from '../assets/jonzaniforest2.jpeg'
 import stoneTownImage from '../assets/stonetown.jpeg'
@@ -11,6 +11,8 @@ import spiceFarmCookingImage from '../assets/Spice Farm and Spice Cooking.jpeg'
 import spiceFarmStonetownImage from '../assets/Spice Farm and Stonetown.jpeg'
 import spiceFarmTourImage from '../assets/Spice Farm Tour.jpeg'
 import sunsetDhowImage from '../assets/Sunset Dhow Cruise.jpeg'
+import blueSafariImage from '../assets/Blue safari.jpeg'
+import prisonIslandImage from '../assets/Prison island.jpeg'
 import jozaniKuzaPajeImage from '../assets/Jozani Forest, Kuza Cave, Paje Beach and Rock Restaurant.jpeg'
 import maalumCaveImage from '../assets/Maalum Cave, Mtende Beach, Paje Beach and Rock Restaurant.jpeg'
 
@@ -53,7 +55,7 @@ export const tours = [
     category: 'Full Day',
     description:
       "Spend the day exploring Zanzibar's marine side with a dhow cruise and snorkeling from Fumba.",
-    image: blueLagoonImage,
+    image: blueSafariImage,
   },
 ]
 
@@ -131,7 +133,7 @@ export const zanzibarTours = [
     reviews: '102 reviews',
     price: '$57 / person',
     rating: '4.8',
-    image: blueLagoonImage,
+    image: blueSafariImage,
     detailUrl: 'https://www.yazantours.co.tz/blue-safari-tour/',
   },
   {
@@ -269,7 +271,7 @@ export const zanzibarTours = [
     reviews: 'Reviews',
     price: '$37 / person',
     rating: '4.8',
-    image: nakupendaPrisonImage,
+    image: prisonIslandImage,
     detailUrl: 'https://www.yazantours.co.tz/prison-island-tour/',
   },
   {

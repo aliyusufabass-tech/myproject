@@ -5,6 +5,7 @@ import ScrollToTop from './components/ScrollToTop'
 import HomePage from './pages/HomePage'
 import AboutPage from './pages/AboutPage'
 import ToursPage from './pages/ToursPage'
+import TourDetailPage from './pages/TourDetailPage'
 import TransfersPage from './pages/TransfersPage'
 import GalleryPage from './pages/GalleryPage'
 import ContactPage from './pages/ContactPage'
@@ -19,6 +20,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
+            <Route path="/tours/:tourId" element={<TourDetailPage />} />
             <Route path="/tours" element={<ToursPage />} />
             <Route path="/transfers" element={<TransfersPage />} />
             <Route path="/gallery" element={<GalleryPage />} />
