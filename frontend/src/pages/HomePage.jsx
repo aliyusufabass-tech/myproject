@@ -1,9 +1,10 @@
+import { useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import Button from '../components/Button'
 import PageMeta from '../components/PageMeta'
 import SectionHeading from '../components/SectionHeading'
-import TourCard from '../components/TourCard'
-import { testimonials, tours } from '../data/tours'
+import TourFormatCard from '../components/TourFormatCard'
+import { testimonials, zanzibarTours, safariTours } from '../data/tours'
 import homeHeroImage from '../assets/image.jpeg'
 
 const reasons = [
@@ -21,7 +22,34 @@ const reasons = [
   },
 ]
 
+const buildHomeCards = () => {
+  const excursionCards = zanzibarTours.slice(0, 3).map((tour) => ({
+    id: tour.id,
+    badge: tour.type === 'half' ? 'Half-day' : 'Full-day',
+    title: tour.title,
+    summary: tour.summary,
+    image: tour.image,
+    price: tour.price,
+    rating: tour.rating,
+    detailUrl: `/tours/${tour.id}`,
+  }))
+
+  const safariCard = safariTours.slice(0, 1).map((tour) => ({
+    id: tour.id,
+    badge: 'Safari',
+    title: tour.title,
+    summary: tour.summary,
+    image: tour.image,
+    price: tour.price,
+    rating: tour.rating,
+    detailUrl: `/tours/${tour.id}`,
+  }))
+
+  return [...excursionCards, ...safariCard]
+}
+
 function HomePage() {
+  const homeTourCards = useMemo(buildHomeCards, [])
   return (
     <>
       <PageMeta
@@ -44,17 +72,25 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section tours-format-section">
         <div className="container">
           <SectionHeading
             eyebrow="Featured Tours"
-            title="Signature experiences for ocean lovers, explorers, and culture seekers"
-            text="From reef adventures to historic town walks, these guest favourites reveal Zanzibar from several memorable perspectives."
+            title="Handpicked tours that mirror the experiences in our full catalogue"
+            text="Taste the variety of Zanzibar with curated experiences that blend culture, wildlife, and ocean moments."
+            align="center"
           />
-          <div className="grid grid--three">
-            {tours.slice(0, 3).map((tour) => (
-              <TourCard key={tour.id} tour={tour} />
+
+          <div className="tour-format-grid">
+            {homeTourCards.map((card) => (
+              <TourFormatCard card={card} key={card.id} />
             ))}
+          </div>
+
+          <div className="tour-format-cta">
+            <Button to="/tours" variant="secondary">
+              View all tours
+            </Button>
           </div>
         </div>
       </section>

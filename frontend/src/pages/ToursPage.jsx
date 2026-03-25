@@ -1,8 +1,8 @@
 import { useMemo, useState } from 'react'
-import { Link } from 'react-router-dom'
 import PageMeta from '../components/PageMeta'
 import { safariTours, zanzibarTours } from '../data/tours'
 import homeHeroImage from '../assets/image.jpeg'
+import TourFormatCard from '../components/TourFormatCard'
 
 const filters = [
   { key: 'all', label: 'All' },
@@ -90,32 +90,7 @@ function ToursPage() {
 
           <div className="tour-format-grid">
             {visibleCards.map((card) => (
-              <article className="tour-format-card" key={card.id}>
-                <div className="tour-format-card__media">
-                  <img src={card.image} alt={card.title} />
-                  <div className="tour-format-card__overlay">
-                    <span className="tour-format-pill">{card.badge}</span>
-                    <span className="tour-rating-pill">
-                      <span className="tour-rating-pill__star">{'\u2605'}</span>
-                      {card.rating}
-                    </span>
-                  </div>
-                </div>
-
-                <div className="tour-format-card__body">
-                  <h3>{card.title}</h3>
-                  <p>{card.summary}</p>
-                  <div className="tour-format-card__footer">
-                    {card.detailUrl?.startsWith('/tours') ? (
-                      <Link to={card.detailUrl}>View Details</Link>
-                    ) : (
-                      <a href={card.detailUrl} target="_blank" rel="noreferrer">
-                        View Details
-                      </a>
-                    )}
-                  </div>
-                </div>
-              </article>
+              <TourFormatCard card={card} key={card.id} />
             ))}
           </div>
         </div>

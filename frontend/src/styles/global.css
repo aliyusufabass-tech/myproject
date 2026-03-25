@@ -1110,23 +1110,24 @@ p {
   min-height: 260px;
   background-size: cover;
   background-position: center;
-  display: flex;
-  justify-content: flex-end;
-  padding: 1rem;
 }
 
 .tour-card__price {
-  display: inline-flex;
-  align-self: flex-start;
-  padding: 0.45rem 0.8rem;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.92);
-  color: var(--text);
   font-weight: 700;
+  color: var(--primary);
+  font-size: 1rem;
 }
 
 .tour-card__content {
   padding: 1.5rem;
+}
+
+.tour-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.25rem;
 }
 
 .tour-card__meta,
@@ -1342,6 +1343,11 @@ p {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 2rem;
   margin-top: 3rem;
+}
+
+.tour-format-cta {
+  margin-top: 2.5rem;
+  text-align: center;
 }
 
 .tour-format-card {
