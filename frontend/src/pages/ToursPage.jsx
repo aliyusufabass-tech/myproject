@@ -105,7 +105,6 @@ function ToursPage() {
                   <h3>{card.title}</h3>
                   <p>{card.summary}</p>
                   <div className="tour-format-card__footer">
-                    <strong>{card.price}</strong>
                     <a href={card.detailUrl} target="_blank" rel="noreferrer">
                       View Details
                     </a>
