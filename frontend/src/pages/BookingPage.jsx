@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { tours, safariTours } from '../data/tours'
+import { tours, safariTours, zanzibarTours } from '../data/tours'
 
 function BookingPage() {
   const { tourId } = useParams()
   const tour =
     tours.find((entry) => String(entry.id) === String(tourId)) ||
-    safariTours.find((entry) => String(entry.id) === String(tourId))
+    safariTours.find((entry) => String(entry.id) === String(tourId)) ||
+    zanzibarTours.find((entry) => String(entry.id) === String(tourId))
   const [formData, setFormData] = useState({
     name: '',
     email: '',
