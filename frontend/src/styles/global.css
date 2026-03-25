@@ -451,7 +451,10 @@ p {
 .page-hero--tours::before {
   background:
     linear-gradient(120deg, rgba(4, 36, 46, 0.72), rgba(6, 77, 89, 0.48)),
-    url('https://images.unsplash.com/photo-1468413253725-0d5181091126?auto=format&fit=crop&w=1800&q=80')
+    var(
+      --tours-hero-image,
+      url('https://images.unsplash.com/photo-1468413253725-0d5181091126?auto=format&fit=crop&w=1800&q=80')
+    )
       center/cover;
 }
 

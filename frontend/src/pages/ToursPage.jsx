@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react'
 import PageMeta from '../components/PageMeta'
 import { safariTours, zanzibarTours } from '../data/tours'
+import homeHeroImage from '../assets/image.jpeg'
 
 const filters = [
   { key: 'all', label: 'All' },
@@ -60,7 +61,10 @@ function ToursPage() {
         description="Browse Zanzibar excursions and safari packages through a polished card layout with quick filters."
       />
 
-      <section className="page-hero page-hero--tours">
+      <section
+        className="page-hero page-hero--tours"
+        style={{ '--tours-hero-image': `url(${homeHeroImage})` }}
+      >
         <div className="container">
           <h1>Choose the Zanzibar escape or wildlife journey that best suits your travel style.</h1>
         </div>

@@ -2,6 +2,7 @@ import mnembaImage from '../assets/image 2.jpeg'
 import jozaniImage from '../assets/jonzaniforest.jpeg'
 import jozaniImageTwo from '../assets/jonzaniforest2.jpeg'
 import stoneTownImage from '../assets/stonetown.jpeg'
+import spiceFarmImage from '../assets/spice farm.jpeg'
 
 export const tours = [
   {
@@ -22,7 +23,7 @@ export const tours = [
     category: 'Half Day',
     description:
       'Walk through historic Stone Town and enjoy its culture, landmarks, and everyday stories.',
-    image: stoneTownImage,
+    image: spiceFarmImage,
   },
   {
     id: 3,
@@ -42,8 +43,8 @@ export const tours = [
     category: 'Full Day',
     description:
       "Spend the day exploring Zanzibar's marine side with a dhow cruise and snorkeling from Fumba.",
-    image:
-      'https://www.yazantours.co.tz/wp-content/uploads/2025/12/Safari-Blue.jpg',
+    image: spiceFarmImage,
+
   },
 ]
 
