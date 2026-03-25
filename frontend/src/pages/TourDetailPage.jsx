@@ -1,5 +1,5 @@
 import { useParams, useNavigate } from 'react-router-dom'
-import { tours } from '../data/tours'
+import { safariTours, tours } from '../data/tours'
 
 const tourDetailContent = {
   1: {
@@ -60,10 +60,18 @@ const defaultContent = {
   includes: ['Transport', 'Guide', 'Meals'],
 }
 
+const createFallbackContent = (tour) => ({
+  location: tour.origin ?? defaultContent.location,
+  groupSize: tour.maxGuests ?? defaultContent.groupSize,
+  reviews: tour.reviews ?? defaultContent.reviews,
+  experiences: tour.tags?.length ? tour.tags : defaultContent.experiences,
+  includes: tour.includes ?? defaultContent.includes,
+})
+
 function TourDetailPage() {
   const { tourId } = useParams()
-  const tour = tours.find((entry) => String(entry.id) === String(tourId))
-  const content = tourDetailContent[tour?.id] ?? defaultContent
+  const allTours = [...tours, ...safariTours]
+  const tour = allTours.find((entry) => String(entry.id) === String(tourId))
   const navigate = useNavigate()
   const handleReserve = () => {
     if (tour) {
@@ -79,6 +87,10 @@ function TourDetailPage() {
     )
   }
 
+  const staticContent = tourDetailContent[tour.id]
+  const content = staticContent ?? createFallbackContent(tour)
+  const description = tour.description || tour.summary || ''
+
   return (
     <section className="tour-detail">
       <div
@@ -89,16 +101,16 @@ function TourDetailPage() {
       />
 
       <div className="tour-detail__info-bar">
-        <div>📍 Location: {content.location}</div>
-        <div>⏱ Duration: {tour.duration}</div>
-        <div>👥 Group Size: {content.groupSize}</div>
-        <div>⭐ Reviews: {content.reviews}</div>
+        <div>Location: {content.location}</div>
+        <div>Duration: {tour.duration}</div>
+        <div>Group Size: {content.groupSize}</div>
+        <div>Reviews: {content.reviews}</div>
       </div>
 
       <div className="tour-detail__container">
         <div className="tour-detail__content">
           <h1>{tour.title}</h1>
-          <p>{tour.description}</p>
+          <p>{description}</p>
 
           <h2>Experience</h2>
           <ul>

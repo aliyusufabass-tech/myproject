@@ -55,10 +55,10 @@ function BookingPage() {
       />
 
       <div className="tour-detail__info-bar">
-        <div>📍 Location: Continuing in Zanzibar</div>
-        <div>⏱ Duration: {tour.duration}</div>
-        <div>👥 Group Size: Max 10</div>
-        <div>⭐ Reviews: 120</div>
+        <div>Location: Continuing in Zanzibar</div>
+        <div>Duration: {tour.duration}</div>
+        <div>Group Size: Max 10</div>
+        <div>Reviews: 120</div>
       </div>
 
       <div className="tour-detail__container">
@@ -79,23 +79,23 @@ function BookingPage() {
             </div>
             <div className="tour-booking__summary-row">
               <span>Full name</span>
-              <span>{formData.name || '—'}</span>
+              <span>{formData.name || 'N/A'}</span>
             </div>
             <div className="tour-booking__summary-row">
               <span>Email</span>
-              <span>{formData.email || '—'}</span>
+              <span>{formData.email || 'N/A'}</span>
             </div>
             <div className="tour-booking__summary-row">
               <span>Phone</span>
-              <span>{formData.phone || '—'}</span>
+              <span>{formData.phone || 'N/A'}</span>
             </div>
             <div className="tour-booking__summary-row">
               <span>Adults</span>
-              <span>{formData.adults || '—'}</span>
+              <span>{formData.adults || 'N/A'}</span>
             </div>
             <div className="tour-booking__summary-row">
               <span>Children</span>
-              <span>{formData.children || '—'}</span>
+              <span>{formData.children || 'N/A'}</span>
             </div>
             <div className="tour-booking__summary-row">
               <span>Child rate</span>

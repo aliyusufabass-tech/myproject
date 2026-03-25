@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react'
+import { Link } from 'react-router-dom'
 import PageMeta from '../components/PageMeta'
 import { safariTours, zanzibarTours } from '../data/tours'
 import homeHeroImage from '../assets/image.jpeg'
@@ -21,7 +22,7 @@ const normalizeSafariCard = (tour) => ({
   image: tour.image,
   price: tour.price,
   rating: tour.rating,
-  detailUrl: tour.detailUrl || '/contact',
+  detailUrl: `/tours/${tour.id}`,
 })
 
 const normalizeExcursionCard = (tour) => ({
@@ -105,9 +106,13 @@ function ToursPage() {
                   <h3>{card.title}</h3>
                   <p>{card.summary}</p>
                   <div className="tour-format-card__footer">
-                    <a href={card.detailUrl} target="_blank" rel="noreferrer">
-                      View Details
-                    </a>
+                    {card.detailUrl?.startsWith('/tours') ? (
+                      <Link to={card.detailUrl}>View Details</Link>
+                    ) : (
+                      <a href={card.detailUrl} target="_blank" rel="noreferrer">
+                        View Details
+                      </a>
+                    )}
                   </div>
                 </div>
               </article>
