@@ -25,8 +25,25 @@ function BookingPage() {
     )
   }
 
-  const childRate = tour.childPrice ?? 10
-  const basePrice = parseFloat(String(tour.price).replace(/[^0-9.]/g, '')) || 0
+  const isSafariTour = safariTours.some((entry) => String(entry.id) === String(tourId))
+  const isZanzibarExcursion = zanzibarTours.some((entry) => String(entry.id) === String(tourId))
+  const tourOrigin = safariTours.find((entry) => String(entry.id) === String(tourId))?.origin
+
+  const parseBasePrice = (priceString) => {
+    const match = String(priceString).match(/[\d.,]+/)
+    if (!match) {
+      return 0
+    }
+    return Number(match[0].replace(/,/g, ''))
+  }
+
+  const basePrice = parseBasePrice(tour.price)
+  const isFromZanzibarOrArusha = isZanzibarExcursion || tourOrigin === 'From Zanzibar' || tourOrigin === 'From Arusha'
+  const deduction = isFromZanzibarOrArusha ? 20 : 10
+  const childRate = isFromZanzibarOrArusha
+    ? Math.max(0, basePrice - deduction)
+    : tour.childPrice ?? Math.max(0, basePrice - deduction)
+
   const adultsCount = Number(formData.adults) || 0
   const childrenCount = Number(formData.children) || 0
   const total = adultsCount * basePrice + childrenCount * childRate

@@ -15,6 +15,15 @@ import blueSafariImage from '../assets/Blue safari.jpeg'
 import prisonIslandImage from '../assets/Prison island.jpeg'
 import jozaniKuzaPajeImage from '../assets/Jozani Forest, Kuza Cave, Paje Beach and Rock Restaurant.jpeg'
 import maalumCaveImage from '../assets/Maalum Cave, Mtende Beach, Paje Beach and Rock Restaurant.jpeg'
+import mikumiDayTripImage from '../assets/Mikumi Day Trip Safari From Zanzibar.jpeg'
+import selousDayTripImage from '../assets/Selous Day Trip Safari From Zanzibar.jpeg'
+import twoDaySelousImage from '../assets/2 Days 1 Night Safari - Selous From Zanzibar.jpeg'
+import twoDayMikumiImage from '../assets/2 Days 1 Night Safari - Mikumi From Zanzibar.jpeg'
+import twoDayNgorongoroImage from '../assets/2 Days 1 Night Safari - Ngorongoro Crater and Tarangire.jpeg'
+import threeDayMikumiImage from '../assets/3 Days 2 Nights Safari - Mikumi From Zanzibar.jpeg'
+import threeDaySerengetiImage from '../assets/3 Days 2 Nights Safari - Serengeti and Ngorongoro From Zanzibar.jpeg'
+import threeDayTarangireImage from '../assets/3 Days 2 Nights Safari - Tarangire and Ngorongoro From Zanzibar.jpeg'
+import fourDaySerengetiImage from '../assets/4 Days 3 Nights Safari - Serengeti, Ngorongoro and Tarangire.jpeg'
 
 export const tours = [
   {
@@ -352,7 +361,7 @@ export const safariTours = [
     price: 'From $450',
     rating: '4.9',
     detailUrl: '/contact',
-    image: 'https://picsum.photos/seed/safari1/1200/800',
+    image: mikumiDayTripImage,
     childPrice: 20,
   },
   {
@@ -366,7 +375,7 @@ export const safariTours = [
     price: 'From $460',
     rating: '4.8',
     detailUrl: '/contact',
-    image: 'https://picsum.photos/seed/safari2/1200/800',
+    image: selousDayTripImage,
     childPrice: 20,
   },
   {
@@ -380,7 +389,7 @@ export const safariTours = [
     price: 'From $700',
     rating: '4.7',
     detailUrl: '/contact',
-    image: 'https://picsum.photos/seed/safari3/1200/800',
+    image: twoDaySelousImage,
     childPrice: 20,
   },
   {
@@ -394,7 +403,7 @@ export const safariTours = [
     price: 'From $600',
     rating: '4.6',
     detailUrl: '/contact',
-    image: 'https://picsum.photos/seed/safari4/1200/800',
+    image: twoDayMikumiImage,
     childPrice: 20,
   },
   {
@@ -408,7 +417,7 @@ export const safariTours = [
     price: 'From $550',
     rating: '4.8',
     detailUrl: '/contact',
-    image: 'https://picsum.photos/seed/safari5/1200/800',
+    image: twoDayNgorongoroImage,
     childPrice: 20,
   },
   {
@@ -422,7 +431,7 @@ export const safariTours = [
     price: 'From $650',
     rating: '4.7',
     detailUrl: '/contact',
-    image: 'https://picsum.photos/seed/safari6/1200/800',
+    image: threeDayMikumiImage,
     childPrice: 20,
   },
   {
@@ -436,7 +445,7 @@ export const safariTours = [
     price: 'From $1470',
     rating: '4.9',
     detailUrl: '/contact',
-    image: 'https://picsum.photos/seed/safari7/1200/800',
+    image: threeDaySerengetiImage,
     childPrice: 20,
   },
   {
@@ -450,7 +459,7 @@ export const safariTours = [
     price: 'From $650',
     rating: '4.7',
     detailUrl: '/contact',
-    image: 'https://picsum.photos/seed/safari8/1200/800',
+    image: threeDayTarangireImage,
     childPrice: 20,
   },
   {
@@ -464,7 +473,7 @@ export const safariTours = [
     price: 'From $1700',
     rating: '4.9',
     detailUrl: '/contact',
-    image: 'https://picsum.photos/seed/safari9/1200/800',
+    image: fourDaySerengetiImage,
     childPrice: 20,
   },
 ]

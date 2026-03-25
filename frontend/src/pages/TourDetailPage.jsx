@@ -369,7 +369,7 @@ Finish the day back in Stone Town, where a local guide leads you through winding
     overview: `Discover a secluded snorkeling spot near Tumbatu, where calm seas, colorful reefs, and serene beaches offer an intimate marine day trip.`,
     note: 'Hotel transfer surcharges depend on location.',
   },
-}
+};
 const defaultContent = {
   location: 'Zanzibar',
   groupSize: 'Max 10',
