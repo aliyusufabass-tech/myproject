@@ -1,5 +1,4 @@
-import { useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import { tours } from '../data/tours'
 
 const tourDetailContent = {
@@ -65,41 +64,11 @@ function TourDetailPage() {
   const { tourId } = useParams()
   const tour = tours.find((entry) => String(entry.id) === String(tourId))
   const content = tourDetailContent[tour?.id] ?? defaultContent
-  const [showForm, setShowForm] = useState(false)
-  const [bookingData, setBookingData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    guests: '',
-    notes: '',
-  })
-  const [confirmation, setConfirmation] = useState(null)
-
-  const handleToggleForm = () => {
-    setShowForm(true)
-    setConfirmation(null)
-  }
-
-  const handleInputChange = (event) => {
-    const { name, value } = event.target
-    setBookingData((prev) => ({ ...prev, [name]: value }))
-  }
-
-  const handleSubmit = (event) => {
-    event.preventDefault()
-    setConfirmation({
-      ...bookingData,
-      tourTitle: tour?.title,
-      price: tour?.price,
-    })
-    setBookingData({
-      name: '',
-      email: '',
-      phone: '',
-      guests: '',
-      notes: '',
-    })
-    setShowForm(false)
+  const navigate = useNavigate()
+  const handleReserve = () => {
+    if (tour) {
+      navigate(`/booking/${tour.id}`)
+    }
   }
 
   if (!tour) {
@@ -152,81 +121,9 @@ function TourDetailPage() {
             <strong>Duration:</strong> {tour.duration}
           </p>
           <div className="tour-detail__price">{tour.price}</div>
-          <button className="tour-detail__btn" type="button" onClick={handleToggleForm}>
+          <button className="tour-detail__btn" type="button" onClick={handleReserve}>
             Reserve Your Spot
           </button>
-          {showForm && (
-            <form className="tour-detail__form" onSubmit={handleSubmit}>
-              <label>
-                Full name
-                <input
-                  name="name"
-                  type="text"
-                  value={bookingData.name}
-                  onChange={handleInputChange}
-                  required
-                />
-              </label>
-              <label>
-                Email
-                <input
-                  name="email"
-                  type="email"
-                  value={bookingData.email}
-                  onChange={handleInputChange}
-                  required
-                />
-              </label>
-              <label>
-                Phone number
-                <input
-                  name="phone"
-                  type="tel"
-                  value={bookingData.phone}
-                  onChange={handleInputChange}
-                />
-              </label>
-              <label>
-                Guests
-                <input
-                  name="guests"
-                  type="number"
-                  min="1"
-                  value={bookingData.guests}
-                  onChange={handleInputChange}
-                />
-              </label>
-              <label>
-                Notes / requests
-                <textarea
-                  name="notes"
-                  value={bookingData.notes}
-                  onChange={handleInputChange}
-                  rows="3"
-                />
-              </label>
-              <button className="tour-detail__form-btn" type="submit">
-                Confirm Booking
-              </button>
-            </form>
-          )}
-          {confirmation && (
-            <div className="tour-detail__confirmation">
-              <p>Your booking request is confirmed:</p>
-              <p>
-                <strong>Tour:</strong> {confirmation.tourTitle}
-              </p>
-              <p>
-                <strong>Name:</strong> {confirmation.name}
-              </p>
-              <p>
-                <strong>Email:</strong> {confirmation.email}
-              </p>
-              <p>
-                <strong>Price:</strong> {confirmation.price}
-              </p>
-            </div>
-          )}
         </div>
       </div>
     </section>
