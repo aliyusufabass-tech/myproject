@@ -286,6 +286,270 @@ Mikumi is home to lions, elephants, giraffes, zebras, buffaloes, and a wide vari
 Return to the airstrip in the late afternoon for your flight back to Zanzibar, closing the day with unforgettable memories of Tanzania’s wildlife and landscapes.`,
     note: 'Flight times and pickup schedules depend on seasonal availability.',
   },
+  'safari-2': {
+    location: 'Selous Game Reserve Day Trip Safari',
+    groupSize: 'Max 20',
+    reviews: 'New package',
+    experiences: [
+      'Full-day safari in one of Africa\'s largest wildlife reserves',
+      'Chances to see elephants, lions, giraffes, hippos, and more',
+      'Scenic bush lunch surrounded by wilderness',
+      'Explore diverse landscapes with a professional guide',
+    ],
+    includes: [
+      'Return flight from Zanzibar to Selous',
+      'All park fees and activities',
+      'Bush lunch',
+      'Professional driver/guide',
+      'All taxes and VAT',
+      'Hotel pick-up and drop-off',
+    ],
+    overview: `Early Morning Departure (4:30 AM)
+Your guide picks you up from the hotel and transfers you to Zanzibar Airport for the flight to Selous Game Reserve. After the short flight, you meet your professional safari guide and begin your wildlife adventure.
+
+Morning Game Drive (7:00 AM – 12:00 PM)
+Roam through Selous' varied habitats—open plains, riverine forests, and lagoon areas—looking for elephants, lions, giraffes, hippos, crocodiles, and abundant birdlife while your guide shares local knowledge.
+
+Lunch in the Bush
+Pause for a bush lunch in a scenic clearing before continuing with afternoon activities.
+
+Afternoon Safari & Optional Boat Safari
+Choose between another game drive or an optional boat safari along the Rufiji River to discover wildlife from a different perspective.
+
+Return to Zanzibar (Evening Flight)
+Transfer back to the airstrip for the evening flight to Zanzibar, ending the day with unforgettable memories of Selous Game Reserve.`,
+    note: 'All times are approximate and may change depending on flight schedules or park conditions.',
+  },
+  'safari-3': {
+    location: 'Selous Game Reserve 2 Days / 1 Night',
+    groupSize: 'Max 20',
+    reviews: 'New package',
+    experiences: [
+      'Scenic flight from Zanzibar to Selous Game Reserve',
+      'Full-day safari with chances to see elephants, lions, giraffes, and more on Day 1',
+      'Sunrise game drive on Day 2',
+      'Overnight stay in a safari lodge or camp',
+    ],
+    includes: [
+      'Return flights from Zanzibar to Selous',
+      'All safari game drives (4x4 vehicle)',
+      'Professional safari guide',
+      'Park fees and conservation charges',
+      'Lunch (Day 1) and breakfast (Day 2)',
+      '1-night accommodation in lodge/camp',
+      'Bottled drinking water',
+      'Airstrip and hotel transfers',
+      'Hotel pick-up and drop-off',
+    ],
+    overview: `Day 1: Zanzibar to Selous & Full-Day Safari
+Early Morning Departure
+Your guide collects you from the hotel and transfers you to Zanzibar Airport for the scenic flight to Selous Game Reserve, one of Africa's most untouched wildlife areas.
+
+Arrival & Safari Briefing
+Meet your safari guide upon landing for a short briefing before heading out into the reserve for a full-day game drive across open savannahs, woodlands, lakes, and riverbanks. Look for elephants, lions, giraffes, buffaloes, hippos, crocodiles, zebras, wildebeests, and a rich array of birdlife.
+
+Bush Lunch and Afternoon Safari
+Enjoy a bush lunch surrounded by nature, then continue exploring Selous as the afternoon activity brings more wildlife opportunities. In the evening transfer to your lodge or camp for dinner and an overnight stay in the heart of the wilderness.
+
+Day 2: Morning Safari & Return to Zanzibar
+Early Morning Safari
+Start before sunrise for a morning game drive when wildlife tends to be most active.
+
+Breakfast at the Lodge
+Return to camp for a leisurely breakfast.
+
+Return to Zanzibar
+Transfer to the airstrip for the mid-morning flight back to Zanzibar and then on to your hotel.`,
+    note: 'All times are approximate and may change depending on flight schedules or park conditions.',
+  },
+  'safari-4': {
+    location: 'Mikumi National Park 2 Days / 1 Night',
+    groupSize: 'Max 20',
+    reviews: 'New package',
+    experiences: [
+      'Unique ferry and SGR train travel experience',
+      'Afternoon and morning safari game drives',
+      'Overnight stay in a safari lodge or camp',
+      'Exciting wildlife experience in Mikumi National Park',
+    ],
+    includes: [
+      'Ferry and SGR train tickets',
+      'Safari game drives',
+      'Accommodation and meals',
+      'Park fees and professional guide',
+    ],
+    overview: `Day 1: Zanzibar → Dar → Mikumi
+Hotel Pick-Up (5:20 AM)
+Start with an early pickup from your hotel (time varies by location), then transfer to the ferry terminal in Stone Town. Board the 7:00 AM ferry to Dar es Salaam and arrive around 9:00 AM.
+
+Transfer to SGR Station
+Take the short drive to the SGR train station, board the 9:30 AM train to Morogoro, and enjoy the comfort of the journey, arriving around 11:45 AM.
+
+Drive to Mikumi & Safari (12:30 PM)
+Meet your safari guide in Morogoro and continue to Mikumi National Park. After lunch, head into the reserve for an afternoon game drive before settling in at your lodge or camp for dinner and an overnight stay in the wild.
+
+Day 2: Mikumi → Morogoro → Dar → Zanzibar
+Morning Game Drive
+Rise early for a sunrise game drive, wrapping up near midday.
+
+Return to Morogoro & Train (4:00 PM)
+Return to Morogoro, board the SGR train back to Dar es Salaam, then transfer to the airport for the evening flight to Zanzibar.`,
+    note: 'All times are approximate and may change depending on schedules and conditions.',
+  },
+  'safari-5': {
+    location: '2 Days 1 Night Safari - Ngorongoro Crater and Tarangire',
+    groupSize: 'Max 20',
+    reviews: 'New package',
+    experiences: [
+      'Visit Tarangire National Park, known for large elephant herds',
+      'Scenic game drives with picnic lunches',
+      'Overnight stay near Ngorongoro Crater with crater rim views',
+      'Big Five-focused morning drive in Ngorongoro Crater',
+    ],
+    includes: [
+      '4x4 safari vehicle with professional guide',
+      '1-night accommodation near Ngorongoro',
+      'Game drives in Tarangire and Ngorongoro',
+      'Picnic lunches',
+      'Park entrance fees',
+      'Hotel pick-up and drop-off',
+    ],
+    overview: `Day 1: Arusha → Tarangire → Ngorongoro
+Begin with an early hotel or airport pickup in Arusha. Drive to Tarangire National Park for a morning game drive followed by a picnic lunch and a short afternoon drive. After enjoying the park's elephants, giraffes, zebras, lions, and baobab trees, continue to the Ngorongoro Conservation Area for dinner and overnight near the crater rim.
+
+Day 2: Ngorongoro Crater → Arusha
+After breakfast descend into Ngorongoro Crater for a morning game drive, seeking rhinos, lions, elephants, hippos, wildebeests, and abundant birdlife. Following the safari, ascend from the crater and drive back to Arusha for hotel or airport drop-off.`,
+    note: 'Tips are recommended (approx. $15 per person per day). Hotel pick-up/drop-off depends on location.',
+  },
+  'safari-6': {
+    location: '3 Days 2 Nights Safari - Mikumi From Zanzibar',
+    groupSize: 'Max 20',
+    reviews: 'New package',
+    experiences: [
+      'Cultural visit to a Maasai village with traditional dances',
+      'Scenic SGR train journey across Tanzania',
+      'Full-day safari game drive in Mikumi National Park',
+      'Combination of wildlife adventure and cultural immersion',
+    ],
+    includes: [
+      'Ferry transfers (Zanzibar ↔ Mainland)',
+      'SGR train tickets (round trip)',
+      '2 nights accommodation (lodge/camp)',
+      'Safari game drives as per itinerary',
+      'Maasai village cultural experience',
+      'Meals during safari and travel',
+      'Professional guide services',
+      'Hotel pick-up and drop-off',
+    ],
+    overview: `Day 1: Zanzibar → Dar → Mikumi + Maasai Village
+Hotel Pick-Up (05:00 AM)
+Begin with a hotel pickup, followed by the 7:00 AM ferry from Stone Town to Dar es Salaam. Transfer to the SGR station and board the 9:30 AM train to Morogoro, where breakfast is served on board.
+
+Drive to Mikumi (12:30 PM)
+Meet your safari guide in Morogoro, transfer to Mikumi National Park, check into your lodge, have lunch, and relax.
+
+Maasai Village Visit (4:00 PM)
+Visit a Maasai village for cultural performances, traditional dances, and insights into their day-to-day life. Return to your lodge for dinner and overnight.
+
+Day 2: Full-Day Safari Game Drive
+Spend the day exploring Mikumi National Park, following wildlife trails with a picnic lunch inside the park. Head back to the lodge for evening dinner and rest.
+
+Day 3: Return to Zanzibar
+Morning Transfer
+Drive back to Morogoro and board the SGR train to Dar es Salaam. From there, take the ferry back to Zanzibar and finish with a hotel transfer.`,
+    note: 'All times are approximate and may change depending on schedules and conditions.',
+  },
+  'safari-7': {
+    location: '3 Days 2 Nights Safari - Serengeti & Ngorongoro From Zanzibar',
+    groupSize: 'Max 20',
+    reviews: 'New package',
+    experiences: [
+      'Flight from Zanzibar to Serengeti with scenic views',
+      'Full-day safari in Serengeti National Park',
+      'Ngorongoro Crater game drive with chances to see the Big Five',
+      'Combination of two iconic safari destinations',
+    ],
+    includes: [
+      'Return flights (Zanzibar ↔ Arusha)',
+      'Airport pick-up and drop-off in Arusha',
+      '4x4 safari vehicle with professional guide',
+      'Accommodation with meals (dinner, breakfast, selected lunches)',
+      'Park entrance fees (Serengeti & Ngorongoro)',
+      'Game drives with picnic lunches',
+      'Bottled drinking water',
+      'Hotel pick-up and drop-off',
+    ],
+    overview: `Day 1: Zanzibar → Serengeti
+Begin with an early morning flight from Zanzibar to Arusha. On arrival, transfer to Serengeti National Park and head into the reserve for an afternoon game drive across the vast plains in search of lions, elephants, giraffes, and zebras. Spend the night at a lodge or camp inside the Serengeti.
+
+Day 2: Serengeti Game Drive → Ngorongoro
+Enjoy a full-day game drive in Serengeti National Park, then in the late afternoon transfer to the Ngorongoro Conservation Area and check in at a lodge on the crater rim for dinner and overnight stay.
+
+Day 3: Ngorongoro Crater → Zanzibar
+Descend into Ngorongoro Crater for a morning game drive with opportunities to spot the Big Five, then transfer back to Arusha for your flight to Zanzibar.`,
+    note: 'Tips recommended (approx. $15 per person per day). Hotel pick-up/drop-off depends on location.',
+  },
+  'safari-8': {
+    location: '3 Days 2 Nights Safari - Tarangire and Ngorongoro From Zanzibar',
+    groupSize: 'Max 20',
+    reviews: 'New package',
+    experiences: [
+      'Explore Tarangire National Park, famous for elephants and baobab trees',
+      'Full-day game drives with diverse wildlife viewing',
+      'Visit Ngorongoro Crater and spot the Big Five',
+      'Enjoy scenic picnic lunch near the hippo pool',
+    ],
+    includes: [
+      'Return flights (Zanzibar ↔ Arusha)',
+      '4x4 safari vehicle with professional guide',
+      'Accommodation in Karatu (with meals)',
+      'Park entrance fees (Tarangire & Ngorongoro)',
+      'Game drives with picnic lunches',
+      'Bottled drinking water',
+      'Hotel pick-up and drop-off',
+    ],
+    overview: `Day 1: Zanzibar → Arusha → Tarangire → Karatu
+Start with an early morning flight from Zanzibar to Arusha. On arrival, meet your guide and drive to Tarangire National Park for a full-day game drive and picnic lunch among elephants, giraffes, zebras, and buffaloes. In the late afternoon transfer to Karatu for dinner and overnight.
+
+Day 2: Ngorongoro Crater Game Drive
+After breakfast travel to Ngorongoro Crater for a full-day exploration of the crater floor, looking for the Big Five. Enjoy a picnic lunch near the hippo pool before returning to Karatu for dinner and an overnight stay.
+
+Day 3: Return to Zanzibar
+After breakfast drive back to Arusha and board your return flight to Zanzibar, followed by a transfer to your hotel.`,
+    note: 'Tips recommended (approx. $15 per person per day). Hotel pick-up/drop-off depends on location.',
+  },
+  'safari-9': {
+    location: '4 Days 3 Nights Safari - Serengeti, Ngorongoro and Tarangire',
+    groupSize: 'Max 20',
+    reviews: 'New package',
+    experiences: [
+      'Explore Tarangire with large elephant herds',
+      'Discover the vast Serengeti plains and diverse wildlife',
+      'Stay near the Ngorongoro crater rim with stunning views',
+      'Game drive inside Ngorongoro Crater to spot the Big Five',
+    ],
+    includes: [
+      'Hotel/airport pick-up and drop-off in Arusha',
+      '4x4 safari vehicle with professional driver-guide',
+      'Accommodation with meals (dinner, breakfast, selected lunches)',
+      'Park entrance fees (Tarangire, Serengeti & Ngorongoro)',
+      'Game drives as per itinerary',
+      'Picnic lunches during safaris',
+      'Bottled drinking water',
+    ],
+    overview: `Day 1: Arusha → Tarangire → Karatu
+Begin with a pickup from your hotel or airport in Arusha and drive to Tarangire National Park. Enjoy a game drive with opportunities to spot elephants, giraffes, zebras, and baobab trees, followed by a picnic lunch before continuing to Karatu for dinner and an overnight stay.
+
+Day 2: Karatu → Serengeti National Park
+After breakfast travel through the Ngorongoro highlands to Serengeti National Park, embarking on game drives across the iconic plains before settling into your lodge or tented camp for dinner and overnight.
+
+Day 3: Serengeti → Ngorongoro Conservation Area
+Start with an early morning game drive in Serengeti, then transfer toward Ngorongoro Conservation Area, arriving at a lodge on the crater rim for dinner and overnight with sweeping views.
+
+Day 4: Ngorongoro Crater → Arusha
+Descend into Ngorongoro Crater for a half-day game drive, enjoy a picnic lunch near the hippo pool, and drive back to Arusha for hotel or airport drop-off.`,
+    note: 'Tips recommended (approx. $15 per person per day). Hotel pick-up/drop-off depends on location.',
+  },
   'half-1': {
     location: 'Stone Town',
     groupSize: 'Max 30',
