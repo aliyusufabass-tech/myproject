@@ -94,11 +94,11 @@ The tour then transforms into a cooking session where local chefs help you prepa
       'Bottled water during the tour',
       'Transfer between Stone Town and the Spice Farm',
     ],
-    overview: `The morning begins with a pickup for a brisk walk through Stone Town’s historic quarter, where you learn about the city’s trade routes, architecture, and cultural fusion before the crowds arrive.
+    overview: `Your day starts with a morning pickup and a relaxed walk through Stone Town. You will explore the old streets, learn about the town’s history, culture, and how people lived and traded in the past, all before it gets crowded.
 
-After the urban stroll, you visit a nearby spice plantation to see how cloves, cardamom, cinnamon, and nutmeg are cultivated and used in local kitchens and remedies, complete with fragrant tasting samples.
+After that, you will visit a nearby spice farm where you will see how spices like cloves, cinnamon, cardamom, and nutmeg are grown and used. You will also smell and taste fresh spices during the tour.
 
-The experience ends with a hearty Zanzibari lunch cooked using the farm’s produce, giving you a flavorful farewell before returning to your accommodations.`,
+At the end, enjoy a delicious Zanzibari lunch made with fresh ingredients from the farm before returning to your hotel.`,
   },
   'full-3': {
     location: 'Jozani Forest, Spice Farm & Stone Town',
@@ -145,7 +145,7 @@ In the afternoon, journey to Stone Town for a guided historical tour through its
 
 Then relax at Nakupenda Sandbank, lounging on pearly sand, cooling off in clear shallows, and savoring a freshly grilled seafood lunch served nearby.
 
-Finish the day back in Stone Town, where a local guide leads you through winding lanes, markets, and landmarks that highlight the island’s layered past.`,
+Finish the day back in Stone Town, where a local guide leads you through winding lanes, markets, and landmarks that highlight the island's layered past.`,
     note: 'Hotel pickup/drop-off charges depend on your accommodation.',
   },
   'full-5': {
@@ -165,7 +165,9 @@ Finish the day back in Stone Town, where a local guide leads you through winding
       'Soft drinks and mineral water',
       'Marine conservation fees and taxes',
     ],
-    overview: `Set sail from Fumba Fishing Village for a classic Blue Safari day. Glide across turquoise water, unwind on a secluded sandbank, then plunge into colorful snorkeling spots teeming with tropical life. Later, anchor near Kwale Island for a fire-grilled seafood lunch and toast the day beside Zanzibar’s famous baobab before heading home.`,
+    overview: `Start your trip from Fumba Fishing Village for a relaxing Blue Safari experience. Cruise across clear turquoise waters and stop at a quiet sandbank where you can relax and enjoy the peaceful surroundings.
+
+Then go snorkeling in beautiful spots full of colorful fish and coral reefs. Later, head to Kwale Island, where you will enjoy a fresh seafood lunch prepared on the beach. You can also relax near the famous baobab tree before heading back to your hotel.`,
     note: 'Hotel pickup/drop-off fees vary by hotel location.',
   },
   'full-6': {
@@ -185,7 +187,7 @@ Finish the day back in Stone Town, where a local guide leads you through winding
       'Tropical fruits and water',
       'Marine park fees',
     ],
-    overview: `Head south from Kizimkazi for a marine adventure around Pungume. The boat ride offers a strong chance of dolphin sightings, and you can dive into clear water to swim near them. After splashing in the reef, unwind on the island’s white sand while enjoying a freshly prepared lunch beneath the shade.`,
+    overview: `Head south from Kizimkazi for a marine adventure around Pungume. The boat ride offers a strong chance of dolphin sightings, and you can dive into clear water to swim near them. After splashing in the reef, unwind on the island's white sand while enjoying a freshly prepared lunch beneath the shade.`,
     note: 'Pickup and drop-off surcharges are based on hotel location.',
   },
   'full-7': {
@@ -225,7 +227,11 @@ Finish the day back in Stone Town, where a local guide leads you through winding
       'Drinking water',
       'All government fees',
     ],
-    overview: `Begin with a scenic pickup to Jozani Forest, where your guide leads a nature walk through mangroves and wildlife zones. Continue east to Kuza Cave for a refreshing swim, then enjoy free time at Paje Beach. Cap the day with a table at the famed Rock Restaurant perched above the sea.`,
+    overview: `Start your day with a pickup and head to Jozani Chwaka Bay National Park, where your guide will take you on a nature walk through the forest and mangrove areas while spotting wildlife.
+
+After that, continue to Kuza Cave for a refreshing swim in its clear natural water. Then enjoy some free time relaxing at Paje Beach.
+
+End your day with a visit to The Rock Restaurant, where you can enjoy a meal with amazing ocean views before returning to your hotel.`,
     note: 'Pickup/drop-off fees change based on hotel zone.',
   },
   'full-9': {
@@ -245,21 +251,52 @@ Finish the day back in Stone Town, where a local guide leads you through winding
       'Mineral water',
       'All government fees',
     ],
-    overview: `Enjoy a day that blends cave swimming, quiet beaches, and iconic dining. Start at Maalum Cave’s freshwater pool, head to Mtende for seaside serenity, wander Paje Beach’s white sand, and finish with breathtaking coastal cuisine at the Rock Restaurant.`,
+    overview: `Spend a full day exploring Zanzibar's beautiful coastline with a mix of adventure and relaxation. Start at Maalum Cave, where you can swim in clear natural water in a calm and peaceful place.
+
+Then visit Mtende Beach, known for its big rocks and quiet environment, perfect for relaxing. Continue to Paje Beach, where you can enjoy white sand, blue water, and a lively beach atmosphere.
+
+End your day at The Rock Restaurant, where you can enjoy a meal with amazing ocean views before returning to your hotel.`,
     note: 'Extra charges for hotel pickup/drop-off apply.',
+  },
+  'safari-1': {
+    location: 'Mikumi National Park Day Trip Safari',
+    groupSize: 'Max 20',
+    reviews: 'New package',
+    experiences: [
+      'Full-day safari from Zanzibar to Mikumi National Park',
+      'Game drive with chances to see lions, elephants, giraffes, and zebras',
+      'Stunning African landscapes and wildlife experience',
+      'Professional safari guide throughout the trip',
+      'Perfect one-day safari escape',
+    ],
+    includes: [
+      'Return flight from Zanzibar to Mikumi',
+      'All park entrance fees',
+      'Safari game drive',
+      'Bush lunch',
+      'Professional driver/guide',
+      'All taxes and VAT',
+      'Hotel pick-up and drop-off',
+    ],
+    overview: `Early Morning Departure (5:00am)
+Your day begins with an early morning transfer from your Zanzibar hotel to the airport, followed by a flight to Mikumi National Park. Upon arrival, your professional safari guide welcomes you and you immediately head into the park for a game drive.
+
+Mikumi is home to lions, elephants, giraffes, zebras, buffaloes, and a wide variety of bird species, all playing out against open plains, acacia woodlands, and distant Uluguru Mountain views. After a few hours of spotting wildlife, pause for a bush lunch in the heart of the wilderness before resuming the safari in the afternoon.
+
+Return to the airstrip in the late afternoon for your flight back to Zanzibar, closing the day with unforgettable memories of Tanzania’s wildlife and landscapes.`,
+    note: 'Flight times and pickup schedules depend on seasonal availability.',
   },
   'half-1': {
     location: 'Stone Town',
     groupSize: 'Max 30',
     reviews: 'Varied reviews',
     experiences: [
-      'Meander through Stone Town’s historic alleys',
-      'See the House of Wonders, Sultan’s Palace, and Freddie Mercury House',
-      'Browse Darajani Market and the Forodhani waterfront',
-      'Hear stories of commerce, architecture, and cultural fusion',
+      'Walk through historic streets',
+      'Visit Forodhani Gardens and the Slave Memorial',
+      'Explore Darajani Market',
     ],
-    includes: ['Guided walk', 'Entrance fee at Slave Memorial Market', 'Mineral water'],
-    overview: `Spend 2-3 hours with a guide who explains Stone Town’s layered history, from its stately palaces to its bustling markets and famous music heritage.`,
+    includes: ['Tour guide', 'Entrance fee', 'Mineral water'],
+    overview: `Enjoy a 2–3 hour guided walk through Stone Town, exploring its narrow streets, historic buildings, and vibrant culture. Visit key landmarks like House of Wonders, Sultan's Palace, and Freddie Mercury House while learning about Zanzibar's rich history and cultural diversity.`,
     note: 'Pickup fees depend on hotel location.',
   },
   'half-2': {
@@ -267,107 +304,161 @@ Finish the day back in Stone Town, where a local guide leads you through winding
     groupSize: 'Max 30',
     reviews: 'Varied reviews',
     experiences: [
-      'Join a two-hour walk through lush spice plantations',
-      'Smell and taste turmeric, cinnamon, cardamom, cloves, and nutmeg',
-      'Learn how spices are harvested and used locally',
+      'Walk through green spice farms with a local guide',
+      'Smell, taste, and learn about a variety of spices',
+      'Experience tropical plants and rainforest surroundings',
       'Shop for fresh spices to take home',
     ],
-    includes: ['Guide services', 'Spice tasting', 'Tropical fruits', 'Drinking water', 'Entrance fees'],
-    overview: `Immerse yourself in Zanzibar’s spice heritage with an expert guide who leads you through aromatic fields and explains traditional uses of each plant.`,
-    note: 'Hotel pickup/drop-off charges vary by location.',
+    includes: ['Guide services', 'Entrance fees', 'Tropical fruits', 'Drinking water', 'All government fees'],
+    overview: `Immerse yourself in Zanzibar's spice heritage with a guided walk through lush plantations. During this approximately two-hour tour, discover, smell, and taste fresh spices such as turmeric, cinnamon, cloves, black pepper, and cardamom while learning how they are used in cooking, medicine, and local traditions.`,
+    note: 'Hotel pick-up/drop-off available at extra cost depending on location. Optional spice lunch ($10 per person).',
   },
   'half-3': {
     location: 'Jozani Forest',
     groupSize: 'Max 25',
     reviews: 'Varied reviews',
     experiences: [
-      'Walk the boardwalk through Jozani’s mangrove habitats',
-      'Spot the red colobus monkeys up close',
-      'See other forest wildlife such as blue monkeys and elephant shrews',
-      'Enjoy guided storytelling about the forest ecosystem',
+      "Visit Zanzibar's only national park",
+      'See the rare red colobus monkeys up close',
+      'Discover diverse wildlife and plant species',
+      'Walk through forest paths and mangrove areas',
     ],
-    includes: ['Guide', 'Entrance fees', 'Drinking water'],
-    overview: `Visit Zanzibar’s only national park to witness unique primates, mangroves, and biodiversity on a peaceful half-day hike.`,
-    note: 'Transport surcharges apply depending on your hotel.',
+    includes: ['Professional tour guide', 'Entrance fees', 'All government taxes', 'Bottled mineral water'],
+    overview: `Explore the natural beauty of Jozani Chwaka Bay National Park, Zanzibar's only national park and home to the rare red colobus monkeys found nowhere else in the world. Walk through lush forest trails, discover unique wildlife such as blue monkeys and elephant shrews, and experience the rich biodiversity of this protected ecosystem, including its fascinating mangrove forests.`,
+    note: 'Hotel pick-up/drop-off available at extra cost depending on location.',
   },
   'half-4': {
     location: 'Nakupenda Sandbank',
     groupSize: 'Max 20',
     reviews: 'Varied reviews',
     experiences: [
-      'Boat out to Nakupenda for white-sand beach time',
-      'Swim, snorkel, and relax with beachfront snacks',
-      'Enjoy a light seafood bite with tropical fruit',
+      'Visit the beautiful Nakupenda Sandbank',
+      'Swim, snorkel, and relax in clear turquoise waters',
+      'Enjoy a peaceful and scenic environment',
+      'Taste a fresh seafood BBQ with tropical fruits',
     ],
-    includes: ['Private boat', 'Snacks', 'Soft drinks', 'Guide', 'Entrance fees'],
-    overview: `Take a short cruise from Stone Town to Nakupenda Sandbank for swimming, snorkeling, and an alfresco snack while surrounded by azure water.`,
-    note: 'Pickup/drop-off fees depend on hotel.',
+    includes: [
+      'Professional tour guide',
+      'Private boat transfer',
+      'Seafood BBQ',
+      'Snorkeling equipment',
+      'Tropical fruits and soft drinks',
+      'All taxes and entrance fees',
+    ],
+    overview: `Take a short boat ride from Stone Town to the stunning Nakupenda Sandbank, a beautiful stretch of white sand surrounded by crystal-clear turquoise waters. Known as "I love you" in Swahili, Nakupenda offers a peaceful escape where you can swim, relax under the sun, and enjoy the natural beauty of Zanzibar.
+
+Spend your time exploring the shallow waters, snorkeling, or simply unwinding in this serene environment. Your experience is completed with a delicious seafood barbecue and fresh tropical fruits, making it a perfect day of relaxation and enjoyment.`,
+    note: 'Hotel pick-up/drop-off available at extra cost depending on location.',
   },
   'half-5': {
     location: 'Prison Island',
     groupSize: 'Max 20',
     reviews: 'New package',
     experiences: [
-      'Boat ride from Stone Town to Prison Island',
+      'Enjoy a short scenic boat ride from Stone Town',
       'See Aldabra giant tortoises and peacocks',
-      'Tour the historic prison facility and learn its stories',
+      'Explore the historic prison site',
+      'Learn about the island’s history and culture',
     ],
-    includes: ['Boat transfer', 'Entrance fees', 'Marine conservation fee', 'Mineral water'],
-    overview: `Embark on a quick boat journey to Prison Island to meet giant tortoises, enjoy the island’s calm atmosphere, and explore its colonial prison buildings.`,
-    note: 'Additional pickup costs apply per hotel location.',
+    includes: [
+      'Professional tour guide',
+      'Entrance fees',
+      'Marine conservation fees',
+      'Private boat transfer',
+      'Bottled mineral water',
+    ],
+    overview: `Take a short 20-minute boat ride from Stone Town to the beautiful Prison Island, surrounded by clear turquoise waters. Upon arrival, explore the island and meet the famous Aldabra giant tortoises, known as some of the largest tortoises in the world.
+
+Discover the historic prison building dating back to the late 19th century and learn about its role in Zanzibar's history. Enjoy the peaceful environment while observing wildlife such as tortoises and peacocks up close.`,
+    note: 'Hotel pick-up/drop-off available at extra cost depending on location.',
   },
   'half-6': {
-    location: 'Coastal Sunset',
+    location: 'Sunset Cruise Tour',
     groupSize: 'Varies',
     reviews: 'Varied reviews',
     experiences: [
-      'Set sail aboard a traditional dhow between 4 PM and 6:30 PM',
-      'Cruise along scenic coasts tailored to your pickup area',
-      'Relax on deck while the sky fills with sunset color',
+      'Cruise on a traditional wooden dhow or ngalawa',
+      "Sail along Zanzibar's scenic coastline",
+      'Enjoy a stunning sunset with colorful skies',
+      'Relax on peaceful waters and capture memorable moments',
     ],
-    includes: ['Dhow cruise', 'Soft drinks', 'Taxes'],
-    overview: `Enjoy a peaceful afternoon on a wooden boat, drifting along Zanzibar’s shores while the sun dips below the horizon.`,
-    note: 'Hotel transfer fees are extra.',
+    includes: ['Traditional wooden boat (dhow/ngalawa)', 'All taxes and entrance fees'],
+    overview: `Enjoy a magical half-day sunset cruise from 4:00 PM to 6:30 PM aboard a traditional wooden boat. Sail along Zanzibar's stunning coastline as you relax on calm waters and take in breathtaking ocean views.
+
+Depending on your location, cruise past the beautiful beaches of Kendwa Beach and Nungwi Beach, the scenic Kae Funk Beach, or the iconic shoreline of Stone Town. Watch as the sun sets over the horizon, painting the sky with vibrant colors for a truly unforgettable experience.`,
+    note: 'The hotel pick-up/drop-off price (extra) depends on hotel location.',
   },
   'half-7': {
     location: 'Blue Lagoon / Starfish',
     groupSize: 'Max 20',
     reviews: 'Varied reviews',
     experiences: [
-      'Ride from Pingwe Beach to the Blue Lagoon area',
-      'Snorkel among bright coral and tropical fish',
-      'Visit the shallow starfish lagoon for photos and calm waters',
-      'Float and rest in the sheltered lagoon afterwards',
+      'Boat ride from Pingwe Beach to Blue Lagoon',
+      'Snorkel among vibrant coral reefs and tropical fish',
+      'Visit the starfish area for photos',
+      'Swim and relax in calm, shallow waters',
     ],
-    includes: ['Private boat', 'Snorkeling gear', 'Tropical fruits', 'Mineral water', 'Guide', 'Entrance fees'],
-    overview: `Cruise from Pingwe to the tranquil Blue Lagoon for snorkeling and starfish viewing, then relax in its sheltered waters before returning to shore.`,
-    note: 'Pickup/drop-off charges depend on hotel location.',
+    includes: [
+      'Private boat',
+      'Snorkeling equipment',
+      'Tropical fruits and mineral water',
+      'Professional tour guide',
+      'All entrance fees and government charges',
+    ],
+    overview: `Start your day with a hotel pickup and transfer to Pingwe Beach near The Rock Restaurant, where your boat begins. Cruise across clear turquoise waters to the beautiful Blue Lagoon Zanzibar for an unforgettable marine experience.
+
+Enjoy snorkeling in crystal-clear waters filled with colorful fish and coral reefs. You will also visit the famous starfish area, where you can observe and take photos of these unique sea creatures in their natural environment. The calm and shallow waters make this tour perfect for swimming, relaxing, and suitable for all ages.`,
+    note: 'Hotel pick-up/drop-off available at extra cost depending on location.',
   },
   'half-8': {
-    location: 'Mnemba Snorkeling',
+    location: 'Mnemba Atoll Dolphin & Snorkeling Tour',
     groupSize: 'Max 25',
     reviews: 'Varied reviews',
     experiences: [
-      'Transfer from Muyuni Beach to Mnemba Atoll',
-      'Snorkel in crystal-clear water with chances to see dolphins',
-      'Pause at a sandbank for sunbathing and starfish spotting (tide dependent)',
+      'Cruise to Mnemba Atoll from Muyuni Beach',
+      'High chance of spotting and swimming with dolphins',
+      'Snorkel among coral reefs and tropical fish',
+      'Optional sandbank and starfish experience (tide dependent)',
     ],
-    includes: ['Boat', 'Snorkeling gear', 'Tropical fruits', 'Drinking water', 'Taxes'],
-    overview: `Spend a half-day exploring the marine-rich Mnemba Atoll, with dolphin watching, reef snorkeling, and optional sandbank visits when the water is calm.`,
-    note: 'Extra hotel pickup fees may apply.',
+    includes: [
+      'Private boat',
+      'Snorkeling equipment',
+      'Tropical fruits',
+      'Drinking water',
+      'All taxes and fees',
+      'Professional tour guide',
+    ],
+    overview: `Begin your adventure with a hotel pickup and transfer to Muyuni Beach, where your boat departs toward Mnemba Atoll. Cruise across crystal-clear waters with a high chance of spotting dolphins, and if conditions allow, you may swim alongside them for a truly unforgettable experience.
+
+At Mnemba, enjoy snorkeling in clear waters filled with vibrant coral reefs and colorful tropical fish. Please note that Mnemba Island is privately owned, so the tour takes place around the island without landing on it.
+
+Depending on the tides, you may also visit a nearby sandbank to relax, swim, and spot starfish in shallow waters. During high tide, these areas may be covered by water.`,
+    note: 'Hotel pick-up/drop-off available at extra cost depending on location.',
   },
   'half-9': {
-    location: 'Tumbatu Island',
+    location: 'Snorkeling Tour Near Tumbatu Island',
     groupSize: 'Max 20',
     reviews: 'Varied reviews',
     experiences: [
-      'Cruise to Tumbatu Island through crystal waters',
-      'Dive and snorkel along vibrant coral reefs',
-      'Chill on the quiet beach and appreciate the secluded scenery',
+      'Cruise to Tumbatu Island through clear turquoise waters',
+      'Snorkel among colorful coral reefs and tropical fish',
+      'Relax in a peaceful and less crowded environment',
+      'Enjoy the natural beauty of Zanzibar\'s coastline',
     ],
-    includes: ['Private boat', 'Snorkeling gear', 'Tropical fruits', 'Drinking water', 'Guide', 'Fees'],
-    overview: `Discover a secluded snorkeling spot near Tumbatu, where calm seas, colorful reefs, and serene beaches offer an intimate marine day trip.`,
-    note: 'Hotel transfer surcharges depend on location.',
+    includes: [
+      'Private boat',
+      'Snorkeling equipment',
+      'Tropical fruits',
+      'Drinking water',
+      'Professional tour guide',
+      'All taxes and fees',
+    ],
+    overview: `Enjoy a relaxing day exploring the beautiful waters around Tumbatu Island. Cruise across clear turquoise sea to one of Zanzibar's best snorkeling spots.
+
+Dive into the ocean and discover colorful coral reefs and tropical fish in a calm and peaceful environment. This tour is perfect for both beginners and experienced swimmers.
+
+After snorkeling, relax on the boat or nearby beach, enjoy the fresh sea breeze, and take in the natural beauty of this quiet and less crowded area.`,
+    note: 'Hotel pick-up/drop-off available at extra cost depending on location.',
   },
 };
 const defaultContent = {

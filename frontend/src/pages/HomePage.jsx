@@ -61,10 +61,9 @@ function HomePage() {
         style={{ '--home-hero-image': `url(${homeHeroImage})` }}
       >
         <div className="container hero__content">
-          <h1>Discover the Beauty of Zanzibar</h1>
+          <h1>Discover Zanzibar: where every wave tells a story, and every step leads to wonder.</h1>
           <p>
-            Zanzibar Excursion Company Ltd curates memorable beach escapes, cultural
-            experiences, and dependable transfers for guests who want to explore the island with ease.
+            Zanzibar Excursion Company Ltd designs authentic island experiences — beach escapes, spice routes, and transfers that flow as smoothly as the tides.
           </p>
           <div className="hero__actions">
             <Button to="/tours">Explore Tours</Button>
