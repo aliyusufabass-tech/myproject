@@ -8,8 +8,8 @@ const filters = [
   { key: 'all', label: 'All' },
   { key: 'half', label: 'Half-day Excursions' },
   { key: 'full', label: 'Full-day Excursions' },
-  { key: 'zanzibar', label: 'From Zanzibar' },
-  { key: 'arusha', label: 'From Arusha' },
+  { key: 'zanzibar', label: 'Safaris From Zanzibar' },
+  { key: 'arusha', label: 'Safaris From Arusha' },
 ]
 
 const normalizeSafariCard = (tour) => ({

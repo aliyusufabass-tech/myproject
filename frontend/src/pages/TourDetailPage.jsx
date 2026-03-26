@@ -1,5 +1,6 @@
-import { useParams, useNavigate } from 'react-router-dom'
-import { safariTours, tours, zanzibarTours } from '../data/tours'
+import { useMemo } from 'react'
+import { Link, useParams, useNavigate } from 'react-router-dom'
+import { safariTours, tours, zanzibarTours, galleryImages as sharedGalleryImages } from '../data/tours'
 
 const tourDetailContent = {
   1: {
@@ -725,6 +726,12 @@ After snorkeling, relax on the boat or nearby beach, enjoy the fresh sea breeze,
     note: 'Hotel pick-up/drop-off available at extra cost depending on location.',
   },
 };
+const mikumiGalleryImages = [
+  'https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1200&q=80',
+  'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80',
+  'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200&q=80',
+  'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80',
+]
 const defaultContent = {
   location: 'Zanzibar',
   groupSize: 'Max 10',
@@ -743,7 +750,7 @@ const createFallbackContent = (tour) => ({
 
 function TourDetailPage() {
   const { tourId } = useParams()
-  const allTours = [...tours, ...zanzibarTours, ...safariTours]
+  const allTours = useMemo(() => [...tours, ...zanzibarTours, ...safariTours], [])
   const tour = allTours.find((entry) => String(entry.id) === String(tourId))
   const navigate = useNavigate()
   const handleReserve = () => {
@@ -763,9 +770,40 @@ function TourDetailPage() {
   const staticContent = tourDetailContent[tour.id]
   const content = staticContent ?? createFallbackContent(tour)
   const description = staticContent?.overview || tour.description || tour.summary || ''
+  const galleryImages = useMemo(() => {
+    const fromStatic = staticContent?.gallery
+    if (fromStatic?.length >= 4) {
+      return fromStatic.slice(0, 4)
+    }
+
+    const idx = tour ? allTours.findIndex((entry) => entry.id === tour.id) : 0
+    const base = sharedGalleryImages.length
+      ? sharedGalleryImages
+      : allTours.map((entry) => entry.image).filter(Boolean)
+    const fallbackBase = base.length ? base : tour?.image ? [tour.image] : []
+    if (!fallbackBase.length) {
+      return []
+    }
+
+    const normalizedIndex = idx % fallbackBase.length
+    return Array.from(
+      { length: 4 },
+      (_, offset) => fallbackBase[(normalizedIndex + offset) % fallbackBase.length]
+    )
+  }, [allTours, sharedGalleryImages, staticContent, tour])
+
+  const moreTours = useMemo(() => {
+    if (!tour) return []
+    const candidates = allTours.filter((entry) => entry.id !== tour.id)
+    const shuffled = [...candidates].sort(() => Math.random() - 0.5)
+    return shuffled.slice(0, 3)
+  }, [allTours, tour])
+
+  const isMikumiTour = Boolean(tour?.title?.toLowerCase().includes('mikumi'))
 
   return (
-    <section className="tour-detail">
+    <>
+      <section className="tour-detail">
       <div
         className="tour-detail__hero"
         style={{
@@ -807,6 +845,9 @@ function TourDetailPage() {
               <li key={item}>{item}</li>
             ))}
           </ul>
+          {content.note && (
+            <p className="tour-detail__note">{content.note}</p>
+          )}
         </div>
 
         <div className="tour-detail__booking">
@@ -821,6 +862,61 @@ function TourDetailPage() {
         </div>
       </div>
     </section>
+      {galleryImages.length > 0 && (
+        <section className="tour-detail__gallery-section">
+          <div className="container">
+            <div className="tour-detail__gallery-heading">
+              <h2>Gallery</h2>
+            </div>
+            <div className="tour-detail__gallery-grid tour-detail__gallery-horizontal">
+              {galleryImages.map((src) => (
+                <figure className="tour-detail__gallery-item" key={src}>
+                  <img src={src} alt={`${tour.title} scene`} />
+                </figure>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+      {moreTours.length > 0 && (
+        <section className="tour-detail__more-tours">
+          <div className="container">
+            <h2>More Wildlife Safaris</h2>
+            <div className="tour-detail__more-grid">
+              {moreTours.map((option) => (
+                <article className="tour-detail__more-card" key={option.id}>
+                  <img src={option.image} alt={option.title} />
+                  <div className="tour-detail__more-content">
+                    <h3>{option.title}</h3>
+                    <p>{option.summary}</p>
+                    <div className="tour-detail__more-footer">
+                      <span>{option.price}</span>
+                      <Link to={`/tours/${option.id}`} className="tour-detail__more-btn">
+                        View details
+                      </Link>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+      {isMikumiTour && (
+        <section className="tour-detail__mikumi-gallery">
+          <div className="container">
+            <h2>Mikumi Through the Lens</h2>
+            <div className="tour-detail__gallery-grid tour-detail__mikumi-gallery-grid">
+              {mikumiGalleryImages.map((src, index) => (
+                <figure className="tour-detail__gallery-item" key={`${src}-${index}`}>
+                  <img src={src} alt={`Mikumi scene ${index + 1}`} />
+                </figure>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+    </>
   )
 }
 
