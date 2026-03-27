@@ -1,6 +1,10 @@
 import { useMemo } from 'react'
 import { Link, useParams, useNavigate } from 'react-router-dom'
 import { safariTours, tours, zanzibarTours, galleryImages as sharedGalleryImages } from '../data/tours'
+import lionFamily from '../assets/46.jpeg'
+import giraffePair from '../assets/47.jpeg'
+import tarangireHerd from '../assets/62.jpeg'
+import wildebeestMigration from '../assets/64.jpeg'
 
 const tourDetailContent = {
   1: {
@@ -549,6 +553,7 @@ Start with an early morning game drive in Serengeti, then transfer toward Ngoron
 
 Day 4: Ngorongoro Crater → Arusha
 Descend into Ngorongoro Crater for a half-day game drive, enjoy a picnic lunch near the hippo pool, and drive back to Arusha for hotel or airport drop-off.`,
+    gallery: [lionFamily, giraffePair, tarangireHerd, wildebeestMigration],
     note: 'Tips recommended (approx. $15 per person per day). Hotel pick-up/drop-off depends on location.',
   },
   'half-1': {
