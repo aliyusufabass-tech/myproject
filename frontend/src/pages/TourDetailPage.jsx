@@ -5,6 +5,49 @@ import lionFamily from '../assets/46.jpeg'
 import giraffePair from '../assets/47.jpeg'
 import tarangireHerd from '../assets/62.jpeg'
 import wildebeestMigration from '../assets/64.jpeg'
+import spiceCookingGallery1 from '../assets/1.jpeg'
+import spiceCookingGallery2 from '../assets/2..jpeg'
+import spiceCookingGallery3 from '../assets/3..jpeg'
+import spiceCookingGallery4 from '../assets/4..jpeg'
+import spiceFarmGuide from '../assets/29.jpeg'
+import spiceFarmStonetownImage from '../assets/Spice Farm and Stonetown.jpeg'
+import stoneTownGallery1 from '../assets/27.jpeg'
+import stoneTownGallery2 from '../assets/background.jpeg'
+import stoneTownGallery3 from '../assets/28.jpeg'
+import stoneTownGallery4 from '../assets/spice-stonetown-4.jpeg'
+import jozaniWalkway from '../assets/5.jpeg'
+import jozaniMangroves from '../assets/6.jpeg'
+import jozaniMonkeys from '../assets/30.jpeg'
+import jozaniColobus from '../assets/jonzaniforest2.jpeg'
+import turquoiseSandbankA from '../assets/9.jpeg'
+import nakupendaSandbank2 from '../assets/13.jpeg'
+import nakupendaAerial1 from '../assets/8.jpeg'
+import nakupendaAerial2 from '../assets/9.jpeg'
+import stoneTownMarket from '../assets/jozani-2.jpeg'
+import prisonTortoise from '../assets/nakupenda-4.jpeg'
+import prisonIslandAerial from '../assets/31.jpeg'
+import prisonIslandPath from '../assets/32.jpeg'
+import prisonIslandWharf from '../assets/33.jpeg'
+import prisonIslandMain from '../assets/Prison island.jpeg'
+import blueSafariLagoon from '../assets/12.jpeg'
+import blueSafariSnorkel from '../assets/14.jpeg'
+import blueSafariDhow from '../assets/16.jpeg'
+import pungumeSnorkelFish from '../assets/38.jpeg'
+import pungumeDolphins from '../assets/image 2.jpeg'
+import mnembaDolphins from '../assets/Mnemba Snorkeling and Dolphins.jpeg'
+import nakupendaSandbankImage from '../assets/Nakupenda Sandbank.jpeg'
+import nakupendaIslandMarket from '../assets/Nakupenda Sandbank, Prison Island and Stonetown.jpeg'
+import mnembaDolphins2 from '../assets/40.jpeg'
+import tumbatuBoat from '../assets/17.jpeg'
+import tumbatuReef1 from '../assets/41.jpeg'
+import tumbatuReef2 from '../assets/42.jpeg'
+import tumbatuReef3 from '../assets/43.jpeg'
+import blueLagoonStarfish from '../assets/39.jpeg'
+import kuzaCaveEntry from '../assets/22.jpeg'
+import rockRestaurantHuts from '../assets/23.jpeg'
+import pajeBeachKites from '../assets/24.jpeg'
+import mtendeAccess from '../assets/25.jpeg'
+import maalumCaveEntrance from '../assets/26.jpeg'
 
 const tourDetailContent = {
   1: {
@@ -76,6 +119,12 @@ const tourDetailContent = {
       'Cultural insights, storytelling, and recipe sharing',
       'Bottled water during the experience',
     ],
+    gallery: [
+      spiceCookingGallery1,
+      spiceCookingGallery2,
+      spiceCookingGallery3,
+      spiceCookingGallery4,
+    ],
     overview: `A driver collects you at the hotel and transports you to a fragrant spice estate for a guided walk through plots of cloves, cinnamon, ginger, vanilla, and cardamom. You can touch, smell, and sample each plant while your guide explains its local uses.
 
 The tour then transforms into a cooking session where local chefs help you prepare Swahili favorites like Pilau, kebabs, and spiced vegetables using the ingredients you just inspected. End the experience by sharing the meal you helped create and hearing more about Zanzibar's food heritage.`,
@@ -99,6 +148,12 @@ The tour then transforms into a cooking session where local chefs help you prepa
       'Bottled water during the tour',
       'Transfer between Stone Town and the Spice Farm',
     ],
+    gallery: [
+      spiceCookingGallery1,
+      spiceCookingGallery4,
+      stoneTownGallery1,
+      stoneTownGallery2,
+    ],
     overview: `Your day starts with a morning pickup and a relaxed walk through Stone Town. You will explore the old streets, learn about the town’s history, culture, and how people lived and traded in the past, all before it gets crowded.
 
 After that, you will visit a nearby spice farm where you will see how spices like cloves, cinnamon, cardamom, and nutmeg are grown and used. You will also smell and taste fresh spices during the tour.
@@ -121,6 +176,12 @@ At the end, enjoy a delicious Zanzibari lunch made with fresh ingredients from t
       'Lunch of local Zanzibari cuisine at the Spice Farm',
       'Drinking water',
       'All government fees',
+    ],
+    gallery: [
+      spiceCookingGallery1,
+      jozaniWalkway,
+      jozaniMangroves,
+      stoneTownGallery2,
     ],
     overview: `Your day begins with a hotel pickup and a scenic drive to Jozani Forest, where you will enjoy a guided walk through the natural habitat of the rare Red Colobus monkeys, mangrove forests, and rich biodiversity.
 
@@ -146,6 +207,12 @@ In the afternoon, journey to Stone Town for a guided historical tour through its
       'Mineral water',
       'All applicable taxes',
     ],
+    gallery: [
+      nakupendaAerial1,
+      nakupendaAerial2,
+      nakupendaSandbankImage,
+      nakupendaIslandMarket,
+    ],
     overview: `Experience the best of Zanzibar with a full-day blend of history, beach time, and culture. Begin with a boat ride to Prison Island to observe the impressive Aldabra tortoise population and learn about the island's historic prison.
 
 Then relax at Nakupenda Sandbank, lounging on pearly sand, cooling off in clear shallows, and savoring a freshly grilled seafood lunch served nearby.
@@ -170,6 +237,12 @@ Finish the day back in Stone Town, where a local guide leads you through winding
       'Soft drinks and mineral water',
       'Marine conservation fees and taxes',
     ],
+    gallery: [
+      turquoiseSandbankA,
+      blueSafariLagoon,
+      blueSafariSnorkel,
+      blueSafariDhow,
+    ],
     overview: `Start your trip from Fumba Fishing Village for a relaxing Blue Safari experience. Cruise across clear turquoise waters and stop at a quiet sandbank where you can relax and enjoy the peaceful surroundings.
 
 Then go snorkeling in beautiful spots full of colorful fish and coral reefs. Later, head to Kwale Island, where you will enjoy a fresh seafood lunch prepared on the beach. You can also relax near the famous baobab tree before heading back to your hotel.`,
@@ -192,6 +265,12 @@ Then go snorkeling in beautiful spots full of colorful fish and coral reefs. Lat
       'Tropical fruits and water',
       'Marine park fees',
     ],
+    gallery: [
+      pungumeSnorkelFish,
+      pungumeDolphins,
+      mnembaDolphins,
+      nakupendaSandbankImage,
+    ],
     overview: `Head south from Kizimkazi for a marine adventure around Pungume. The boat ride offers a strong chance of dolphin sightings, and you can dive into clear water to swim near them. After splashing in the reef, unwind on the island's white sand while enjoying a freshly prepared lunch beneath the shade.`,
     note: 'Pickup and drop-off surcharges are based on hotel location.',
   },
@@ -212,6 +291,12 @@ Then go snorkeling in beautiful spots full of colorful fish and coral reefs. Lat
       'Tropical fruits and soft drinks',
       'Aquarium access and government fees',
     ],
+    gallery: [
+      pungumeSnorkelFish,
+      mnembaDolphins2,
+      pungumeDolphins,
+      mnembaDolphins,
+    ],
     overview: `Your day starts from Muyuni Beach with a transfer to Mnemba Atoll, where you snorkel among vibrant corals and keep watch for dolphins. The tour then swings by the Turtle Aquarium for up-close encounters before finishing with leisure time at the stunning Kendwa Beach.`,
     note: 'Hotel pickup/drop-off is extra and depends on location.',
   },
@@ -231,6 +316,12 @@ Then go snorkeling in beautiful spots full of colorful fish and coral reefs. Lat
       'Lunch or dinner with drinks',
       'Drinking water',
       'All government fees',
+    ],
+    gallery: [
+      jozaniMangroves,
+      kuzaCaveEntry,
+      rockRestaurantHuts,
+      pajeBeachKites,
     ],
     overview: `Start your day with a pickup and head to Jozani Chwaka Bay National Park, where your guide will take you on a nature walk through the forest and mangrove areas while spotting wildlife.
 
@@ -255,6 +346,12 @@ End your day with a visit to The Rock Restaurant, where you can enjoy a meal wit
       'Lunch or supper at the Rock Restaurant',
       'Mineral water',
       'All government fees',
+    ],
+    gallery: [
+      maalumCaveEntrance,
+      mtendeAccess,
+      pajeBeachKites,
+      rockRestaurantHuts,
     ],
     overview: `Spend a full day exploring Zanzibar's beautiful coastline with a mix of adventure and relaxation. Start at Maalum Cave, where you can swim in clear natural water in a calm and peaceful place.
 
@@ -566,6 +663,12 @@ Descend into Ngorongoro Crater for a half-day game drive, enjoy a picnic lunch n
       'Explore Darajani Market',
     ],
     includes: ['Tour guide', 'Entrance fee', 'Mineral water'],
+    gallery: [
+      stoneTownGallery1,
+      stoneTownGallery2,
+      stoneTownGallery3,
+      stoneTownGallery4,
+    ],
     overview: `Enjoy a 2–3 hour guided walk through Stone Town, exploring its narrow streets, historic buildings, and vibrant culture. Visit key landmarks like House of Wonders, Sultan's Palace, and Freddie Mercury House while learning about Zanzibar's rich history and cultural diversity.`,
     note: 'Pickup fees depend on hotel location.',
   },
@@ -580,6 +683,12 @@ Descend into Ngorongoro Crater for a half-day game drive, enjoy a picnic lunch n
       'Shop for fresh spices to take home',
     ],
     includes: ['Guide services', 'Entrance fees', 'Tropical fruits', 'Drinking water', 'All government fees'],
+    gallery: [
+      spiceCookingGallery1,
+      spiceCookingGallery4,
+      spiceFarmGuide,
+      spiceFarmStonetownImage,
+    ],
     overview: `Immerse yourself in Zanzibar's spice heritage with a guided walk through lush plantations. During this approximately two-hour tour, discover, smell, and taste fresh spices such as turmeric, cinnamon, cloves, black pepper, and cardamom while learning how they are used in cooking, medicine, and local traditions.`,
     note: 'Hotel pick-up/drop-off available at extra cost depending on location. Optional spice lunch ($10 per person).',
   },
@@ -594,6 +703,12 @@ Descend into Ngorongoro Crater for a half-day game drive, enjoy a picnic lunch n
       'Walk through forest paths and mangrove areas',
     ],
     includes: ['Professional tour guide', 'Entrance fees', 'All government taxes', 'Bottled mineral water'],
+    gallery: [
+      jozaniWalkway,
+      jozaniMangroves,
+      jozaniMonkeys,
+      jozaniColobus,
+    ],
     overview: `Explore the natural beauty of Jozani Chwaka Bay National Park, Zanzibar's only national park and home to the rare red colobus monkeys found nowhere else in the world. Walk through lush forest trails, discover unique wildlife such as blue monkeys and elephant shrews, and experience the rich biodiversity of this protected ecosystem, including its fascinating mangrove forests.`,
     note: 'Hotel pick-up/drop-off available at extra cost depending on location.',
   },
@@ -637,6 +752,12 @@ Spend your time exploring the shallow waters, snorkeling, or simply unwinding in
       'Private boat transfer',
       'Bottled mineral water',
     ],
+    gallery: [
+      prisonIslandAerial,
+      prisonIslandPath,
+      prisonIslandWharf,
+      prisonIslandMain,
+    ],
     overview: `Take a short 20-minute boat ride from Stone Town to the beautiful Prison Island, surrounded by clear turquoise waters. Upon arrival, explore the island and meet the famous Aldabra giant tortoises, known as some of the largest tortoises in the world.
 
 Discover the historic prison building dating back to the late 19th century and learn about its role in Zanzibar's history. Enjoy the peaceful environment while observing wildlife such as tortoises and peacocks up close.`,
@@ -653,6 +774,12 @@ Discover the historic prison building dating back to the late 19th century and l
       'Relax on peaceful waters and capture memorable moments',
     ],
     includes: ['Traditional wooden boat (dhow/ngalawa)', 'All taxes and entrance fees'],
+    gallery: [
+      sunsetDhow1,
+      sunsetDhow2,
+      sunsetDhow3,
+      sunsetDhow4,
+    ],
     overview: `Enjoy a magical half-day sunset cruise from 4:00 PM to 6:30 PM aboard a traditional wooden boat. Sail along Zanzibar's stunning coastline as you relax on calm waters and take in breathtaking ocean views.
 
 Depending on your location, cruise past the beautiful beaches of Kendwa Beach and Nungwi Beach, the scenic Kae Funk Beach, or the iconic shoreline of Stone Town. Watch as the sun sets over the horizon, painting the sky with vibrant colors for a truly unforgettable experience.`,
@@ -674,6 +801,12 @@ Depending on your location, cruise past the beautiful beaches of Kendwa Beach an
       'Tropical fruits and mineral water',
       'Professional tour guide',
       'All entrance fees and government charges',
+    ],
+    gallery: [
+      blueLagoonSnorkel1,
+      blueLagoonSnorkel2,
+      blueLagoonSnorkel3,
+      blueLagoonStarfish,
     ],
     overview: `Start your day with a hotel pickup and transfer to Pingwe Beach near The Rock Restaurant, where your boat begins. Cruise across clear turquoise waters to the beautiful Blue Lagoon Zanzibar for an unforgettable marine experience.
 
@@ -722,6 +855,12 @@ Depending on the tides, you may also visit a nearby sandbank to relax, swim, and
       'Drinking water',
       'Professional tour guide',
       'All taxes and fees',
+    ],
+    gallery: [
+      tumbatuBoat,
+      tumbatuReef1,
+      tumbatuReef2,
+      tumbatuReef3,
     ],
     overview: `Enjoy a relaxing day exploring the beautiful waters around Tumbatu Island. Cruise across clear turquoise sea to one of Zanzibar's best snorkeling spots.
 
