@@ -5,6 +5,15 @@ import lionFamily from '../assets/46.jpeg'
 import giraffePair from '../assets/47.jpeg'
 import tarangireHerd from '../assets/62.jpeg'
 import wildebeestMigration from '../assets/64.jpeg'
+import mikumiLions from '../assets/48.jpeg'
+import mikumiGiraffes from '../assets/49.jpeg'
+import mikumiHerd from '../assets/54.jpeg'
+import mikumiGiraffeGroup from '../assets/55.jpeg'
+import mikumiRhino from '../assets/57.jpeg'
+import selousElephants from '../assets/50.jpeg'
+import selousRhinos from '../assets/51.jpeg'
+import selousHerd from '../assets/52.jpeg'
+import selousBoat from '../assets/53.jpeg'
 import spiceCookingGallery1 from '../assets/1.jpeg'
 import spiceCookingGallery2 from '../assets/2..jpeg'
 import spiceCookingGallery3 from '../assets/3..jpeg'
@@ -37,17 +46,46 @@ import pungumeDolphins from '../assets/image 2.jpeg'
 import mnembaDolphins from '../assets/Mnemba Snorkeling and Dolphins.jpeg'
 import nakupendaSandbankImage from '../assets/Nakupenda Sandbank.jpeg'
 import nakupendaIslandMarket from '../assets/Nakupenda Sandbank, Prison Island and Stonetown.jpeg'
+import nakupendaSandbankScene1 from '../assets/8.jpeg'
+import nakupendaSandbankScene2 from '../assets/9.jpeg'
+import nakupendaSandbankScene3 from '../assets/Nakupenda Sandbank, Prison Island and Stonetown.jpeg'
 import mnembaDolphins2 from '../assets/40.jpeg'
 import tumbatuBoat from '../assets/17.jpeg'
 import tumbatuReef1 from '../assets/41.jpeg'
 import tumbatuReef2 from '../assets/42.jpeg'
 import tumbatuReef3 from '../assets/43.jpeg'
+import tumbatuScene4 from '../assets/44.jpeg'
 import blueLagoonStarfish from '../assets/39.jpeg'
+import blueLagoonScene1 from '../assets/16.jpeg'
+import blueLagoonScene2 from '../assets/20.jpeg'
+import blueLagoonScene3 from '../assets/38.jpeg'
+import mnembaScene1 from '../assets/14.jpeg'
+import mnembaScene2 from '../assets/20.jpeg'
+import mnembaScene3 from '../assets/38.jpeg'
+import mnembaScene4 from '../assets/Mnemba Snorkeling and Dolphins.jpeg'
 import kuzaCaveEntry from '../assets/22.jpeg'
 import rockRestaurantHuts from '../assets/23.jpeg'
 import pajeBeachKites from '../assets/24.jpeg'
 import mtendeAccess from '../assets/25.jpeg'
 import maalumCaveEntrance from '../assets/26.jpeg'
+import sunsetDhowImage from '../assets/Sunset Dhow Cruise.jpeg'
+import sunsetDhowScene1 from '../assets/34.jpeg'
+import sunsetDhowScene2 from '../assets/35.jpeg'
+import sunsetDhowScene3 from '../assets/36.jpeg'
+import sunsetDhowScene4 from '../assets/37.jpeg'
+
+const sunsetDhow1 = sunsetDhowScene1
+const sunsetDhow2 = sunsetDhowScene2
+const sunsetDhow3 = sunsetDhowScene3
+const sunsetDhow4 = sunsetDhowScene4
+
+const blueLagoonSnorkel1 = blueLagoonScene1
+const blueLagoonSnorkel2 = blueLagoonScene2
+const blueLagoonSnorkel3 = blueLagoonScene3
+const mnembaSnorkel1 = mnembaScene1
+const mnembaSnorkel2 = mnembaScene2
+const mnembaSnorkel3 = mnembaScene3
+const mnembaSnorkel4 = mnembaScene4
 
 const tourDetailContent = {
   1: {
@@ -380,6 +418,7 @@ End your day at The Rock Restaurant, where you can enjoy a meal with amazing oce
       'All taxes and VAT',
       'Hotel pick-up and drop-off',
     ],
+    gallery: [lionFamily, giraffePair, mikumiLions, mikumiGiraffes],
     overview: `Early Morning Departure (5:00am)
 Your day begins with an early morning transfer from your Zanzibar hotel to the airport, followed by a flight to Mikumi National Park. Upon arrival, your professional safari guide welcomes you and you immediately head into the park for a game drive.
 
@@ -406,6 +445,7 @@ Return to the airstrip in the late afternoon for your flight back to Zanzibar, c
       'All taxes and VAT',
       'Hotel pick-up and drop-off',
     ],
+    gallery: [selousElephants, selousRhinos, selousHerd, mikumiLions],
     overview: `Early Morning Departure (4:30 AM)
 Your guide picks you up from the hotel and transfers you to Zanzibar Airport for the flight to Selous Game Reserve. After the short flight, you meet your professional safari guide and begin your wildlife adventure.
 
@@ -443,6 +483,7 @@ Transfer back to the airstrip for the evening flight to Zanzibar, ending the day
       'Airstrip and hotel transfers',
       'Hotel pick-up and drop-off',
     ],
+    gallery: [giraffePair, selousRhinos, selousHerd, selousBoat],
     overview: `Day 1: Zanzibar to Selous & Full-Day Safari
 Early Morning Departure
 Your guide collects you from the hotel and transfers you to Zanzibar Airport for the scenic flight to Selous Game Reserve, one of Africa's most untouched wildlife areas.
@@ -543,6 +584,7 @@ After breakfast descend into Ngorongoro Crater for a morning game drive, seeking
       'Professional guide services',
       'Hotel pick-up and drop-off',
     ],
+    gallery: [mikumiLions, mikumiGiraffes, mikumiHerd, mikumiRhino],
     overview: `Day 1: Zanzibar → Dar → Mikumi + Maasai Village
 Hotel Pick-Up (05:00 AM)
 Begin with a hotel pickup, followed by the 7:00 AM ferry from Stone Town to Dar es Salaam. Transfer to the SGR station and board the 9:30 AM train to Morogoro, where breakfast is served on board.
@@ -730,6 +772,12 @@ Descend into Ngorongoro Crater for a half-day game drive, enjoy a picnic lunch n
       'Tropical fruits and soft drinks',
       'All taxes and entrance fees',
     ],
+    gallery: [
+      nakupendaSandbankImage,
+      nakupendaSandbankScene1,
+      nakupendaSandbankScene2,
+      nakupendaSandbankScene3,
+    ],
     overview: `Take a short boat ride from Stone Town to the stunning Nakupenda Sandbank, a beautiful stretch of white sand surrounded by crystal-clear turquoise waters. Known as "I love you" in Swahili, Nakupenda offers a peaceful escape where you can swim, relax under the sun, and enjoy the natural beauty of Zanzibar.
 
 Spend your time exploring the shallow waters, snorkeling, or simply unwinding in this serene environment. Your experience is completed with a delicious seafood barbecue and fresh tropical fruits, making it a perfect day of relaxation and enjoyment.`,
@@ -831,6 +879,12 @@ Enjoy snorkeling in crystal-clear waters filled with colorful fish and coral ree
       'All taxes and fees',
       'Professional tour guide',
     ],
+    gallery: [
+      mnembaSnorkel1,
+      mnembaSnorkel2,
+      mnembaSnorkel3,
+      mnembaSnorkel4,
+    ],
     overview: `Begin your adventure with a hotel pickup and transfer to Muyuni Beach, where your boat departs toward Mnemba Atoll. Cruise across crystal-clear waters with a high chance of spotting dolphins, and if conditions allow, you may swim alongside them for a truly unforgettable experience.
 
 At Mnemba, enjoy snorkeling in clear waters filled with vibrant coral reefs and colorful tropical fish. Please note that Mnemba Island is privately owned, so the tour takes place around the island without landing on it.
@@ -856,6 +910,7 @@ Depending on the tides, you may also visit a nearby sandbank to relax, swim, and
       'Professional tour guide',
       'All taxes and fees',
     ],
+    gallery: [tumbatuReef1, tumbatuReef2, tumbatuReef3, tumbatuScene4],
     gallery: [
       tumbatuBoat,
       tumbatuReef1,
@@ -870,12 +925,6 @@ After snorkeling, relax on the boat or nearby beach, enjoy the fresh sea breeze,
     note: 'Hotel pick-up/drop-off available at extra cost depending on location.',
   },
 };
-const mikumiGalleryImages = [
-  'https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80',
-]
 const defaultContent = {
   location: 'Zanzibar',
   groupSize: 'Max 10',
@@ -942,8 +991,6 @@ function TourDetailPage() {
     const shuffled = [...candidates].sort(() => Math.random() - 0.5)
     return shuffled.slice(0, 3)
   }, [allTours, tour])
-
-  const isMikumiTour = Boolean(tour?.title?.toLowerCase().includes('mikumi'))
 
   return (
     <>
@@ -1041,20 +1088,6 @@ function TourDetailPage() {
                     </div>
                   </div>
                 </article>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-      {isMikumiTour && (
-        <section className="tour-detail__mikumi-gallery">
-          <div className="container">
-            <h2>Mikumi Through the Lens</h2>
-            <div className="tour-detail__gallery-grid tour-detail__mikumi-gallery-grid">
-              {mikumiGalleryImages.map((src, index) => (
-                <figure className="tour-detail__gallery-item" key={`${src}-${index}`}>
-                  <img src={src} alt={`Mikumi scene ${index + 1}`} />
-                </figure>
               ))}
             </div>
           </div>
