@@ -89,6 +89,7 @@ import serengetiHerd from '../assets/54.jpeg'
 import serengetiElephants from '../assets/58.jpeg'
 import serengetiLeopard from '../assets/59.jpeg'
 import serengetiGiraffes from '../assets/56.jpeg'
+import BookingForm from '../components/BookingForm'
 
 const sunsetDhow1 = sunsetDhowScene1
 const sunsetDhow2 = sunsetDhowScene2
@@ -954,6 +955,13 @@ const defaultContent = {
   includes: ['Transport', 'Guide', 'Meals'],
 }
 
+const extractPrice = (value) => {
+  if (!value) return 0
+  const match = value.match(/([\d,]+(\.\d+)?)/)
+  if (!match) return 0
+  return Number(match[1].replace(/,/g, ''))
+}
+
 const createFallbackContent = (tour) => ({
   location: tour.origin ?? defaultContent.location,
   groupSize: tour.maxGuests ?? defaultContent.groupSize,
@@ -1076,9 +1084,20 @@ function TourDetailPage() {
             <strong>Duration:</strong> {tour.duration}
           </p>
           <div className="tour-detail__price">{tour.price}</div>
-          <button className="tour-detail__btn" type="button" onClick={handleReserve}>
-            Reserve Your Spot
-          </button>
+          <BookingForm
+            subject={`Reserve Your Spot - ${tour.title}`}
+            adultPrice={extractPrice(tour.price)}
+            isSafari={/safari/i.test(tour.title)}
+            fields={[
+              { name: 'fullName', label: 'Name', placeholder: 'Full name', required: true },
+              { name: 'email', label: 'Email', type: 'email', placeholder: 'you@email.com', required: true },
+              { name: 'country', label: 'Country', placeholder: 'Country', required: true },
+              { name: 'adults', label: 'Adults', type: 'number', value: '1', min: 1, required: true },
+              { name: 'kids', label: 'Kids', type: 'number', value: '0', min: 0 },
+            ]}
+            hiddenFields={{ tour: tour.title, tourId: tour.id }}
+            buttonText="Reserve Your Spot"
+          />
         </div>
       </div>
     </section>

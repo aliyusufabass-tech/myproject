@@ -304,6 +304,18 @@
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+@media (max-width: 768px) {
+  .tour-detail__gallery-horizontal {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .tour-detail__gallery-horizontal {
+    grid-template-columns: 1fr;
+  }
+}
+
 .tour-detail__gallery-item {
   border-radius: 22px;
   overflow: hidden;
@@ -1048,6 +1060,28 @@ p {
   flex: 1;
 }
 
+.transfers-summary-card {
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+  border-radius: 0.9rem;
+  background: #f0f7ff;
+  border: 1px solid rgba(14, 118, 168, 0.25);
+  font-weight: 500;
+}
+.transfers-summary-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.35rem;
+}
+.success {
+  margin-top: 1.25rem;
+  padding: 1rem 1.25rem;
+  border-radius: 0.9rem;
+  background: #e7f9ee;
+  border: 1px solid #8cd0b0;
+  color: #0f5132;
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.08);
+}
+
 .transfers-submit-btn {
   padding: 0.95rem;
   background: linear-gradient(45deg, #0077b6, #0096c7);
@@ -1182,6 +1216,27 @@ p {
   color: #b91c1c;
   margin-top: 0.5rem;
   font-weight: 500;
+}
+
+.booking-summary {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background: #f0f8ff;
+  border: 1px solid rgba(0, 100, 200, 0.2);
+  font-weight: 500;
+}
+
+.booking-summary h4 {
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+}
+
+.booking-summary small {
+  color: #1f2937;
+  display: block;
+  margin-top: 0.35rem;
+  font-weight: 400;
 }
 
 .contact-info-item {

@@ -14,10 +14,10 @@ function ContactPage() {
   const [error, setError] = useState('')
   const [submitting, setSubmitting] = useState(false)
 
-  const formspreeEndpoint = useMemo(
+  const formsubmitEndpoint = useMemo(
     () =>
-      import.meta.env.VITE_FORMSPREE_ENDPOINT ||
-      'https://formspree.io/f/xqegello',
+      import.meta.env.VITE_FORMSUBMIT_ENDPOINT ||
+      'https://formsubmit.co/info@zanzibarexcursion.com',
     [],
   )
 
@@ -30,14 +30,17 @@ function ContactPage() {
     event.preventDefault()
     setSubmitting(true)
     setError('')
-    fetch(formspreeEndpoint, {
+
+    const payload = new FormData()
+    payload.append('_subject', 'New Contact Booking')
+    payload.append('_captcha', 'false')
+    payload.append('name', form.fullName)
+    payload.append('email', form.email)
+    payload.append('message', form.message)
+
+    fetch(formsubmitEndpoint, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        name: form.fullName,
-        email: form.email,
-        message: form.message,
-      }),
+      body: payload,
     })
       .then((response) => {
         if (!response.ok) {
@@ -45,9 +48,12 @@ function ContactPage() {
         }
         setSent(true)
         setForm(initialForm)
+        setTimeout(() => {
+          window.location.reload()
+        }, 1200)
       })
-      .catch((err) => {
-        setError(err.message)
+      .catch(() => {
+        setError('Could not submit the form right now.')
       })
       .finally(() => setSubmitting(false))
   }
@@ -129,7 +135,7 @@ function ContactPage() {
 
               <div className="contact-info-item">
                 <strong>Email:</strong>
-                <p>booking@yazantours.co.tz</p>
+                <p>info@zanzibarexcursion.com</p>
               </div>
 
               <div className="contact-info-item">
