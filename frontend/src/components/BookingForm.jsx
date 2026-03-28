@@ -133,8 +133,8 @@ const BookingForm = forwardRef(function BookingForm(
       </button>
 
       {status && <p className="form-success">{status}</p>}
-    </form>
-  )
-}
+  </form>
+)
+})
 
 export default BookingForm
