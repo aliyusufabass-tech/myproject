@@ -87,6 +87,7 @@ function ContactPage() {
                     value={form.fullName}
                     onChange={handleChange}
                     required
+                    autoComplete="name"
                   />
                 </div>
 
@@ -99,6 +100,7 @@ function ContactPage() {
                     value={form.email}
                     onChange={handleChange}
                     required
+                    autoComplete="email"
                   />
                 </div>
 

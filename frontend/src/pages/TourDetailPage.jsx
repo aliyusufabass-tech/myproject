@@ -1089,11 +1089,18 @@ function TourDetailPage() {
             adultPrice={extractPrice(tour.price)}
             isSafari={/safari/i.test(tour.title)}
             fields={[
-              { name: 'fullName', label: 'Name', placeholder: 'Full name', required: true },
-              { name: 'email', label: 'Email', type: 'email', placeholder: 'you@email.com', required: true },
-              { name: 'country', label: 'Country', placeholder: 'Country', required: true },
-              { name: 'adults', label: 'Adults', type: 'number', value: '1', min: 1, required: true },
-              { name: 'kids', label: 'Kids', type: 'number', value: '0', min: 0 },
+              { name: 'fullName', label: 'Name', placeholder: 'Full name', required: true, autocomplete: 'name' },
+              {
+                name: 'email',
+                label: 'Email',
+                type: 'email',
+                placeholder: 'you@email.com',
+                required: true,
+                autocomplete: 'email',
+              },
+              { name: 'country', label: 'Country', placeholder: 'Country', required: true, autocomplete: 'country' },
+              { name: 'adults', label: 'Adults', type: 'number', value: '1', min: 1, required: true, autocomplete: 'off' },
+              { name: 'kids', label: 'Kids', type: 'number', value: '0', min: 0, autocomplete: 'off' },
             ]}
             hiddenFields={{ tour: tour.title, tourId: tour.id }}
             buttonText="Reserve Your Spot"

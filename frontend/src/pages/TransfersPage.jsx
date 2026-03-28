@@ -247,6 +247,7 @@ function TransfersPage() {
                   onChange={handleInputChange}
                   placeholder="Full Name"
                   required
+                  autoComplete="name"
                 />
               </div>
               <div className="transfers-form-group">
@@ -259,6 +260,7 @@ function TransfersPage() {
                   onChange={handleInputChange}
                   placeholder="Email"
                   required
+                  autoComplete="email"
                 />
               </div>
               <div className="transfers-form-group">
@@ -271,6 +273,7 @@ function TransfersPage() {
                   onChange={handleInputChange}
                   placeholder="Phone Number"
                   required
+                  autoComplete="tel"
                 />
               </div>
               <div className="transfers-form-group">
@@ -282,6 +285,7 @@ function TransfersPage() {
                   onChange={handleInputChange}
                   placeholder="Country"
                   required
+                  autoComplete="country"
                 />
               </div>
               <div className="transfers-form-group">
@@ -295,27 +299,29 @@ function TransfersPage() {
               <div className="transfers-form-row">
                 <div className="transfers-form-group">
                   <label htmlFor="pickup">Pickup</label>
-                  <input
-                    ref={pickupRef}
-                    id="pickup"
-                    name="pickup"
-                    value={formData.pickup}
-                    onChange={handleInputChange}
-                    placeholder="Pickup location"
-                    required
-                  />
+                <input
+                  ref={pickupRef}
+                  id="pickup"
+                  name="pickup"
+                  value={formData.pickup}
+                  onChange={handleInputChange}
+                  placeholder="Pickup location"
+                  required
+                  autoComplete="off"
+                />
                 </div>
                 <div className="transfers-form-group">
                   <label htmlFor="dropoff">Drop-off</label>
-                  <input
-                    ref={dropRef}
-                    id="dropoff"
-                    name="dropoff"
-                    value={formData.dropoff}
-                    onChange={handleInputChange}
-                    placeholder="Drop-off location"
-                    required
-                  />
+                <input
+                  ref={dropRef}
+                  id="dropoff"
+                  name="dropoff"
+                  value={formData.dropoff}
+                  onChange={handleInputChange}
+                  placeholder="Drop-off location"
+                  required
+                  autoComplete="off"
+                />
                 </div>
               </div>
               <div className="transfers-form-row">
@@ -347,6 +353,7 @@ function TransfersPage() {
                   value={formData.message}
                   onChange={handleInputChange}
                   placeholder="Any special requests?"
+                  autoComplete="off"
                 />
               </div>
               <div className="transfers-summary-card">

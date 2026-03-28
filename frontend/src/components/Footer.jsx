@@ -31,7 +31,7 @@ function Footer() {
           <h4>Contact</h4>
           <p>Stone Town, Zanzibar</p>
           <p>+255 777 123 456</p>
-          <p>hello@zanzibarexcursion.com</p>
+          <p>info@zanzibarexcursion.com</p>
         </div>
       </div>
       <div className="container footer__bottom">

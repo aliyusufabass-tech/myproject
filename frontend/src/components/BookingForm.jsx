@@ -74,6 +74,7 @@ function BookingForm({
               onChange={handleChange}
               placeholder={field.placeholder}
               required={field.required}
+              autoComplete={field.autocomplete ?? 'off'}
             />
           ) : field.options ? (
             <select
@@ -100,6 +101,7 @@ function BookingForm({
               required={field.required}
               min={field.min}
               max={field.max}
+              autoComplete={field.autocomplete ?? 'off'}
             />
           )}
         </div>
