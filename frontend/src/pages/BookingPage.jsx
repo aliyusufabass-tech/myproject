@@ -15,7 +15,9 @@ function BookingPage() {
     adults: '1',
     children: '0',
   })
-  const [confirmed, setConfirmed] = useState(false)
+  const [status, setStatus] = useState('')
+  const [success, setSuccess] = useState(false)
+  const [submitDisabled, setSubmitDisabled] = useState(false)
 
   if (!tour) {
     return (
@@ -58,9 +60,52 @@ function BookingPage() {
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault()
-    setConfirmed(true)
+    if (submitDisabled) {
+      return
+    }
+    setStatus('Sending booking...')
+    setSubmitDisabled(true)
+    const payload = new FormData()
+    payload.append('_subject', `New Booking Request - ${tour.title}`)
+    payload.append('_captcha', 'false')
+    payload.append('tour', tour.title)
+    payload.append('tourId', tour.id)
+    payload.append('duration', tour.duration)
+    payload.append('price', tour.price)
+    payload.append('name', formData.name)
+    payload.append('email', formData.email)
+    payload.append('phone', formData.phone)
+    payload.append('adults', formData.adults)
+    payload.append('children', formData.children)
+
+    try {
+      const response = await fetch('https://formsubmit.co/info@zanzibarexcursion.com', {
+        method: 'POST',
+        body: payload,
+      })
+      if (!response.ok) {
+        throw new Error('Request failed')
+      }
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        adults: '1',
+        children: '0',
+      })
+      setStatus('✅ Booking submitted! We’ll be in touch shortly.')
+      setSuccess(true)
+      setTimeout(() => {
+        setStatus('')
+        setSuccess(false)
+        setSubmitDisabled(false)
+      }, 5000)
+    } catch (error) {
+      setStatus('❌ Unable to send booking. Please try again.')
+      setSubmitDisabled(false)
+    }
   }
 
   return (
@@ -165,21 +210,15 @@ function BookingPage() {
                 onChange={handleChange}
               />
             </label>
-            <button className="tour-detail__form-btn" type="submit">
-              Confirm Booking
+            <button className="tour-detail__form-btn" type="submit" disabled={submitDisabled}>
+              {submitDisabled ? 'Sending…' : 'Confirm Booking'}
             </button>
           </form>
 
-          {confirmed && (
+          {status && <p className="form-success">{status}</p>}
+          {success && (
             <div className="tour-detail__confirmation">
-              <p>
-                Booking confirmed for {formData.name || 'your name'} ({formData.adults || 0} adults,
-                {formData.children || 0} children).
-              </p>
-              <p>
-                {`We will contact you at `}
-                <strong>{formData.email}</strong> {` and confirm the ${formattedTotal} charge.`}
-              </p>
+              <p>We received your booking details and will reply shortly to confirm.</p>
             </div>
           )}
         </div>
