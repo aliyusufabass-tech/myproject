@@ -1,4 +1,4 @@
-import { useMemo, useRef } from 'react'
+import { useMemo } from 'react'
 import { Link, useParams, useNavigate } from 'react-router-dom'
 import { safariTours, tours, zanzibarTours, galleryImages as sharedGalleryImages } from '../data/tours'
 import lionFamily from '../assets/46.jpeg'
@@ -89,7 +89,6 @@ import serengetiHerd from '../assets/54.jpeg'
 import serengetiElephants from '../assets/58.jpeg'
 import serengetiLeopard from '../assets/59.jpeg'
 import serengetiGiraffes from '../assets/56.jpeg'
-import BookingForm from '../components/BookingForm'
 
 const sunsetDhow1 = sunsetDhowScene1
 const sunsetDhow2 = sunsetDhowScene2
@@ -975,7 +974,6 @@ function TourDetailPage() {
   const allTours = useMemo(() => [...tours, ...zanzibarTours, ...safariTours], [])
   const tour = allTours.find((entry) => String(entry.id) === String(tourId))
   const navigate = useNavigate()
-  const bookingFormRef = useRef(null)
   const handleReserve = () => {
     if (tour) {
       navigate(`/booking/${tour.id}`)
@@ -1085,38 +1083,9 @@ function TourDetailPage() {
             <strong>Duration:</strong> {tour.duration}
           </p>
           <div className="tour-detail__price">{tour.price}</div>
-          <button
-            type="button"
-            className="tour-detail__btn tour-detail__btn--primary"
-            onClick={() => {
-              bookingFormRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' })
-            }}
-          >
+          <button className="tour-detail__btn tour-detail__btn--primary" type="button" onClick={handleReserve}>
             Reserve Your Spot
           </button>
-          <BookingForm
-            subject={`Reserve Your Spot - ${tour.title}`}
-            adultPrice={extractPrice(tour.price)}
-            isSafari={/safari/i.test(tour.title)}
-            fields={[
-              { name: 'fullName', label: 'Name', placeholder: 'Full name', required: true, autocomplete: 'name' },
-              {
-                name: 'email',
-                label: 'Email',
-                type: 'email',
-                placeholder: 'you@email.com',
-                required: true,
-                autocomplete: 'email',
-              },
-              { name: 'country', label: 'Country', placeholder: 'Country', required: true, autocomplete: 'country' },
-              { name: 'adults', label: 'Adults', type: 'number', value: '1', min: 1, required: true, autocomplete: 'off' },
-              { name: 'kids', label: 'Kids', type: 'number', value: '0', min: 0, autocomplete: 'off' },
-            ]}
-            hiddenFields={{ tour: tour.title, tourId: tour.id }}
-            buttonText="Reserve Your Spot"
-            formClassName="tour-detail__booking-form"
-            ref={bookingFormRef}
-          />
         </div>
       </div>
     </section>
