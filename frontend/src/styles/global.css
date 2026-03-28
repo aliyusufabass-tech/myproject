@@ -189,6 +189,10 @@
   cursor: pointer;
 }
 
+.tour-detail__btn--primary {
+  margin-bottom: 1rem;
+}
+
 .tour-booking__card {
   background: white;
   padding: 30px;

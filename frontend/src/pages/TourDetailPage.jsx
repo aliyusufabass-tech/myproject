@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+import { useMemo, useRef } from 'react'
 import { Link, useParams, useNavigate } from 'react-router-dom'
 import { safariTours, tours, zanzibarTours, galleryImages as sharedGalleryImages } from '../data/tours'
 import lionFamily from '../assets/46.jpeg'
@@ -975,6 +975,7 @@ function TourDetailPage() {
   const allTours = useMemo(() => [...tours, ...zanzibarTours, ...safariTours], [])
   const tour = allTours.find((entry) => String(entry.id) === String(tourId))
   const navigate = useNavigate()
+  const bookingFormRef = useRef(null)
   const handleReserve = () => {
     if (tour) {
       navigate(`/booking/${tour.id}`)
@@ -1084,6 +1085,15 @@ function TourDetailPage() {
             <strong>Duration:</strong> {tour.duration}
           </p>
           <div className="tour-detail__price">{tour.price}</div>
+          <button
+            type="button"
+            className="tour-detail__btn tour-detail__btn--primary"
+            onClick={() => {
+              bookingFormRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+            }}
+          >
+            Reserve Your Spot
+          </button>
           <BookingForm
             subject={`Reserve Your Spot - ${tour.title}`}
             adultPrice={extractPrice(tour.price)}
@@ -1105,6 +1115,7 @@ function TourDetailPage() {
             hiddenFields={{ tour: tour.title, tourId: tour.id }}
             buttonText="Reserve Your Spot"
             formClassName="tour-detail__booking-form"
+            ref={bookingFormRef}
           />
         </div>
       </div>

@@ -1,8 +1,8 @@
-import { useState, useMemo } from 'react'
+import { forwardRef, useImperativeHandle, useMemo, useState, useRef } from 'react'
 
 const DEFAULT_ENDPOINT = 'https://formsubmit.co/info@zanzibarexcursion.com'
 
-function BookingForm({
+const BookingForm = forwardRef(function BookingForm({
   endpoint,
   subject = 'New Booking Request',
   fields = [],
@@ -61,8 +61,11 @@ function BookingForm({
     }
   }
 
+  const innerRef = useRef(null)
+  useImperativeHandle(ref, () => innerRef.current)
+
   return (
-    <form className={formClassName ?? 'transfers-booking-form'} onSubmit={handleSubmit}>
+    <form ref={innerRef} className={formClassName ?? 'transfers-booking-form'} onSubmit={handleSubmit}>
       {fields.map((field) => (
         <div className="transfers-form-group" key={field.name}>
           {field.label && <label htmlFor={field.name}>{field.label}</label>}
