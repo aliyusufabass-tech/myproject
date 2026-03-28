@@ -73,6 +73,22 @@ import sunsetDhowScene1 from '../assets/34.jpeg'
 import sunsetDhowScene2 from '../assets/35.jpeg'
 import sunsetDhowScene3 from '../assets/36.jpeg'
 import sunsetDhowScene4 from '../assets/37.jpeg'
+import serengetiFlamingos from '../assets/90.jpeg'
+import tarangireFlamingos from '../assets/90.jpeg'
+import tarangireRhino from '../assets/92.jpeg'
+import tarangireZebraFlamingos from '../assets/93.jpeg'
+import tarangireStream from '../assets/94.jpeg'
+import serengetiRhino from '../assets/92.jpeg'
+import serengetiWaterhole from '../assets/93.jpeg'
+import serengetiElephantHerd from '../assets/94.jpeg'
+import tarangireElephants from '../assets/54.jpeg'
+import tarangireZebraHerd from '../assets/55.jpeg'
+import tarangireView from '../assets/61.jpeg'
+import tarangireHerdScene from '../assets/63.jpeg'
+import serengetiHerd from '../assets/54.jpeg'
+import serengetiElephants from '../assets/58.jpeg'
+import serengetiLeopard from '../assets/59.jpeg'
+import serengetiGiraffes from '../assets/56.jpeg'
 
 const sunsetDhow1 = sunsetDhowScene1
 const sunsetDhow2 = sunsetDhowScene2
@@ -521,6 +537,7 @@ Transfer to the airstrip for the mid-morning flight back to Zanzibar and then on
       'Accommodation and meals',
       'Park fees and professional guide',
     ],
+    gallery: [mikumiHerd, mikumiGiraffes, mikumiLions, mikumiRhino],
     overview: `Day 1: Zanzibar → Dar → Mikumi
 Hotel Pick-Up (5:20 AM)
 Start with an early pickup from your hotel (time varies by location), then transfer to the ferry terminal in Stone Town. Board the 7:00 AM ferry to Dar es Salaam and arrive around 9:00 AM.
@@ -557,6 +574,7 @@ Return to Morogoro, board the SGR train back to Dar es Salaam, then transfer to 
       'Park entrance fees',
       'Hotel pick-up and drop-off',
     ],
+    gallery: [tarangireView, tarangireHerd, tarangireHerdScene, wildebeestMigration],
     overview: `Day 1: Arusha → Tarangire → Ngorongoro
 Begin with an early hotel or airport pickup in Arusha. Drive to Tarangire National Park for a morning game drive followed by a picnic lunch and a short afternoon drive. After enjoying the park's elephants, giraffes, zebras, lions, and baobab trees, continue to the Ngorongoro Conservation Area for dinner and overnight near the crater rim.
 
@@ -623,6 +641,7 @@ Drive back to Morogoro and board the SGR train to Dar es Salaam. From there, tak
       'Bottled drinking water',
       'Hotel pick-up and drop-off',
     ],
+    gallery: [serengetiFlamingos, serengetiRhino, serengetiWaterhole, serengetiElephantHerd],
     overview: `Day 1: Zanzibar → Serengeti
 Begin with an early morning flight from Zanzibar to Arusha. On arrival, transfer to Serengeti National Park and head into the reserve for an afternoon game drive across the vast plains in search of lions, elephants, giraffes, and zebras. Spend the night at a lodge or camp inside the Serengeti.
 
@@ -652,6 +671,7 @@ Descend into Ngorongoro Crater for a morning game drive with opportunities to sp
       'Bottled drinking water',
       'Hotel pick-up and drop-off',
     ],
+    gallery: [tarangireView, tarangireHerd, tarangireHerdScene, wildebeestMigration],
     overview: `Day 1: Zanzibar → Arusha → Tarangire → Karatu
 Start with an early morning flight from Zanzibar to Arusha. On arrival, meet your guide and drive to Tarangire National Park for a full-day game drive and picnic lunch among elephants, giraffes, zebras, and buffaloes. In the late afternoon transfer to Karatu for dinner and overnight.
 
@@ -681,6 +701,7 @@ After breakfast drive back to Arusha and board your return flight to Zanzibar, f
       'Picnic lunches during safaris',
       'Bottled drinking water',
     ],
+    gallery: [tarangireFlamingos, tarangireRhino, tarangireZebraFlamingos, tarangireStream],
     overview: `Day 1: Arusha → Tarangire → Karatu
 Begin with a pickup from your hotel or airport in Arusha and drive to Tarangire National Park. Enjoy a game drive with opportunities to spot elephants, giraffes, zebras, and baobab trees, followed by a picnic lunch before continuing to Karatu for dinner and an overnight stay.
 
@@ -988,8 +1009,16 @@ function TourDetailPage() {
   const moreTours = useMemo(() => {
     if (!tour) return []
     const candidates = allTours.filter((entry) => entry.id !== tour.id)
-    const shuffled = [...candidates].sort(() => Math.random() - 0.5)
-    return shuffled.slice(0, 3)
+    const key = tour.type || tour.origin || tour.category || tour.title
+    const primary = candidates.filter(
+      (entry) =>
+        (key && (entry.type === key || entry.origin === key || entry.category === key)) ||
+        entry.title.includes(key)
+    )
+    const remainder = candidates.filter((entry) => !primary.includes(entry))
+    const shuffledPrimary = [...primary].sort(() => Math.random() - 0.5)
+    const shuffledRemainder = [...remainder].sort(() => Math.random() - 0.5)
+    return [...shuffledPrimary, ...shuffledRemainder].slice(0, 3)
   }, [allTours, tour])
 
   return (

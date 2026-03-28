@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import PageMeta from '../components/PageMeta'
 import { transferOptions, transferVehicles } from '../data/tours'
+import transfersHero from '../assets/98.jpeg'
 
 const initialForm = {
   fullName: '',
@@ -35,7 +36,10 @@ function TransfersPage() {
         description="Professional airport pickup, hotel transfers, private trips, and vehicle booking services across Zanzibar."
       />
 
-      <section className="transfers-hero">
+      <section
+        className="transfers-hero"
+        style={{ '--transfers-hero-image': `url(${transfersHero})` }}
+      >
         <div className="container transfers-hero__content">
           <h1>Transfer Services</h1>
         </div>

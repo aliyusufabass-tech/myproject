@@ -1,5 +1,6 @@
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import PageMeta from '../components/PageMeta'
+import contactHero from '../assets/picha.jpeg'
 
 const initialForm = {
   fullName: '',
@@ -10,6 +11,15 @@ const initialForm = {
 function ContactPage() {
   const [form, setForm] = useState(initialForm)
   const [sent, setSent] = useState(false)
+  const [error, setError] = useState('')
+  const [submitting, setSubmitting] = useState(false)
+
+  const formspreeEndpoint = useMemo(
+    () =>
+      import.meta.env.VITE_FORMSPREE_ENDPOINT ||
+      'https://formspree.io/f/xqegello',
+    [],
+  )
 
   const handleChange = (event) => {
     const { name, value } = event.target
@@ -18,8 +28,28 @@ function ContactPage() {
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    setSent(true)
-    setForm(initialForm)
+    setSubmitting(true)
+    setError('')
+    fetch(formspreeEndpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: form.fullName,
+        email: form.email,
+        message: form.message,
+      }),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Could not submit the form right now.')
+        }
+        setSent(true)
+        setForm(initialForm)
+      })
+      .catch((err) => {
+        setError(err.message)
+      })
+      .finally(() => setSubmitting(false))
   }
 
   return (
@@ -29,7 +59,7 @@ function ContactPage() {
         description="Contact Zanzibar Excursion Company Ltd for bookings, travel guidance, and personalised Zanzibar trip planning."
       />
 
-      <section className="contact-hero">
+      <section className="contact-hero" style={{ '--contact-hero-image': `url(${contactHero})` }}>
         <div className="container contact-hero__content">
           <h1>Contact Us</h1>
         </div>
@@ -78,11 +108,14 @@ function ContactPage() {
                   />
                 </div>
 
-                <button className="contact-submit-btn" type="submit">
-                  Send Message
+                <button className="contact-submit-btn" type="submit" disabled={submitting}>
+                  {submitting ? 'Sending…' : 'Send Message'}
                 </button>
 
-                {sent ? <p className="form-success">Your message has been sent successfully.</p> : null}
+                {sent ? (
+                  <p className="form-success">Your message has been sent successfully.</p>
+                ) : null}
+                {error ? <p className="form-error">{error}</p> : null}
               </form>
             </div>
 
@@ -96,7 +129,7 @@ function ContactPage() {
 
               <div className="contact-info-item">
                 <strong>Email:</strong>
-                <p>info@zanzibarexcursion.com</p>
+                <p>booking@yazantours.co.tz</p>
               </div>
 
               <div className="contact-info-item">

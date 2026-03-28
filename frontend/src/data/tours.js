@@ -21,9 +21,14 @@ import twoDaySelousImage from '../assets/2 Days 1 Night Safari - Selous From Zan
 import twoDayMikumiImage from '../assets/2 Days 1 Night Safari - Mikumi From Zanzibar.jpeg'
 import twoDayNgorongoroImage from '../assets/2 Days 1 Night Safari - Ngorongoro Crater and Tarangire.jpeg'
 import threeDayMikumiImage from '../assets/3 Days 2 Nights Safari - Mikumi From Zanzibar.jpeg'
+import threeDayMikumiCardImage from '../assets/54.jpeg'
 import threeDaySerengetiImage from '../assets/3 Days 2 Nights Safari - Serengeti and Ngorongoro From Zanzibar.jpeg'
+import threeDaySerengetiCardImage from '../assets/56.jpeg'
 import threeDayTarangireImage from '../assets/3 Days 2 Nights Safari - Tarangire and Ngorongoro From Zanzibar.jpeg'
 import fourDaySerengetiImage from '../assets/4 Days 3 Nights Safari - Serengeti, Ngorongoro and Tarangire.jpeg'
+import standardCarImage from '../assets/95.jpeg'
+import minivanImage from '../assets/96.jpeg'
+import busImage from '../assets/97.jpeg'
 
 export const tours = [
   {
@@ -431,7 +436,7 @@ export const safariTours = [
     price: 'From $650',
     rating: '4.7',
     detailUrl: '/contact',
-    image: threeDayMikumiImage,
+    image: threeDayMikumiCardImage,
     childPrice: 20,
   },
   {
@@ -445,7 +450,7 @@ export const safariTours = [
     price: 'From $1470',
     rating: '4.9',
     detailUrl: '/contact',
-    image: threeDaySerengetiImage,
+    image: threeDaySerengetiCardImage,
     childPrice: 20,
   },
   {
@@ -497,20 +502,17 @@ export const transferVehicles = [
   {
     name: 'Standard Car',
     capacity: 'Up to 3 passengers',
-    image:
-      'https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=1200&q=80',
+    image: standardCarImage,
   },
   {
     name: 'Minivan',
     capacity: 'Up to 6 passengers',
-    image:
-      'https://images.unsplash.com/photo-1583267746897-2cf415887172?auto=format&fit=crop&w=1200&q=80',
+    image: minivanImage,
   },
   {
     name: 'Bus',
     capacity: 'Up to 20 passengers',
-    image:
-      'https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=1200&q=80',
+    image: busImage,
   },
 ]
 
@@ -553,9 +555,4 @@ export const team = [
   },
 ]
 
-export const galleryImages = [
-  'https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1473116763249-2faaef81ccda?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80',
-  'https://images.unsplash.com/photo-1520454974749-611b7248ffdb?auto=format&fit=crop&w=1200&q=80',
-]
+export { galleryImages } from './galleryAssets'

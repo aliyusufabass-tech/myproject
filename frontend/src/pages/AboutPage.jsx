@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom'
 import PageMeta from '../components/PageMeta'
+import aboutHeroImage from '../assets/40 - Copy.jpeg'
+import aboutGridImage from '../assets/38.jpeg'
 
 const stats = [
   { value: '500+', label: 'Happy Clients' },
@@ -30,7 +32,10 @@ function AboutPage() {
         description="Discover Zanzibar Excursion Company Ltd, our story, services, and trusted travel experience."
       />
 
-      <section className="about-hero">
+      <section
+        className="about-hero"
+        style={{ '--about-hero-image': `url(${aboutHeroImage})` }}
+      >
         <div className="container about-hero__content">
           <h1>Discover Zanzibar With Us</h1>
           <p>Your trusted travel partner for meaningful and memorable experiences</p>
@@ -40,10 +45,7 @@ function AboutPage() {
       <section className="section about-page-section">
         <div className="container about-page-container">
           <div className="about-grid">
-            <img
-              src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1200&q=80"
-              alt="Zanzibar ocean experience"
-            />
+            <img src={aboutGridImage} alt="Zanzibar ocean experience" />
 
             <div className="about-text">
               <h2>About Zanzibar Excursion Company Ltd</h2>
