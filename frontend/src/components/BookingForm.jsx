@@ -2,16 +2,19 @@ import { forwardRef, useImperativeHandle, useMemo, useState, useRef } from 'reac
 
 const DEFAULT_ENDPOINT = 'https://formsubmit.co/info@zanzibarexcursion.com'
 
-const BookingForm = forwardRef(function BookingForm({
-  endpoint,
-  subject = 'New Booking Request',
-  fields = [],
-  hiddenFields = {},
-  buttonText = 'Send Booking',
-  adultPrice = 0,
-  isSafari = false,
-  formClassName,
-}) {
+const BookingForm = forwardRef(function BookingForm(
+  {
+    endpoint,
+    subject = 'New Booking Request',
+    fields = [],
+    hiddenFields = {},
+    buttonText = 'Send Booking',
+    adultPrice = 0,
+    isSafari = false,
+    formClassName,
+  },
+  ref,
+) {
   const [status, setStatus] = useState('')
   const [values, setValues] = useState(
     fields.reduce((acc, field) => ({ ...acc, [field.name]: field.value ?? '' }), {}),
