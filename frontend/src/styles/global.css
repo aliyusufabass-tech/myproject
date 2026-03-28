@@ -127,6 +127,27 @@
   height: fit-content;
 }
 
+.tour-detail__booking-form {
+  width: min(480px, 100%);
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+}
+
+.tour-detail__booking-form label {
+  font-weight: 600;
+  color: #0c2f4a;
+}
+
+.tour-detail__booking-form input,
+.tour-detail__booking-form select {
+  width: 100%;
+  padding: 0.85rem;
+  border-radius: 0.8rem;
+  border: 1px solid #cfd7e5;
+  font: inherit;
+}
+
 .tour-detail__booking h3 {
   margin-bottom: 15px;
 }

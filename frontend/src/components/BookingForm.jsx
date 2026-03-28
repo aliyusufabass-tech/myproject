@@ -10,6 +10,7 @@ function BookingForm({
   buttonText = 'Send Booking',
   adultPrice = 0,
   isSafari = false,
+  formClassName,
 }) {
   const [status, setStatus] = useState('')
   const [values, setValues] = useState(
@@ -61,7 +62,7 @@ function BookingForm({
   }
 
   return (
-    <form className="transfers-booking-form" onSubmit={handleSubmit}>
+    <form className={formClassName ?? 'transfers-booking-form'} onSubmit={handleSubmit}>
       {fields.map((field) => (
         <div className="transfers-form-group" key={field.name}>
           {field.label && <label htmlFor={field.name}>{field.label}</label>}

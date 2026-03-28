@@ -1104,6 +1104,7 @@ function TourDetailPage() {
             ]}
             hiddenFields={{ tour: tour.title, tourId: tour.id }}
             buttonText="Reserve Your Spot"
+            formClassName="tour-detail__booking-form"
           />
         </div>
       </div>
