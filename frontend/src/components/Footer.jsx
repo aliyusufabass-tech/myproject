@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import logo from '../assets/ZANZIBAR EXCURSION COMPANY LTD copy.jpg'
+import logo from '../assets/new.png'
 import footerImage from '../assets/picha.jpeg'
 
 function Footer() {
@@ -12,8 +12,8 @@ function Footer() {
     >
       <div className="container footer__grid">
         <div>
-          <img className="footer__logo" src={logo} alt="Zanzibar Excursion Company Ltd" />
-          <p className="section-tag">Zanzibar Excursion Company Ltd</p>
+          <img className="footer__logo" src={logo} alt="Zan Excursions" />
+          <p className="section-tag">Zan Excursions</p>
           <h3>Escape into island stories, ocean air, and seamless travel.</h3>
         </div>
         <div>
@@ -30,12 +30,12 @@ function Footer() {
         <div>
           <h4>Contact</h4>
           <p>Stone Town, Zanzibar</p>
-          <p>+255 774 652 480</p>
-          <p>info@zanzibarexcursion.com</p>
+          <p>+255 792 692 084</p>
+          <p>info@zanexcursions.com</p>
         </div>
       </div>
       <div className="container footer__bottom">
-        <p>(c) 2026 Zanzibar Excursion Company Ltd. Crafted for memorable journeys.</p>
+        <p>(c) 2026 Zan Excursions. Crafted for memorable journeys.</p>
       </div>
     </footer>
   )

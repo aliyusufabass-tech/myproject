@@ -1,5 +1,5 @@
 import { useMemo } from 'react'
-import { Link, useParams, useNavigate } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { safariTours, tours, zanzibarTours, galleryImages as sharedGalleryImages } from '../data/tours'
 import lionFamily from '../assets/46.jpeg'
 import giraffePair from '../assets/47.jpeg'
@@ -973,13 +973,7 @@ function TourDetailPage() {
   const { tourId } = useParams()
   const allTours = useMemo(() => [...tours, ...zanzibarTours, ...safariTours], [])
   const tour = allTours.find((entry) => String(entry.id) === String(tourId))
-  const navigate = useNavigate()
-  const handleReserve = () => {
-    if (tour) {
-      navigate(`/booking/${tour.id}`)
-    }
-  }
-
+  const today = useMemo(() => new Date().toISOString().split('T')[0], [])
   if (!tour) {
     return (
       <div className="tour-detail">
@@ -1083,9 +1077,9 @@ function TourDetailPage() {
             <strong>Duration:</strong> {tour.duration}
           </p>
           <div className="tour-detail__price">{tour.price}</div>
-          <button className="tour-detail__btn tour-detail__btn--primary" type="button" onClick={handleReserve}>
+          <Link to={`/booking/${tourId}`} className="tour-detail__btn tour-detail__btn--primary">
             Reserve Your Spot
-          </button>
+          </Link>
         </div>
       </div>
     </section>

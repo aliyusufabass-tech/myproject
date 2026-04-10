@@ -54,7 +54,7 @@ function HomePage() {
     <>
       <PageMeta
         title="Home"
-        description="Discover tours, transfers, and tailored island experiences with Zanzibar Excursion Company Ltd."
+        description="Discover tours, transfers, and tailored island experiences with Zan Excursions."
       />
       <section
         className="hero hero--home"
@@ -63,7 +63,7 @@ function HomePage() {
         <div className="container hero__content">
           <h1>Discover Zanzibar: where every wave tells a story, and every step leads to wonder.</h1>
           <p>
-            Zanzibar Excursion Company Ltd designs authentic island experiences — beach escapes, spice routes, and transfers that flow as smoothly as the tides.
+            Zan Excursions designs authentic island experiences — beach escapes, spice routes, and transfers that flow as smoothly as the tides.
           </p>
           <div className="hero__actions">
             <Button to="/tours">Explore Tours</Button>

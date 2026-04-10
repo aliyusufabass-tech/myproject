@@ -1,6 +1,6 @@
 import { forwardRef, useImperativeHandle, useMemo, useState, useRef } from 'react'
 
-const DEFAULT_ENDPOINT = 'https://formsubmit.co/info@zanzibarexcursion.com'
+const DEFAULT_ENDPOINT = 'https://formsubmit.co/info@zanexcursions.com'
 
 const BookingForm = forwardRef(function BookingForm(
   {

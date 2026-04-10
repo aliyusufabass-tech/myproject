@@ -35,7 +35,7 @@ function TransfersPage() {
     Object.entries(formData).forEach(([key, value]) => payload.append(key, value))
 
     try {
-      const response = await fetch('https://formsubmit.co/info@zanzibarexcursion.com', {
+      const response = await fetch('https://formsubmit.co/info@zanexcursions.com', {
         method: 'POST',
         body: payload,
       })
@@ -166,12 +166,26 @@ function TransfersPage() {
               </div>
               <div className="transfers-form-row">
                 <div className="transfers-form-group">
-                  <label htmlFor="date">Travel Date</label>
-                  <input id="date" name="date" type="date" value={formData.date} onChange={handleChange} />
+                  <label htmlFor="date">Date of transfer</label>
+                  <input
+                    id="date"
+                    name="date"
+                    type="date"
+                    value={formData.date}
+                    onChange={handleChange}
+                    required
+                  />
                 </div>
                 <div className="transfers-form-group">
-                  <label htmlFor="time">Time</label>
-                  <input id="time" name="time" type="time" value={formData.time} onChange={handleChange} />
+                  <label htmlFor="time">Preferred transfer time</label>
+                  <input
+                    id="time"
+                    name="time"
+                    type="time"
+                    value={formData.time}
+                    onChange={handleChange}
+                    required
+                  />
                 </div>
               </div>
               <div className="transfers-form-row">

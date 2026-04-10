@@ -2,9 +2,7 @@ import { useEffect } from 'react'
 
 function PageMeta({ title, description }) {
   useEffect(() => {
-    document.title = title
-      ? `${title} | Zanzibar Excursion Company Ltd`
-      : 'Zanzibar Excursion Company Ltd'
+    document.title = title ? `${title} | Zan Excursions` : 'Zan Excursions'
 
     const metaDescription = document.querySelector('meta[name="description"]')
     if (metaDescription && description) {

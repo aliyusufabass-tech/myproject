@@ -1,68 +1,12 @@
-import { useMemo, useState } from 'react'
 import PageMeta from '../components/PageMeta'
 import contactHero from '../assets/picha.jpeg'
 
-const initialForm = {
-  fullName: '',
-  email: '',
-  message: '',
-}
-
 function ContactPage() {
-  const [form, setForm] = useState(initialForm)
-  const [sent, setSent] = useState(false)
-  const [error, setError] = useState('')
-  const [submitting, setSubmitting] = useState(false)
-
-  const formsubmitEndpoint = useMemo(
-    () =>
-      import.meta.env.VITE_FORMSUBMIT_ENDPOINT ||
-      'https://formsubmit.co/info@zanzibarexcursion.com',
-    [],
-  )
-
-  const handleChange = (event) => {
-    const { name, value } = event.target
-    setForm((current) => ({ ...current, [name]: value }))
-  }
-
-  const handleSubmit = (event) => {
-    event.preventDefault()
-    setSubmitting(true)
-    setError('')
-
-    const payload = new FormData()
-    payload.append('_subject', 'New Contact Booking')
-    payload.append('_captcha', 'false')
-    payload.append('name', form.fullName)
-    payload.append('email', form.email)
-    payload.append('message', form.message)
-
-    fetch(formsubmitEndpoint, {
-      method: 'POST',
-      body: payload,
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error('Could not submit the form right now.')
-        }
-        setSent(true)
-        setForm(initialForm)
-        setTimeout(() => {
-          window.location.reload()
-        }, 1200)
-      })
-      .catch(() => {
-        setError('Could not submit the form right now.')
-      })
-      .finally(() => setSubmitting(false))
-  }
-
   return (
     <>
       <PageMeta
         title="Contact Us"
-        description="Contact Zanzibar Excursion Company Ltd for bookings, travel guidance, and personalised Zanzibar trip planning."
+        description="Contact Zan Excursions for bookings, travel guidance, and personalised Zanzibar trip planning."
       />
 
       <section className="contact-hero" style={{ '--contact-hero-image': `url(${contactHero})` }}>
@@ -74,70 +18,20 @@ function ContactPage() {
       <section className="section contact-page-section">
         <div className="container contact-page-container">
           <div className="contact-page-grid">
-            <div className="contact-form-box">
-              <h2>Send Us a Message</h2>
-
-              <form className="contact-page-form" onSubmit={handleSubmit}>
-                <div className="contact-form-group">
-                  <label htmlFor="fullName">Full Name</label>
-                  <input
-                    id="fullName"
-                    name="fullName"
-                    type="text"
-                    value={form.fullName}
-                    onChange={handleChange}
-                    required
-                    autoComplete="name"
-                  />
-                </div>
-
-                <div className="contact-form-group">
-                  <label htmlFor="email">Email Address</label>
-                  <input
-                    id="email"
-                    name="email"
-                    type="email"
-                    value={form.email}
-                    onChange={handleChange}
-                    required
-                    autoComplete="email"
-                  />
-                </div>
-
-                <div className="contact-form-group">
-                  <label htmlFor="message">Message</label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows="5"
-                    value={form.message}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-
-                <button className="contact-submit-btn" type="submit" disabled={submitting}>
-                  {submitting ? 'Sending…' : 'Send Message'}
-                </button>
-
-                {sent ? (
-                  <p className="form-success">Your message has been sent successfully.</p>
-                ) : null}
-                {error ? <p className="form-error">{error}</p> : null}
-              </form>
-            </div>
-
-            <div className="contact-info-box">
-              <h2>Contact Information</h2>
-
-              <div className="contact-info-item">
-                <strong>Phone:</strong>
-                <p>+255 700 000 000</p>
-              </div>
+            <div className="contact-info-box contact-info-box--wide">
+              <h2>Talk to Zan Excursions</h2>
+              <p>Send us your travel details via the form or contact the office directly.</p>
 
               <div className="contact-info-item">
                 <strong>Email:</strong>
-                <p>info@zanzibarexcursion.com</p>
+                <p>
+                  <a href="mailto:info@zanexcursions.com">info@zanexcursions.com</a>
+                </p>
+              </div>
+
+              <div className="contact-info-item">
+                <strong>Phone:</strong>
+                <p>+255 792 692 084</p>
               </div>
 
               <div className="contact-info-item">
@@ -149,6 +43,36 @@ function ContactPage() {
                 <strong>Working Hours:</strong>
                 <p>Mon - Sun: 8:00 AM - 8:00 PM</p>
               </div>
+            </div>
+
+            <div className="contact-form-box">
+              <h2>Share your travel details</h2>
+              <form className="contact-page-form">
+                <div className="contact-form-group">
+                  <label htmlFor="contact-fullname">Full name</label>
+                  <input id="contact-fullname" type="text" placeholder="Your full name" required />
+                </div>
+                <div className="contact-form-group">
+                  <label htmlFor="contact-email">Email</label>
+                  <input id="contact-email" type="email" placeholder="you@example.com" required />
+                </div>
+                <div className="contact-form-group">
+                  <label htmlFor="contact-phone">Phone number</label>
+                  <input id="contact-phone" type="tel" placeholder="+255 7XX XXX XXX" required />
+                </div>
+                <div className="contact-form-group">
+                  <label htmlFor="contact-message">Message</label>
+                  <textarea
+                    id="contact-message"
+                    rows="4"
+                    placeholder="Tell us about your preferred dates, group size, and requests."
+                    required
+                  />
+                </div>
+                <button className="contact-submit-btn" type="submit">
+                  Submit travel info
+                </button>
+              </form>
             </div>
           </div>
 

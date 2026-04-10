@@ -1,9 +1,12 @@
-import { useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useMemo, useState } from 'react'
+import { useLocation, useParams } from 'react-router-dom'
 import { tours, safariTours, zanzibarTours } from '../data/tours'
 
 function BookingPage() {
   const { tourId } = useParams()
+  const today = useMemo(() => new Date().toISOString().split('T')[0], [])
+  const location = useLocation()
+  const initialTourDate = new URLSearchParams(location.search).get('tourDate') ?? ''
   const tour =
     tours.find((entry) => String(entry.id) === String(tourId)) ||
     safariTours.find((entry) => String(entry.id) === String(tourId)) ||
@@ -14,6 +17,7 @@ function BookingPage() {
     phone: '',
     adults: '1',
     children: '0',
+    tourDate: initialTourDate,
   })
   const [status, setStatus] = useState('')
   const [success, setSuccess] = useState(false)
@@ -79,9 +83,10 @@ function BookingPage() {
     payload.append('phone', formData.phone)
     payload.append('adults', formData.adults)
     payload.append('children', formData.children)
+    payload.append('tourDate', formData.tourDate)
 
     try {
-      const response = await fetch('https://formsubmit.co/info@zanzibarexcursion.com', {
+      const response = await fetch('https://formsubmit.co/info@zanexcursions.com', {
         method: 'POST',
         body: payload,
       })
@@ -94,6 +99,7 @@ function BookingPage() {
         phone: '',
         adults: '1',
         children: '0',
+        tourDate: '',
       })
       setStatus('✅ Booking submitted! We’ll be in touch shortly.')
       setSuccess(true)
@@ -161,6 +167,10 @@ function BookingPage() {
               <span>{formData.children || 'N/A'}</span>
             </div>
             <div className="tour-booking__summary-row">
+              <span>Date of tour</span>
+              <span>{formData.tourDate || 'Not set'}</span>
+            </div>
+            <div className="tour-booking__summary-row">
               <span>Child rate</span>
               <span>{currency.format(childRate)}</span>
             </div>
@@ -188,6 +198,17 @@ function BookingPage() {
             <label>
               Phone number
               <input name="phone" type="tel" value={formData.phone} onChange={handleChange} />
+            </label>
+            <label>
+              Date of tour
+              <input
+                name="tourDate"
+                type="date"
+                value={formData.tourDate}
+                onChange={handleChange}
+                required
+                min={today}
+              />
             </label>
             <label>
               Adults

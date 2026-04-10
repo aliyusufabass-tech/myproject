@@ -148,6 +148,37 @@
   font: inherit;
 }
 
+.tour-detail__booking-date {
+  margin: 1rem 0 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.tour-detail__booking-date label {
+  font-weight: 600;
+  color: #0c2f4a;
+}
+
+.tour-detail__booking-date input {
+  width: 100%;
+  padding: 0.85rem;
+  border-radius: 0.8rem;
+  border: 1px solid #cfd7e5;
+  font: inherit;
+}
+
+.tour-detail__booking-error {
+  color: #c0392b;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.tour-detail__btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 .tour-detail__booking h3 {
   margin-bottom: 15px;
 }
