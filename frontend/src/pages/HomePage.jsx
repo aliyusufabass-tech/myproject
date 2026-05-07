@@ -67,6 +67,14 @@ function HomePage() {
           </p>
           <div className="hero__actions">
             <Button to="/tours">Explore Tours</Button>
+            <Button
+              href="https://wa.me/255792692084"
+              target="_blank"
+              rel="noopener noreferrer"
+              variant="secondary"
+            >
+              WhatsApp Us
+            </Button>
           </div>
         </div>
       </section>
