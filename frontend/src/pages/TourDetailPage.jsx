@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+ï»¿import { useMemo } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { safariTours, tours, zanzibarTours, galleryImages as sharedGalleryImages } from '../data/tours'
 import { pt } from '../utils/i18nPt'
@@ -209,7 +209,7 @@ The tour then transforms into a cooking session where local chefs help you prepa
       stoneTownGallery1,
       stoneTownGallery2,
     ],
-    overview: `Your day starts with a morning pickup and a relaxed walk through Stone Town. You will explore the old streets, learn about the town’s history, culture, and how people lived and traded in the past, all before it gets crowded.
+    overview: `Your day starts with a morning pickup and a relaxed walk through Stone Town. You will explore the old streets, learn about the townâ€™s history, culture, and how people lived and traded in the past, all before it gets crowded.
 
 After that, you will visit a nearby spice farm where you will see how spices like cloves, cinnamon, cardamom, and nutmeg are grown and used. You will also smell and taste fresh spices during the tour.
 
@@ -441,7 +441,7 @@ Your day begins with an early morning transfer from your Zanzibar hotel to the a
 
 Mikumi is home to lions, elephants, giraffes, zebras, buffaloes, and a wide variety of bird species, all playing out against open plains, acacia woodlands, and distant Uluguru Mountain views. After a few hours of spotting wildlife, pause for a bush lunch in the heart of the wilderness before resuming the safari in the afternoon.
 
-Return to the airstrip in the late afternoon for your flight back to Zanzibar, closing the day with unforgettable memories of Tanzania’s wildlife and landscapes.`,
+Return to the airstrip in the late afternoon for your flight back to Zanzibar, closing the day with unforgettable memories of Tanzaniaâ€™s wildlife and landscapes.`,
     note: 'Flight times and pickup schedules depend on seasonal availability.',
   },
   'safari-2': {
@@ -466,8 +466,8 @@ Return to the airstrip in the late afternoon for your flight back to Zanzibar, c
     overview: `Early Morning Departure (4:30 AM)
 Your guide picks you up from the hotel and transfers you to Zanzibar Airport for the flight to Selous Game Reserve. After the short flight, you meet your professional safari guide and begin your wildlife adventure.
 
-Morning Game Drive (7:00 AM – 12:00 PM)
-Roam through Selous' varied habitats—open plains, riverine forests, and lagoon areas—looking for elephants, lions, giraffes, hippos, crocodiles, and abundant birdlife while your guide shares local knowledge.
+Morning Game Drive (7:00 AM â€“ 12:00 PM)
+Roam through Selous' varied habitatsâ€”open plains, riverine forests, and lagoon areasâ€”looking for elephants, lions, giraffes, hippos, crocodiles, and abundant birdlife while your guide shares local knowledge.
 
 Lunch in the Bush
 Pause for a bush lunch in a scenic clearing before continuing with afternoon activities.
@@ -733,7 +733,7 @@ Descend into Ngorongoro Crater for a half-day game drive, enjoy a picnic lunch n
       stoneTownGallery3,
       stoneTownGallery4,
     ],
-    overview: `Enjoy a 2–3 hour guided walk through Stone Town, exploring its narrow streets, historic buildings, and vibrant culture. Visit key landmarks like House of Wonders, Sultan's Palace, and Freddie Mercury House while learning about Zanzibar's rich history and cultural diversity.`,
+    overview: `Enjoy a 2â€“3 hour guided walk through Stone Town, exploring its narrow streets, historic buildings, and vibrant culture. Visit key landmarks like House of Wonders, Sultan's Palace, and Freddie Mercury House while learning about Zanzibar's rich history and cultural diversity.`,
     note: 'Pickup fees depend on hotel location.',
   },
   'half-2': {
@@ -813,7 +813,7 @@ Spend your time exploring the shallow waters, snorkeling, or simply unwinding in
       'Enjoy a short scenic boat ride from Stone Town',
       'See Aldabra giant tortoises and peacocks',
       'Explore the historic prison site',
-      'Learn about the island’s history and culture',
+      'Learn about the islandâ€™s history and culture',
     ],
     includes: [
       'Professional tour guide',
@@ -1129,5 +1129,6 @@ function TourDetailPage() {
 }
 
 export default TourDetailPage
+
 
 
