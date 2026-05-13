@@ -3,12 +3,12 @@ import { NavLink, useLocation } from 'react-router-dom'
 import logo from '../assets/new.png'
 
 const navLinks = [
-  { to: '/', label: 'Home' },
-  { to: '/about', label: 'About Us' },
+  { to: '/', label: 'Início' },
+  { to: '/about', label: 'Sobre Nos' },
   { to: '/tours', label: 'Tours' },
   { to: '/transfers', label: 'Transfers' },
-  { to: '/gallery', label: 'Gallery' },
-  { to: '/contact', label: 'Contact Us' },
+  { to: '/gallery', label: 'Galeria' },
+  { to: '/contact', label: 'Contacto' },
 ]
 
 function Navbar() {
@@ -39,7 +39,7 @@ function Navbar() {
         <button
           className="navbar__toggle"
           type="button"
-          aria-label="Toggle navigation"
+          aria-label="Alternar navegacao"
           aria-expanded={menuOpen}
           onClick={() => setMenuOpen((open) => !open)}
         >

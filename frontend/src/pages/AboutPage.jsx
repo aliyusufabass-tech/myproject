@@ -4,23 +4,23 @@ import aboutHeroImage from '../assets/40 - Copy.jpeg'
 import aboutGridImage from '../assets/38.jpeg'
 
 const stats = [
-  { value: '500+', label: 'Happy Clients' },
-  { value: '50+', label: 'Tour Packages' },
-  { value: '5+', label: 'Years Experience' },
+  { value: '500+', label: 'Clientes Satisfeitos' },
+  { value: '50+', label: 'Pacotes de Tours' },
+  { value: '5+', label: 'Anos de Experiencia' },
 ]
 
 const services = [
   {
-    title: 'Beach Tours',
-    text: 'Experience Zanzibar beaches, sandbanks, and island escapes through carefully planned coastal tours.',
+    title: 'Tours de Praia',
+    text: 'Descubra praias de Zanzibar, bancos de areia e escapadelas na ilha com tours costeiros cuidadosamente planeados.',
   },
   {
-    title: 'Safari Trips',
-    text: 'Discover Tanzania wildlife through well-organised safari journeys across leading parks and reserves.',
+    title: 'Viagens de Safari',
+    text: 'Conheca a vida selvagem da Tanzania com safaris bem organizados nos principais parques e reservas.',
   },
   {
     title: 'Transfers',
-    text: 'Travel comfortably with reliable airport and hotel transfers supported by friendly local coordination.',
+    text: 'Viaje com conforto atraves de Transfers confiaveis entre aeroporto e hotel, com coordenacao local atenciosa.',
   },
 ]
 
@@ -28,8 +28,8 @@ function AboutPage() {
   return (
     <>
       <PageMeta
-        title="About Us"
-        description="Discover Zan Excursions, our story, services, and trusted travel experience."
+        title="Sobre Nos"
+        description="Conheca a Zan Excursions, a nossa historia, servicos e experiencia de viagem de confianca."
       />
 
       <section
@@ -37,8 +37,8 @@ function AboutPage() {
         style={{ '--about-hero-image': `url(${aboutHeroImage})` }}
       >
         <div className="container about-hero__content">
-          <h1>Discover Zanzibar With Us</h1>
-          <p>Your trusted travel partner for meaningful and memorable experiences</p>
+          <h1>Descubra Zanzibar Connosco</h1>
+          <p>O seu parceiro de viagem de confianca para experiencias memoraveis</p>
         </div>
       </section>
 
@@ -48,15 +48,15 @@ function AboutPage() {
             <img src={aboutGridImage} alt="Zanzibar ocean experience" />
 
             <div className="about-text">
-              <h2>About Zan Excursions</h2>
+              <h2>Sobre a Zan Excursions</h2>
               <p>
-                Zan Excursions is a professional tourism company offering thoughtfully planned
-                travel experiences across Zanzibar and Tanzania. From beach holidays to wildlife
-                safaris, we aim to make every journey memorable.
+                A Zan Excursions e uma empresa profissional de turismo que oferece experiencias
+                de viagem cuidadosamente planeadas em Zanzibar e na Tanzania. De ferias de praia
+                a safaris de vida selvagem, o nosso objetivo e tornar cada viagem inesquecivel.
               </p>
               <p>
-                We focus on service quality, safety, and guest satisfaction while
-                showcasing the best of nature, culture, and coastal adventure.
+                Focamo-nos na qualidade do servico, seguranca e satisfacao dos clientes, mostrando
+                o melhor da natureza, cultura e aventura costeira.
               </p>
             </div>
           </div>
@@ -71,7 +71,7 @@ function AboutPage() {
           </div>
 
           <div className="about-services">
-            <h2>What We Offer</h2>
+            <h2>O Que Oferecemos</h2>
             <div className="about-service-boxes">
               {services.map((service) => (
                 <article className="about-service-card" key={service.title}>
@@ -83,10 +83,10 @@ function AboutPage() {
           </div>
 
           <div className="about-cta">
-            <h2>Start Your Journey Today</h2>
-            <p>Book your experience today and discover Zanzibar with confidence</p>
+            <h2>Comece a Sua Viagem Hoje</h2>
+            <p>Reserve a sua experiencia hoje e descubra Zanzibar com confianca.</p>
             <Link className="about-cta__button" to="/tours">
-              Book Now
+              Reservar Agora
             </Link>
           </div>
         </div>
@@ -96,3 +96,4 @@ function AboutPage() {
 }
 
 export default AboutPage
+

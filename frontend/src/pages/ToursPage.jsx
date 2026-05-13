@@ -5,11 +5,11 @@ import homeHeroImage from '../assets/image.jpeg'
 import TourFormatCard from '../components/TourFormatCard'
 
 const filters = [
-  { key: 'all', label: 'All' },
-  { key: 'half', label: 'Half-day Excursions' },
-  { key: 'full', label: 'Full-day Excursions' },
-  { key: 'zanzibar', label: 'Safaris From Zanzibar' },
-  { key: 'arusha', label: 'Safaris From Arusha' },
+  { key: 'all', label: 'Todos' },
+  { key: 'half', label: 'Excursoes de Meio Dia' },
+  { key: 'full', label: 'Excursoes de Dia Inteiro' },
+  { key: 'zanzibar', label: 'Safaris a Partir de Zanzibar' },
+  { key: 'arusha', label: 'Safaris a Partir de Arusha' },
 ]
 
 const normalizeSafariCard = (tour) => ({
@@ -29,7 +29,7 @@ const normalizeExcursionCard = (tour) => ({
   id: tour.id,
   type: 'excursion',
   filterKey: tour.type,
-  badge: tour.type === 'half' ? 'Half-day' : 'Full-day',
+  badge: tour.type === 'half' ? 'Meio dia' : 'Dia inteiro',
   title: tour.title,
   summary: tour.summary,
   image: tour.image,
@@ -59,7 +59,7 @@ function ToursPage() {
     <>
       <PageMeta
         title="Tours"
-        description="Browse Zanzibar excursions and safari packages through a polished card layout with quick filters."
+        description="Explore excursoes em Zanzibar e pacotes de safari atraves de um layout organizado com filtros rapidos."
       />
 
       <section
@@ -67,8 +67,8 @@ function ToursPage() {
         style={{ '--tours-hero-image': `url(${homeHeroImage})` }}
       >
         <div className="page-hero__content container">
-          <h1>Explore Zanzibar Like Never Before
-From ocean adventures to wildlife safaris, discover it all.</h1>
+          <h1>Explore Zanzibar Como Nunca Antes
+Das aventuras no oceano aos safaris de vida selvagem, descubra tudo.</h1>
         </div>
       </section>
 
@@ -101,3 +101,4 @@ From ocean adventures to wildlife safaris, discover it all.</h1>
 }
 
 export default ToursPage
+

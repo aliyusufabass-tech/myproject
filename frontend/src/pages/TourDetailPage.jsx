@@ -1,6 +1,7 @@
 import { useMemo } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { safariTours, tours, zanzibarTours, galleryImages as sharedGalleryImages } from '../data/tours'
+import { pt } from '../utils/i18nPt'
 import lionFamily from '../assets/46.jpeg'
 import giraffePair from '../assets/47.jpeg'
 import tarangireHerd from '../assets/62.jpeg'
@@ -208,7 +209,7 @@ The tour then transforms into a cooking session where local chefs help you prepa
       stoneTownGallery1,
       stoneTownGallery2,
     ],
-    overview: `Your day starts with a morning pickup and a relaxed walk through Stone Town. You will explore the old streets, learn about the town’s history, culture, and how people lived and traded in the past, all before it gets crowded.
+    overview: `Your day starts with a morning pickup and a relaxed walk through Stone Town. You will explore the old streets, learn about the town�s history, culture, and how people lived and traded in the past, all before it gets crowded.
 
 After that, you will visit a nearby spice farm where you will see how spices like cloves, cinnamon, cardamom, and nutmeg are grown and used. You will also smell and taste fresh spices during the tour.
 
@@ -440,7 +441,7 @@ Your day begins with an early morning transfer from your Zanzibar hotel to the a
 
 Mikumi is home to lions, elephants, giraffes, zebras, buffaloes, and a wide variety of bird species, all playing out against open plains, acacia woodlands, and distant Uluguru Mountain views. After a few hours of spotting wildlife, pause for a bush lunch in the heart of the wilderness before resuming the safari in the afternoon.
 
-Return to the airstrip in the late afternoon for your flight back to Zanzibar, closing the day with unforgettable memories of Tanzania’s wildlife and landscapes.`,
+Return to the airstrip in the late afternoon for your flight back to Zanzibar, closing the day with unforgettable memories of Tanzania�s wildlife and landscapes.`,
     note: 'Flight times and pickup schedules depend on seasonal availability.',
   },
   'safari-2': {
@@ -465,8 +466,8 @@ Return to the airstrip in the late afternoon for your flight back to Zanzibar, c
     overview: `Early Morning Departure (4:30 AM)
 Your guide picks you up from the hotel and transfers you to Zanzibar Airport for the flight to Selous Game Reserve. After the short flight, you meet your professional safari guide and begin your wildlife adventure.
 
-Morning Game Drive (7:00 AM – 12:00 PM)
-Roam through Selous' varied habitats—open plains, riverine forests, and lagoon areas—looking for elephants, lions, giraffes, hippos, crocodiles, and abundant birdlife while your guide shares local knowledge.
+Morning Game Drive (7:00 AM � 12:00 PM)
+Roam through Selous' varied habitats�open plains, riverine forests, and lagoon areas�looking for elephants, lions, giraffes, hippos, crocodiles, and abundant birdlife while your guide shares local knowledge.
 
 Lunch in the Bush
 Pause for a bush lunch in a scenic clearing before continuing with afternoon activities.
@@ -538,7 +539,7 @@ Transfer to the airstrip for the mid-morning flight back to Zanzibar and then on
       'Park fees and professional guide',
     ],
     gallery: [mikumiHerd, mikumiGiraffes, mikumiLions, mikumiRhino],
-    overview: `Day 1: Zanzibar → Dar → Mikumi
+    overview: `Day 1: Zanzibar ? Dar ? Mikumi
 Hotel Pick-Up (5:20 AM)
 Start with an early pickup from your hotel (time varies by location), then transfer to the ferry terminal in Stone Town. Board the 7:00 AM ferry to Dar es Salaam and arrive around 9:00 AM.
 
@@ -548,7 +549,7 @@ Take the short drive to the SGR train station, board the 9:30 AM train to Morogo
 Drive to Mikumi & Safari (12:30 PM)
 Meet your safari guide in Morogoro and continue to Mikumi National Park. After lunch, head into the reserve for an afternoon game drive before settling in at your lodge or camp for dinner and an overnight stay in the wild.
 
-Day 2: Mikumi → Morogoro → Dar → Zanzibar
+Day 2: Mikumi ? Morogoro ? Dar ? Zanzibar
 Morning Game Drive
 Rise early for a sunrise game drive, wrapping up near midday.
 
@@ -575,10 +576,10 @@ Return to Morogoro, board the SGR train back to Dar es Salaam, then transfer to 
       'Hotel pick-up and drop-off',
     ],
     gallery: [tarangireView, tarangireHerd, tarangireHerdScene, wildebeestMigration],
-    overview: `Day 1: Arusha → Tarangire → Ngorongoro
+    overview: `Day 1: Arusha ? Tarangire ? Ngorongoro
 Begin with an early hotel or airport pickup in Arusha. Drive to Tarangire National Park for a morning game drive followed by a picnic lunch and a short afternoon drive. After enjoying the park's elephants, giraffes, zebras, lions, and baobab trees, continue to the Ngorongoro Conservation Area for dinner and overnight near the crater rim.
 
-Day 2: Ngorongoro Crater → Arusha
+Day 2: Ngorongoro Crater ? Arusha
 After breakfast descend into Ngorongoro Crater for a morning game drive, seeking rhinos, lions, elephants, hippos, wildebeests, and abundant birdlife. Following the safari, ascend from the crater and drive back to Arusha for hotel or airport drop-off.`,
     note: 'Tips are recommended (approx. $15 per person per day). Hotel pick-up/drop-off depends on location.',
   },
@@ -593,7 +594,7 @@ After breakfast descend into Ngorongoro Crater for a morning game drive, seeking
       'Combination of wildlife adventure and cultural immersion',
     ],
     includes: [
-      'Ferry transfers (Zanzibar ↔ Mainland)',
+      'Ferry transfers (Zanzibar ? Mainland)',
       'SGR train tickets (round trip)',
       '2 nights accommodation (lodge/camp)',
       'Safari game drives as per itinerary',
@@ -603,7 +604,7 @@ After breakfast descend into Ngorongoro Crater for a morning game drive, seeking
       'Hotel pick-up and drop-off',
     ],
     gallery: [mikumiLions, mikumiGiraffes, mikumiHerd, mikumiRhino],
-    overview: `Day 1: Zanzibar → Dar → Mikumi + Maasai Village
+    overview: `Day 1: Zanzibar ? Dar ? Mikumi + Maasai Village
 Hotel Pick-Up (05:00 AM)
 Begin with a hotel pickup, followed by the 7:00 AM ferry from Stone Town to Dar es Salaam. Transfer to the SGR station and board the 9:30 AM train to Morogoro, where breakfast is served on board.
 
@@ -632,7 +633,7 @@ Drive back to Morogoro and board the SGR train to Dar es Salaam. From there, tak
       'Combination of two iconic safari destinations',
     ],
     includes: [
-      'Return flights (Zanzibar ↔ Arusha)',
+      'Return flights (Zanzibar ? Arusha)',
       'Airport pick-up and drop-off in Arusha',
       '4x4 safari vehicle with professional guide',
       'Accommodation with meals (dinner, breakfast, selected lunches)',
@@ -642,13 +643,13 @@ Drive back to Morogoro and board the SGR train to Dar es Salaam. From there, tak
       'Hotel pick-up and drop-off',
     ],
     gallery: [serengetiFlamingos, serengetiRhino, serengetiWaterhole, serengetiElephantHerd],
-    overview: `Day 1: Zanzibar → Serengeti
+    overview: `Day 1: Zanzibar ? Serengeti
 Begin with an early morning flight from Zanzibar to Arusha. On arrival, transfer to Serengeti National Park and head into the reserve for an afternoon game drive across the vast plains in search of lions, elephants, giraffes, and zebras. Spend the night at a lodge or camp inside the Serengeti.
 
-Day 2: Serengeti Game Drive → Ngorongoro
+Day 2: Serengeti Game Drive ? Ngorongoro
 Enjoy a full-day game drive in Serengeti National Park, then in the late afternoon transfer to the Ngorongoro Conservation Area and check in at a lodge on the crater rim for dinner and overnight stay.
 
-Day 3: Ngorongoro Crater → Zanzibar
+Day 3: Ngorongoro Crater ? Zanzibar
 Descend into Ngorongoro Crater for a morning game drive with opportunities to spot the Big Five, then transfer back to Arusha for your flight to Zanzibar.`,
     note: 'Tips recommended (approx. $15 per person per day). Hotel pick-up/drop-off depends on location.',
   },
@@ -663,7 +664,7 @@ Descend into Ngorongoro Crater for a morning game drive with opportunities to sp
       'Enjoy scenic picnic lunch near the hippo pool',
     ],
     includes: [
-      'Return flights (Zanzibar ↔ Arusha)',
+      'Return flights (Zanzibar ? Arusha)',
       '4x4 safari vehicle with professional guide',
       'Accommodation in Karatu (with meals)',
       'Park entrance fees (Tarangire & Ngorongoro)',
@@ -672,7 +673,7 @@ Descend into Ngorongoro Crater for a morning game drive with opportunities to sp
       'Hotel pick-up and drop-off',
     ],
     gallery: [tarangireView, tarangireHerd, tarangireHerdScene, wildebeestMigration],
-    overview: `Day 1: Zanzibar → Arusha → Tarangire → Karatu
+    overview: `Day 1: Zanzibar ? Arusha ? Tarangire ? Karatu
 Start with an early morning flight from Zanzibar to Arusha. On arrival, meet your guide and drive to Tarangire National Park for a full-day game drive and picnic lunch among elephants, giraffes, zebras, and buffaloes. In the late afternoon transfer to Karatu for dinner and overnight.
 
 Day 2: Ngorongoro Crater Game Drive
@@ -702,16 +703,16 @@ After breakfast drive back to Arusha and board your return flight to Zanzibar, f
       'Bottled drinking water',
     ],
     gallery: [tarangireFlamingos, tarangireRhino, tarangireZebraFlamingos, tarangireStream],
-    overview: `Day 1: Arusha → Tarangire → Karatu
+    overview: `Day 1: Arusha ? Tarangire ? Karatu
 Begin with a pickup from your hotel or airport in Arusha and drive to Tarangire National Park. Enjoy a game drive with opportunities to spot elephants, giraffes, zebras, and baobab trees, followed by a picnic lunch before continuing to Karatu for dinner and an overnight stay.
 
-Day 2: Karatu → Serengeti National Park
+Day 2: Karatu ? Serengeti National Park
 After breakfast travel through the Ngorongoro highlands to Serengeti National Park, embarking on game drives across the iconic plains before settling into your lodge or tented camp for dinner and overnight.
 
-Day 3: Serengeti → Ngorongoro Conservation Area
+Day 3: Serengeti ? Ngorongoro Conservation Area
 Start with an early morning game drive in Serengeti, then transfer toward Ngorongoro Conservation Area, arriving at a lodge on the crater rim for dinner and overnight with sweeping views.
 
-Day 4: Ngorongoro Crater → Arusha
+Day 4: Ngorongoro Crater ? Arusha
 Descend into Ngorongoro Crater for a half-day game drive, enjoy a picnic lunch near the hippo pool, and drive back to Arusha for hotel or airport drop-off.`,
     gallery: [lionFamily, giraffePair, tarangireHerd, wildebeestMigration],
     note: 'Tips recommended (approx. $15 per person per day). Hotel pick-up/drop-off depends on location.',
@@ -732,7 +733,7 @@ Descend into Ngorongoro Crater for a half-day game drive, enjoy a picnic lunch n
       stoneTownGallery3,
       stoneTownGallery4,
     ],
-    overview: `Enjoy a 2–3 hour guided walk through Stone Town, exploring its narrow streets, historic buildings, and vibrant culture. Visit key landmarks like House of Wonders, Sultan's Palace, and Freddie Mercury House while learning about Zanzibar's rich history and cultural diversity.`,
+    overview: `Enjoy a 2�3 hour guided walk through Stone Town, exploring its narrow streets, historic buildings, and vibrant culture. Visit key landmarks like House of Wonders, Sultan's Palace, and Freddie Mercury House while learning about Zanzibar's rich history and cultural diversity.`,
     note: 'Pickup fees depend on hotel location.',
   },
   'half-2': {
@@ -812,7 +813,7 @@ Spend your time exploring the shallow waters, snorkeling, or simply unwinding in
       'Enjoy a short scenic boat ride from Stone Town',
       'See Aldabra giant tortoises and peacocks',
       'Explore the historic prison site',
-      'Learn about the island’s history and culture',
+      'Learn about the island�s history and culture',
     ],
     includes: [
       'Professional tour guide',
@@ -977,7 +978,7 @@ function TourDetailPage() {
   if (!tour) {
     return (
       <div className="tour-detail">
-        <p className="tour-detail__missing">Tour not found. Please choose another experience.</p>
+        <p className="tour-detail__missing">Tour nao encontrado. Escolha outra experiencia.</p>
       </div>
     )
   }
@@ -1032,53 +1033,53 @@ function TourDetailPage() {
         }}
       >
         <div className="tour-detail__hero-content container">
-          <h1>{tour.title}</h1>
+          <h1>{pt(tour.title)}</h1>
         </div>
       </div>
 
       <div className="tour-detail__info-bar">
-        <div>Location: {content.location}</div>
-        <div>Duration: {tour.duration}</div>
-        <div>Group Size: {content.groupSize}</div>
-        <div>Reviews: {content.reviews}</div>
+        <div>Localizacao: {pt(content.location)}</div>
+        <div>Duracao: {pt(tour.duration)}</div>
+        <div>Tamanho do grupo: {pt(content.groupSize)}</div>
+        <div>Avaliacoes: {pt(content.reviews)}</div>
       </div>
 
       <div className="tour-detail__container">
         <div className="tour-detail__content">
-          <h1>{tour.title}</h1>
+          <h1>{pt(tour.title)}</h1>
           {description && (
             <>
-              <h2>Tour Overview</h2>
-              <p>{description}</p>
+              <h2>Visao Geral do Tour</h2>
+              <p>{pt(description)}</p>
             </>
           )}
 
-          <h2>Tour Highlights</h2>
+          <h2>Destaques do Tour</h2>
           <ul>
             {content.experiences.map((item) => (
-              <li key={item}>{item}</li>
+              <li key={item}>{pt(item)}</li>
             ))}
           </ul>
 
-          <h2>Price Includes</h2>
+          <h2>Preco Inclui</h2>
           <ul>
             {content.includes.map((item) => (
-              <li key={item}>{item}</li>
+              <li key={item}>{pt(item)}</li>
             ))}
           </ul>
           {content.note && (
-            <p className="tour-detail__note">{content.note}</p>
+            <p className="tour-detail__note">{pt(content.note)}</p>
           )}
         </div>
 
         <div className="tour-detail__booking">
-          <h3>Tour Booking</h3>
+          <h3>Reserva do Tour</h3>
           <p>
-            <strong>Duration:</strong> {tour.duration}
+            <strong>Duracao:</strong> {pt(tour.duration)}
           </p>
           <div className="tour-detail__price">{tour.price}</div>
           <Link to={`/booking/${tourId}`} className="tour-detail__btn tour-detail__btn--primary">
-            Reserve Your Spot
+            Reserve o Seu Lugar
           </Link>
         </div>
       </div>
@@ -1087,12 +1088,12 @@ function TourDetailPage() {
         <section className="tour-detail__gallery-section">
           <div className="container">
             <div className="tour-detail__gallery-heading">
-              <h2>Gallery</h2>
+              <h2>Galeria</h2>
             </div>
             <div className="tour-detail__gallery-grid tour-detail__gallery-horizontal">
               {galleryImages.map((src) => (
                 <figure className="tour-detail__gallery-item" key={src}>
-                  <img src={src} alt={`${tour.title} scene`} />
+                  <img src={src} alt={`${pt(tour.title)} imagem`} />
                 </figure>
               ))}
             </div>
@@ -1102,18 +1103,18 @@ function TourDetailPage() {
       {moreTours.length > 0 && (
         <section className="tour-detail__more-tours">
           <div className="container">
-            <h2>More Wildlife Safaris</h2>
+            <h2>Mais Safaris de Vida Selvagem</h2>
             <div className="tour-detail__more-grid">
               {moreTours.map((option) => (
                 <article className="tour-detail__more-card" key={option.id}>
                   <img src={option.image} alt={option.title} />
                   <div className="tour-detail__more-content">
-                    <h3>{option.title}</h3>
-                    <p>{option.summary}</p>
+                    <h3>{pt(option.title)}</h3>
+                    <p>{pt(option.summary)}</p>
                     <div className="tour-detail__more-footer">
                       <span>{option.price}</span>
                       <Link to={`/tours/${option.id}`} className="tour-detail__more-btn">
-                        View details
+                        Ver detalhes
                       </Link>
                     </div>
                   </div>
@@ -1128,3 +1129,5 @@ function TourDetailPage() {
 }
 
 export default TourDetailPage
+
+

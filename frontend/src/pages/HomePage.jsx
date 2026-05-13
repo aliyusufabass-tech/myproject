@@ -9,23 +9,23 @@ import homeHeroImage from '../assets/image.jpeg'
 
 const reasons = [
   {
-    title: 'Local Expertise',
-    text: 'Our team combines genuine hospitality with strong local knowledge and well-considered recommendations.',
+    title: 'Conhecimento Local',
+    text: 'A nossa equipa combina hospitalidade genuina com profundo conhecimento local e recomendacoes bem pensadas.',
   },
   {
-    title: 'Flexible Planning',
-    text: 'Choose private experiences, family-friendly itineraries, or straightforward transfers with confidence.',
+    title: 'Planeamento Flexivel',
+    text: 'Escolha experiencias privadas, itinerarios para familias ou transfers diretos com total confianca.',
   },
   {
-    title: 'Trusted Service',
-    text: 'Count on clear communication, punctual service, and attentive support from arrival to departure.',
+    title: 'Servico de Confianca',
+    text: 'Conte com comunicacao clara, pontualidade e apoio atencioso desde a chegada ate a partida.',
   },
 ]
 
 const buildHomeCards = () => {
   const excursionCards = zanzibarTours.slice(0, 3).map((tour) => ({
     id: tour.id,
-    badge: tour.type === 'half' ? 'Half-day' : 'Full-day',
+    badge: tour.type === 'half' ? 'Meio dia' : 'Dia inteiro',
     title: tour.title,
     summary: tour.summary,
     image: tour.image,
@@ -53,27 +53,27 @@ function HomePage() {
   return (
     <>
       <PageMeta
-        title="Home"
-        description="Discover tours, transfers, and tailored island experiences with Zan Excursions."
+        title="Início"
+        description="Descubra tours, transfers e experiencias personalizadas na ilha com a Zan Excursions."
       />
       <section
         className="hero hero--home"
         style={{ '--home-hero-image': `url(${homeHeroImage})` }}
       >
         <div className="container hero__content">
-          <h1>Discover Zanzibar: where every wave tells a story, and every step leads to wonder.</h1>
+          <h1>Descubra Zanzibar: onde cada onda conta uma historia e cada passo leva ao encanto.</h1>
           <p>
-            Zan Excursions designs authentic island experiences — beach escapes, spice routes, and transfers that flow as smoothly as the tides.
+            A Zan Excursions cria experiencias autenticas na ilha - escapadelas de praia, rotas das especiarias e transfers que fluem tao suavemente quanto as marés.
           </p>
           <div className="hero__actions">
-            <Button to="/tours">Explore Tours</Button>
+            <Button to="/tours">Explorar Tours</Button>
             <Button
               href="https://wa.me/255792692084"
               target="_blank"
               rel="noopener noreferrer"
               variant="secondary"
             >
-              WhatsApp Us
+              Fale Connosco no WhatsApp
             </Button>
           </div>
         </div>
@@ -82,9 +82,9 @@ function HomePage() {
       <section className="section tours-format-section">
         <div className="container">
           <SectionHeading
-            eyebrow="Featured Tours"
-            title="Handpicked tours that mirror the experiences in our full catalogue"
-            text="Taste the variety of Zanzibar with curated experiences that blend culture, wildlife, and ocean moments."
+            eyebrow="Tours em Destaque"
+            title="Tours selecionados que refletem as experiencias do nosso catalogo completo"
+            text="Descubra a variedade de Zanzibar com experiencias escolhidas que combinam cultura, vida selvagem e momentos no oceano."
             align="center"
           />
 
@@ -96,7 +96,7 @@ function HomePage() {
 
           <div className="tour-format-cta">
             <Button to="/tours" variant="secondary">
-              View all tours
+              Ver todos os tours
             </Button>
           </div>
         </div>
@@ -105,8 +105,8 @@ function HomePage() {
       <section className="section section--accent">
         <div className="container">
           <SectionHeading
-            eyebrow="Why Choose Us"
-            title="Travel support that feels personal, reliable, and deeply rooted in local knowledge"
+            eyebrow="Por Que Escolher-nos"
+            title="Apoio de viagem pessoal, confiavel e profundamente enraizado no conhecimento local"
             className="section-heading--compact"
             align="center"
           />
@@ -125,30 +125,30 @@ function HomePage() {
       <section className="section">
         <div className="container split">
           <div>
-            <p className="section-tag">Plan with confidence</p>
+            <p className="section-tag">Planeie com confianca</p>
             <h2 className="home-section-title--compact">
-              Need transfers, tours, and quick local guidance in one place?
+              Precisa de transfers, tours e orientacao local rapida num so lugar?
             </h2>
             <p className="muted">
-              We help guests move smoothly from airport arrival to hotel check-in, then
-              into unforgettable island experiences without the usual coordination stress.
+              Ajudamos os visitantes a deslocarem-se sem complicacoes desde a chegada ao aeroporto ate ao check-in no hotel, e depois
+              para experiencias inesqueciveis na ilha sem o stress habitual de coordenacao.
             </p>
             <Link className="text-link" to="/transfers">
-              See transfer options
+              Ver opcoes de transfer
             </Link>
           </div>
           <div className="feature-panel">
             <div>
-              <strong>Airport pickup</strong>
-              <p>Professional meet-and-greet service with luggage support and direct hotel drop-off.</p>
+              <strong>Recolha no aeroporto</strong>
+              <p>Servico profissional de rececao com apoio de bagagem e transporte direto para o hotel.</p>
             </div>
             <div>
-              <strong>Custom combinations</strong>
-              <p>Combine snorkeling, cultural visits, and sunset experiences within one itinerary.</p>
+              <strong>Combinacoes personalizadas</strong>
+              <p>Combine snorkeling, visitas culturais e experiencias ao por do sol num unico itinerario.</p>
             </div>
             <div>
-              <strong>Fast response</strong>
-              <p>Responsive support for last-minute bookings, schedule changes, and travel updates.</p>
+              <strong>Resposta rapida</strong>
+              <p>Apoio agil para reservas de ultima hora, mudancas de horario e atualizacoes de viagem.</p>
             </div>
           </div>
         </div>
@@ -157,8 +157,8 @@ function HomePage() {
       <section className="section section--sand">
         <div className="container">
           <SectionHeading
-            eyebrow="Testimonials"
-            title="What guests value most about travelling with us"
+            eyebrow="Testemunhos"
+            title="O que os nossos clientes mais valorizam ao viajar connosco"
             align="center"
           />
           <div className="grid grid--three">

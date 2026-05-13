@@ -5,10 +5,10 @@ const DEFAULT_ENDPOINT = 'https://formsubmit.co/info@zanexcursions.com'
 const BookingForm = forwardRef(function BookingForm(
   {
     endpoint,
-    subject = 'New Booking Request',
+    subject = 'Novo Pedido de Reserva',
     fields = [],
     hiddenFields = {},
-    buttonText = 'Send Booking',
+    buttonText = 'Enviar Reserva',
     adultPrice = 0,
     isSafari = false,
     formClassName,
@@ -38,7 +38,7 @@ const BookingForm = forwardRef(function BookingForm(
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    setStatus('Sending…')
+    setStatus('A enviar...')
 
     const payload = new FormData()
     payload.append('_subject', subject)
@@ -52,15 +52,15 @@ const BookingForm = forwardRef(function BookingForm(
         body: payload,
       })
       if (!response.ok) {
-        throw new Error('Failed to send booking')
+        throw new Error('Failed to Enviar Reserva')
       }
       setValues(fields.reduce((acc, field) => ({ ...acc, [field.name]: field.value ?? '' }), {}))
-      setStatus('✅ Booking sent successfully!')
+      setStatus('Reserva enviada com sucesso!')
       setTimeout(() => {
         setStatus('')
       }, 3000)
     } catch (error) {
-      setStatus('❌ Network error, please try again.')
+      setStatus('Erro de rede, tente novamente.')
     }
   }
 
@@ -116,14 +116,14 @@ const BookingForm = forwardRef(function BookingForm(
 
       {showSummary && (
         <div className="booking-summary">
-          <h4>Booking Summary</h4>
-          <p>Adult rate: ${adultRate.toFixed(2)} per person</p>
-          <p>Kids rate: ${kidsRate.toFixed(2)} per person</p>
+          <h4>Resumo da Reserva</h4>
+          <p>Tarifa de adulto: ${adultRate.toFixed(2)} por pessoa</p>
+          <p>Tarifa de crianca: ${kidsRate.toFixed(2)} por pessoa</p>
           <p>
-            {adultCount} adult(s) + {kidsCount} kid(s) = ${totalCost.toFixed(2)}
+            {adultCount} adulto(s) + {kidsCount} crianca(s) = ${totalCost.toFixed(2)}
           </p>
           <small>
-            Safari discount: ${adultDiscount} per adult applied; kids get $10 less than adults.
+            Desconto de safari: ${adultDiscount} por adulto aplicado; criancas pagam $10 a menos.
           </small>
         </div>
       )}
@@ -138,3 +138,4 @@ const BookingForm = forwardRef(function BookingForm(
 })
 
 export default BookingForm
+

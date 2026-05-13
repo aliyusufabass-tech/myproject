@@ -5,13 +5,13 @@ function ContactPage() {
   return (
     <>
       <PageMeta
-        title="Contact Us"
-        description="Contact Zan Excursions for bookings, travel guidance, and personalised Zanzibar trip planning."
+        title="Contacto"
+        description="Contacte a Zan Excursions para reservas, orientacao de viagem e planeamento personalizado em Zanzibar."
       />
 
       <section className="contact-hero" style={{ '--contact-hero-image': `url(${contactHero})` }}>
         <div className="container contact-hero__content">
-          <h1>Contact Us</h1>
+          <h1>Contacto</h1>
         </div>
       </section>
 
@@ -19,8 +19,8 @@ function ContactPage() {
         <div className="container contact-page-container">
           <div className="contact-page-grid">
             <div className="contact-info-box contact-info-box--wide">
-              <h2>Talk to Zan Excursions</h2>
-              <p>Send us your travel details via the form or contact the office directly.</p>
+              <h2>Fale com a Zan Excursions</h2>
+              <p>Envie os detalhes da sua viagem pelo formulario ou contacte-nos diretamente.</p>
 
               <div className="contact-info-item">
                 <strong>Email:</strong>
@@ -30,47 +30,47 @@ function ContactPage() {
               </div>
 
               <div className="contact-info-item">
-                <strong>Phone:</strong>
+                <strong>Telefone:</strong>
                 <p>+255 792 692 084</p>
               </div>
 
               <div className="contact-info-item">
-                <strong>Location:</strong>
+                <strong>Localizacao:</strong>
                 <p>Zanzibar, Tanzania</p>
               </div>
 
               <div className="contact-info-item">
-                <strong>Working Hours:</strong>
-                <p>Mon - Sun: 8:00 AM - 8:00 PM</p>
+                <strong>Horario de Atendimento:</strong>
+                <p>Seg - Dom: 8:00 - 20:00</p>
               </div>
             </div>
 
             <div className="contact-form-box">
-              <h2>Share your travel details</h2>
+              <h2>Partilhe os detalhes da sua viagem</h2>
               <form className="contact-page-form">
                 <div className="contact-form-group">
-                  <label htmlFor="contact-fullname">Full name</label>
-                  <input id="contact-fullname" type="text" placeholder="Your full name" required />
+                  <label htmlFor="contact-fullname">Nome completo</label>
+                  <input id="contact-fullname" type="text" placeholder="O seu nome completo" required />
                 </div>
                 <div className="contact-form-group">
                   <label htmlFor="contact-email">Email</label>
                   <input id="contact-email" type="email" placeholder="you@example.com" required />
                 </div>
                 <div className="contact-form-group">
-                  <label htmlFor="contact-phone">Phone number</label>
+                  <label htmlFor="contact-phone">Numero de telefone</label>
                   <input id="contact-phone" type="tel" placeholder="+255 7XX XXX XXX" required />
                 </div>
                 <div className="contact-form-group">
-                  <label htmlFor="contact-message">Message</label>
+                  <label htmlFor="contact-message">Mensagem</label>
                   <textarea
                     id="contact-message"
                     rows="4"
-                    placeholder="Tell us about your preferred dates, group size, and requests."
+                    placeholder="Fale-nos das datas preferidas, tamanho do grupo e pedidos especiais."
                     required
                   />
                 </div>
                 <button className="contact-submit-btn" type="submit">
-                  Submit travel info
+                  Enviar informacoes de viagem
                 </button>
               </form>
             </div>
@@ -78,7 +78,7 @@ function ContactPage() {
 
           <div className="contact-map-box">
             <iframe
-              title="Zanzibar map"
+              title="Mapa de Zanzibar"
               src="https://www.google.com/maps?q=Zanzibar&output=embed"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

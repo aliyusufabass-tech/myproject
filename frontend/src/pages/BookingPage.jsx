@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react'
 import { useLocation, useParams } from 'react-router-dom'
 import { tours, safariTours, zanzibarTours } from '../data/tours'
+import { pt } from '../utils/i18nPt'
 
 function BookingPage() {
   const { tourId } = useParams()
@@ -26,7 +27,7 @@ function BookingPage() {
   if (!tour) {
     return (
       <section className="tour-detail">
-        <p className="tour-detail__missing">Tour not found. Please choose another experience.</p>
+        <p className="tour-detail__missing">Tour nao encontrado. Escolha outra experiencia.</p>
       </section>
     )
   }
@@ -69,10 +70,10 @@ function BookingPage() {
     if (submitDisabled) {
       return
     }
-    setStatus('Sending booking...')
+    setStatus('A enviar reserva...')
     setSubmitDisabled(true)
     const payload = new FormData()
-    payload.append('_subject', `New Booking Request - ${tour.title}`)
+    payload.append('_subject', `Novo Pedido de Reserva - ${tour.title}`)
     payload.append('_captcha', 'false')
     payload.append('tour', tour.title)
     payload.append('tourId', tour.id)
@@ -101,7 +102,7 @@ function BookingPage() {
         children: '0',
         tourDate: '',
       })
-      setStatus('✅ Booking submitted! We’ll be in touch shortly.')
+      setStatus('Reserva enviada com sucesso! Entraremos em contacto em breve.')
       setSuccess(true)
       setTimeout(() => {
         setStatus('')
@@ -109,7 +110,7 @@ function BookingPage() {
         setSubmitDisabled(false)
       }, 5000)
     } catch (error) {
-      setStatus('❌ Unable to send booking. Please try again.')
+      setStatus('Nao foi possivel enviar a reserva. Tente novamente.')
       setSubmitDisabled(false)
     }
   }
@@ -124,54 +125,54 @@ function BookingPage() {
       />
 
       <div className="tour-detail__info-bar">
-        <div>Location: Continuing in Zanzibar</div>
-        <div>Duration: {tour.duration}</div>
-        <div>Group Size: Max 10</div>
-        <div>Reviews: 120</div>
+        <div>Localizacao: Zanzibar</div>
+        <div>Duracao: {tour.duration}</div>
+        <div>Tamanho do grupo: Maximo 10</div>
+        <div>Avaliacoes: 120</div>
       </div>
 
       <div className="tour-detail__container">
         <div className="tour-booking__card">
           <div className="tour-booking__summary">
-            <h2>Booking summary</h2>
+            <h2>Resumo da Reserva</h2>
             <div className="tour-booking__summary-row">
               <span>Tour</span>
-              <span>{tour.title}</span>
+              <span>{pt(tour.title)}</span>
             </div>
             <div className="tour-booking__summary-row">
-              <span>Duration</span>
-              <span>{tour.duration}</span>
+              <span>Duracao</span>
+              <span>{pt(tour.duration)}</span>
             </div>
             <div className="tour-booking__summary-row">
-              <span>Price</span>
+              <span>Preco</span>
               <span>{tour.price}</span>
             </div>
             <div className="tour-booking__summary-row">
-              <span>Full name</span>
-              <span>{formData.name || 'N/A'}</span>
+              <span>Nome completo</span>
+              <span>{formData.name || 'N/D'}</span>
             </div>
             <div className="tour-booking__summary-row">
               <span>Email</span>
-              <span>{formData.email || 'N/A'}</span>
+              <span>{formData.email || 'N/D'}</span>
             </div>
             <div className="tour-booking__summary-row">
-              <span>Phone</span>
-              <span>{formData.phone || 'N/A'}</span>
+              <span>Telefone</span>
+              <span>{formData.phone || 'N/D'}</span>
             </div>
             <div className="tour-booking__summary-row">
-              <span>Adults</span>
-              <span>{formData.adults || 'N/A'}</span>
+              <span>Adultos</span>
+              <span>{formData.adults || 'N/D'}</span>
             </div>
             <div className="tour-booking__summary-row">
-              <span>Children</span>
-              <span>{formData.children || 'N/A'}</span>
+              <span>Criancas</span>
+              <span>{formData.children || 'N/D'}</span>
             </div>
             <div className="tour-booking__summary-row">
-              <span>Date of tour</span>
-              <span>{formData.tourDate || 'Not set'}</span>
+              <span>Data do tour</span>
+              <span>{formData.tourDate || 'Nao definida'}</span>
             </div>
             <div className="tour-booking__summary-row">
-              <span>Child rate</span>
+              <span>Tarifa de crianca</span>
               <span>{currency.format(childRate)}</span>
             </div>
             <div className="tour-booking__summary-row">
@@ -182,7 +183,7 @@ function BookingPage() {
 
           <form className="tour-detail__form" onSubmit={handleSubmit}>
             <label>
-              Full name
+              Nome completo
               <input name="name" type="text" value={formData.name} onChange={handleChange} required />
             </label>
             <label>
@@ -196,11 +197,11 @@ function BookingPage() {
               />
             </label>
             <label>
-              Phone number
+              Numero de telefone
               <input name="phone" type="tel" value={formData.phone} onChange={handleChange} />
             </label>
             <label>
-              Date of tour
+              Data do tour
               <input
                 name="tourDate"
                 type="date"
@@ -211,7 +212,7 @@ function BookingPage() {
               />
             </label>
             <label>
-              Adults
+              Adultos
               <input
                 name="adults"
                 type="number"
@@ -222,7 +223,7 @@ function BookingPage() {
               />
             </label>
             <label>
-              Children
+              Criancas
               <input
                 name="children"
                 type="number"
@@ -232,14 +233,14 @@ function BookingPage() {
               />
             </label>
             <button className="tour-detail__form-btn" type="submit" disabled={submitDisabled}>
-              {submitDisabled ? 'Sending…' : 'Confirm Booking'}
+              {submitDisabled ? 'A enviar...' : 'Confirmar Reserva'}
             </button>
           </form>
 
           {status && <p className="form-success">{status}</p>}
           {success && (
             <div className="tour-detail__confirmation">
-              <p>We received your booking details and will reply shortly to confirm.</p>
+              <p>Recebemos os detalhes da sua reserva e responderemos em breve para confirmar.</p>
             </div>
           )}
         </div>
@@ -249,3 +250,4 @@ function BookingPage() {
 }
 
 export default BookingPage
+

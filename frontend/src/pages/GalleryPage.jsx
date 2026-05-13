@@ -38,8 +38,8 @@ function GalleryPage() {
   return (
     <>
       <PageMeta
-        title="Gallery"
-        description="Explore Zan Excursions moments through beaches, island scenery, and memorable travel experiences."
+        title="Galeria"
+        description="Explore momentos da Zan Excursions entre praias, paisagens da ilha e experiencias de viagem inesqueciveis."
       />
 
       <section
@@ -47,17 +47,17 @@ function GalleryPage() {
         style={{ '--gallery-hero-image': `url(${galleryHero})` }}
       >
         <div className="container gallery-page-hero__content">
-          <h1>Zan Excursions Gallery</h1>
+          <h1>Galeria Zan Excursions</h1>
         </div>
       </section>
 
       <section className="section gallery-page-section">
         <div className="container">
           <div className="gallery-page-intro">
-            <h2>Island moments worth remembering</h2>
+            <h2>Momentos da ilha que valem a pena recordar</h2>
             <p>
-              From turquoise waters and dhow rides to peaceful beach afternoons, this
-              gallery offers a glimpse of the experiences we help create across Zanzibar.
+              Das aguas turquesa e passeios de dhow aos fins de tarde tranquilos na praia,
+              esta galeria mostra as experiencias que ajudamos a criar em Zanzibar.
             </p>
           </div>
 
@@ -69,7 +69,7 @@ function GalleryPage() {
                 className={`gallery-page-grid__item gallery-page-grid__item--${(index % 5) + 1}`}
                 style={{ backgroundImage: `url(${image})` }}
                 onClick={() => openModalAt(index)}
-                aria-label="Open photo viewer"
+                aria-label="Abrir visualizador de foto"
               />
             ))}
           </div>
@@ -78,18 +78,18 @@ function GalleryPage() {
 
       {modalOpen && (
         <div className="gallery-modal" role="dialog" aria-modal="true">
-          <button className="gallery-modal__close" onClick={closeModal} aria-label="Close gallery viewer">
+          <button className="gallery-modal__close" onClick={closeModal} aria-label="Fechar visualizador de galeria">
             ×
           </button>
-          <button className="gallery-modal__nav gallery-modal__nav--left" onClick={goPrev} aria-label="Previous photo">
+          <button className="gallery-modal__nav gallery-modal__nav--left" onClick={goPrev} aria-label="Foto anterior">
             ‹
           </button>
           <img
             className="gallery-modal__image"
             src={galleryImages[currentIndex]}
-            alt={`Gallery image ${currentIndex + 1}`}
+            alt={`Imagem da galeria ${currentIndex + 1}`}
           />
-          <button className="gallery-modal__nav gallery-modal__nav--right" onClick={goNext} aria-label="Next photo">
+          <button className="gallery-modal__nav gallery-modal__nav--right" onClick={goNext} aria-label="Proxima foto">
             ›
           </button>
         </div>
