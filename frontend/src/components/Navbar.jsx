@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { NavLink, useLocation } from 'react-router-dom'
 import logo from '../assets/new.png'
+import LanguageSwitcher from './LanguageSwitcher'
+import { translateText } from '../utils/i18nText'
 
 const navLinks = [
   { to: '/', label: 'Início' },
@@ -12,9 +15,11 @@ const navLinks = [
 ]
 
 function Navbar() {
+  const { i18n } = useTranslation()
   const [menuOpen, setMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const location = useLocation()
+  const tr = (text) => translateText(text, i18n.language)
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 24)
@@ -58,10 +63,13 @@ function Navbar() {
               to={link.to}
               onClick={() => setMenuOpen(false)}
             >
-              {link.label}
+              {tr(link.label)}
             </NavLink>
           ))}
         </nav>
+      </div>
+      <div className="container navbar__language-row">
+        <LanguageSwitcher />
       </div>
     </header>
   )

@@ -1,7 +1,9 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import PageMeta from '../components/PageMeta'
 import { transferOptions, transferVehicles } from '../data/tours'
 import TransfersHero from '../assets/98.jpeg'
+import { translateText } from '../utils/i18nText'
 
 const initialForm = {
   fullName: '',
@@ -17,9 +19,11 @@ const initialForm = {
 }
 
 function TransfersPage() {
+  const { i18n } = useTranslation()
   const [formData, setFormData] = useState(initialForm)
   const [status, setStatus] = useState('')
   const [success, setSuccess] = useState(false)
+  const tr = (text) => translateText(text, i18n.language)
 
   const handleChange = (event) => {
     const { name, value } = event.target
@@ -57,116 +61,116 @@ function TransfersPage() {
   return (
     <>
       <PageMeta
-        title="Transfers"
-        description="Recolha profissional no aeroporto, Transfers de hotel, viagens privadas e servicos de viaturas em Zanzibar."
+        title={tr('Transfers')}
+        description={tr('Recolha profissional no aeroporto, Transfers de hotel, viagens privadas e servicos de viaturas em Zanzibar.')}
       />
 
       <section
-        className="Transfers-hero"
-        style={{ '--Transfers-hero-image': `url(${TransfersHero})` }}
+        className="transfers-hero"
+        style={{ '--transfers-hero-image': `url(${TransfersHero})` }}
       >
-        <div className="container Transfers-hero__content">
-          <h1>Servicos de Transfer</h1>
+        <div className="container transfers-hero__content">
+          <h1>{tr('Servicos de Transfer')}</h1>
         </div>
       </section>
 
-      <section className="section Transfers-page-section">
-        <div className="container Transfers-page-container">
-          <div className="Transfers-title-block">
-            <h2>Os Nossos Servicos</h2>
+      <section className="section transfers-page-section">
+        <div className="container transfers-page-container">
+          <div className="transfers-title-block">
+            <h2>{tr('Os Nossos Servicos')}</h2>
           </div>
 
-          <div className="Transfers-card-grid">
+          <div className="transfers-card-grid">
             {transferOptions.map((service) => (
-              <article className="Transfers-service-card" key={service.name}>
-                <h3>{service.name}</h3>
-                <p>{service.detail}</p>
+              <article className="transfers-service-card" key={service.name}>
+                <h3>{tr(service.name)}</h3>
+                <p>{tr(service.detail)}</p>
               </article>
             ))}
           </div>
 
-          <div className="Transfers-title-block Transfers-title-block--spaced">
-            <h2>As Nossas Viaturas</h2>
+          <div className="transfers-title-block transfers-title-block--spaced">
+            <h2>{tr('As Nossas Viaturas')}</h2>
           </div>
 
-          <div className="Transfers-vehicle-grid">
+          <div className="transfers-vehicle-grid">
             {transferVehicles.map((vehicle) => (
-              <article className="Transfers-vehicle-card" key={vehicle.name}>
-                <img src={vehicle.image} alt={vehicle.name} />
-                <div className="Transfers-vehicle-card__info">
-                  <h3>{vehicle.name}</h3>
-                  <p>{vehicle.capacity}</p>
+              <article className="transfers-vehicle-card" key={vehicle.name}>
+                <img src={vehicle.image} alt={tr(vehicle.name)} />
+                <div className="transfers-vehicle-card__info">
+                  <h3>{tr(vehicle.name)}</h3>
+                  <p>{tr(vehicle.capacity)}</p>
                 </div>
               </article>
             ))}
           </div>
 
-          <div className="Transfers-booking">
-            <h2>Reserve o Seu Transfer</h2>
+          <div className="transfers-booking">
+            <h2>{tr('Reserve o Seu Transfer')}</h2>
             <form className="transfers-booking-form" onSubmit={handleSubmit}>
-              <div className="Transfers-form-group">
-                <label htmlFor="fullName">Nome Completo</label>
+              <div className="transfers-form-group">
+                <label htmlFor="fullName">{tr('Nome Completo')}</label>
                 <input
                   id="fullName"
                   name="fullName"
                   type="text"
                   value={formData.fullName}
                   onChange={handleChange}
-                  placeholder="Nome Completo"
+                  placeholder={tr('Nome Completo')}
                   required
                 />
               </div>
-              <div className="Transfers-form-group">
-                <label htmlFor="email">Email</label>
+              <div className="transfers-form-group">
+                <label htmlFor="email">{tr('Email')}</label>
                 <input
                   id="email"
                   name="email"
                   type="email"
                   value={formData.email}
                   onChange={handleChange}
-                  placeholder="Email"
+                  placeholder={tr('Email')}
                   required
                 />
               </div>
-              <div className="Transfers-form-group">
-                <label htmlFor="phone">Telefone</label>
+              <div className="transfers-form-group">
+                <label htmlFor="phone">{tr('Telefone')}</label>
                 <input
                   id="phone"
                   name="phone"
                   type="tel"
                   value={formData.phone}
                   onChange={handleChange}
-                  placeholder="Telefone"
+                  placeholder={tr('Telefone')}
                   required
                 />
               </div>
-              <div className="Transfers-form-group">
-                <label htmlFor="pickup">Local de Recolha</label>
+              <div className="transfers-form-group">
+                <label htmlFor="pickup">{tr('Local de Recolha')}</label>
                 <input
                   id="pickup"
                   name="pickup"
                   type="text"
                   value={formData.pickup}
                   onChange={handleChange}
-                  placeholder="Hotel / Aeroporto"
+                  placeholder={tr('Hotel / Aeroporto')}
                   required
                 />
               </div>
-              <div className="Transfers-form-group">
-                <label htmlFor="dropoff">Destino</label>
+              <div className="transfers-form-group">
+                <label htmlFor="dropoff">{tr('Destino')}</label>
                 <input
                   id="dropoff"
                   name="dropoff"
                   type="text"
                   value={formData.dropoff}
                   onChange={handleChange}
-                  placeholder="Hotel / Zona"
+                  placeholder={tr('Hotel / Zona')}
                   required
                 />
               </div>
-              <div className="Transfers-form-row">
-                <div className="Transfers-form-group">
-                  <label htmlFor="date">Data do transfer</label>
+              <div className="transfers-form-row">
+                <div className="transfers-form-group">
+                  <label htmlFor="date">{tr('Data do transfer')}</label>
                   <input
                     id="date"
                     name="date"
@@ -176,8 +180,8 @@ function TransfersPage() {
                     required
                   />
                 </div>
-                <div className="Transfers-form-group">
-                  <label htmlFor="time">Horario preferido</label>
+                <div className="transfers-form-group">
+                  <label htmlFor="time">{tr('Horario preferido')}</label>
                   <input
                     id="time"
                     name="time"
@@ -188,9 +192,9 @@ function TransfersPage() {
                   />
                 </div>
               </div>
-              <div className="Transfers-form-row">
-                <div className="Transfers-form-group">
-                  <label htmlFor="adults">Adultos</label>
+              <div className="transfers-form-row">
+                <div className="transfers-form-group">
+                  <label htmlFor="adults">{tr('Adultos')}</label>
                   <input
                     id="adults"
                     name="adults"
@@ -200,8 +204,8 @@ function TransfersPage() {
                     onChange={handleChange}
                   />
                 </div>
-                <div className="Transfers-form-group">
-                  <label htmlFor="kids">Criancas</label>
+                <div className="transfers-form-group">
+                  <label htmlFor="kids">{tr('Criancas')}</label>
                   <input
                     id="kids"
                     name="kids"
@@ -212,25 +216,25 @@ function TransfersPage() {
                   />
                 </div>
               </div>
-              <div className="Transfers-form-group">
-                <label htmlFor="message">Notas / Pedidos Especiais</label>
+              <div className="transfers-form-group transfers-form-group--full">
+                <label htmlFor="message">{tr('Notas / Pedidos Especiais')}</label>
                 <textarea
                   id="message"
                   name="message"
                   rows="3"
                   value={formData.message}
                   onChange={handleChange}
-                  placeholder="Partilhe detalhes importantes"
+                  placeholder={tr('Partilhe detalhes importantes')}
                 />
               </div>
-              <button className="Transfers-submit-btn" type="submit">
-                Enviar Reserva
+              <button className="transfers-submit-btn" type="submit">
+                {tr('Enviar Reserva')}
               </button>
               {status && <p className="form-success">{status}</p>}
               {success && (
                 <div className="success">
-                  <h3>Reserva Enviada!</h3>
-                  <p>Entraremos em contacto em breve para confirmar o transfer.</p>
+                  <h3>{tr('Reserva Enviada!')}</h3>
+                  <p>{tr('Entraremos em contacto em breve para confirmar o transfer.')}</p>
                 </div>
               )}
             </form>

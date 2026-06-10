@@ -1,7 +1,8 @@
 ﻿import { useMemo } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { safariTours, tours, zanzibarTours, galleryImages as sharedGalleryImages } from '../data/tours'
-import { pt } from '../utils/i18nPt'
+import { useTranslation } from 'react-i18next'
+import { translateText } from '../utils/i18nText'
 import lionFamily from '../assets/46.jpeg'
 import giraffePair from '../assets/47.jpeg'
 import tarangireHerd from '../assets/62.jpeg'
@@ -971,14 +972,16 @@ const createFallbackContent = (tour) => ({
 })
 
 function TourDetailPage() {
+  const { i18n } = useTranslation()
   const { tourId } = useParams()
   const allTours = useMemo(() => [...tours, ...zanzibarTours, ...safariTours], [])
   const tour = allTours.find((entry) => String(entry.id) === String(tourId))
   const today = useMemo(() => new Date().toISOString().split('T')[0], [])
+  const tr = (text) => translateText(text, i18n.language)
   if (!tour) {
     return (
       <div className="tour-detail">
-        <p className="tour-detail__missing">Tour nao encontrado. Escolha outra experiencia.</p>
+        <p className="tour-detail__missing">{tr('Tour nao encontrado. Escolha outra experiencia.')}</p>
       </div>
     )
   }
@@ -1033,53 +1036,53 @@ function TourDetailPage() {
         }}
       >
         <div className="tour-detail__hero-content container">
-          <h1>{pt(tour.title)}</h1>
+          <h1>{tr(tour.title)}</h1>
         </div>
       </div>
 
       <div className="tour-detail__info-bar">
-        <div>Localizacao: {pt(content.location)}</div>
-        <div>Duracao: {pt(tour.duration)}</div>
-        <div>Tamanho do grupo: {pt(content.groupSize)}</div>
-        <div>Avaliacoes: {pt(content.reviews)}</div>
+        <div>{tr('Localizacao')}: {tr(content.location)}</div>
+        <div>{tr('Duracao')}: {tr(tour.duration)}</div>
+        <div>{tr('Tamanho do grupo')}: {tr(content.groupSize)}</div>
+        <div>{tr('Avaliacoes')}: {tr(content.reviews)}</div>
       </div>
 
       <div className="tour-detail__container">
         <div className="tour-detail__content">
-          <h1>{pt(tour.title)}</h1>
+          <h1>{tr(tour.title)}</h1>
           {description && (
             <>
-              <h2>Visao Geral do Tour</h2>
-              <p>{pt(description)}</p>
+              <h2>{tr('Visao Geral do Tour')}</h2>
+              <p>{tr(description)}</p>
             </>
           )}
 
-          <h2>Destaques do Tour</h2>
+          <h2>{tr('Destaques do Tour')}</h2>
           <ul>
             {content.experiences.map((item) => (
-              <li key={item}>{pt(item)}</li>
+              <li key={item}>{tr(item)}</li>
             ))}
           </ul>
 
-          <h2>Preco Inclui</h2>
+          <h2>{tr('Preco Inclui')}</h2>
           <ul>
             {content.includes.map((item) => (
-              <li key={item}>{pt(item)}</li>
+              <li key={item}>{tr(item)}</li>
             ))}
           </ul>
           {content.note && (
-            <p className="tour-detail__note">{pt(content.note)}</p>
+            <p className="tour-detail__note">{tr(content.note)}</p>
           )}
         </div>
 
         <div className="tour-detail__booking">
-          <h3>Reserva do Tour</h3>
+          <h3>{tr('Reserva do Tour')}</h3>
           <p>
-            <strong>Duracao:</strong> {pt(tour.duration)}
+            <strong>{tr('Duracao')}:</strong> {tr(tour.duration)}
           </p>
-          <div className="tour-detail__price">{tour.price}</div>
+          <div className="tour-detail__price">{tr(tour.price)}</div>
           <Link to={`/booking/${tourId}`} className="tour-detail__btn tour-detail__btn--primary">
-            Reserve o Seu Lugar
+            {tr('Reserve o Seu Lugar')}
           </Link>
         </div>
       </div>
@@ -1088,12 +1091,12 @@ function TourDetailPage() {
         <section className="tour-detail__gallery-section">
           <div className="container">
             <div className="tour-detail__gallery-heading">
-              <h2>Galeria</h2>
+              <h2>{tr('Galeria')}</h2>
             </div>
             <div className="tour-detail__gallery-grid tour-detail__gallery-horizontal">
               {galleryImages.map((src) => (
                 <figure className="tour-detail__gallery-item" key={src}>
-                  <img src={src} alt={`${pt(tour.title)} imagem`} />
+                  <img src={src} alt={`${tr(tour.title)} ${tr('imagem')}`} />
                 </figure>
               ))}
             </div>
@@ -1103,18 +1106,18 @@ function TourDetailPage() {
       {moreTours.length > 0 && (
         <section className="tour-detail__more-tours">
           <div className="container">
-            <h2>Mais Safaris de Vida Selvagem</h2>
+            <h2>{tr('Mais Safaris de Vida Selvagem')}</h2>
             <div className="tour-detail__more-grid">
               {moreTours.map((option) => (
                 <article className="tour-detail__more-card" key={option.id}>
-                  <img src={option.image} alt={option.title} />
+                  <img src={option.image} alt={tr(option.title)} />
                   <div className="tour-detail__more-content">
-                    <h3>{pt(option.title)}</h3>
-                    <p>{pt(option.summary)}</p>
+                    <h3>{tr(option.title)}</h3>
+                    <p>{tr(option.summary)}</p>
                     <div className="tour-detail__more-footer">
-                      <span>{option.price}</span>
+                      <span>{tr(option.price)}</span>
                       <Link to={`/tours/${option.id}`} className="tour-detail__more-btn">
-                        Ver detalhes
+                        {tr('Ver detalhes')}
                       </Link>
                     </div>
                   </div>

@@ -1,9 +1,11 @@
 import { useMemo, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { useLocation, useParams } from 'react-router-dom'
 import { tours, safariTours, zanzibarTours } from '../data/tours'
-import { pt } from '../utils/i18nPt'
+import { translateText } from '../utils/i18nText'
 
 function BookingPage() {
+  const { i18n } = useTranslation()
   const { tourId } = useParams()
   const today = useMemo(() => new Date().toISOString().split('T')[0], [])
   const location = useLocation()
@@ -23,11 +25,12 @@ function BookingPage() {
   const [status, setStatus] = useState('')
   const [success, setSuccess] = useState(false)
   const [submitDisabled, setSubmitDisabled] = useState(false)
+  const tr = (text) => translateText(text, i18n.language)
 
   if (!tour) {
     return (
       <section className="tour-detail">
-        <p className="tour-detail__missing">Tour nao encontrado. Escolha outra experiencia.</p>
+        <p className="tour-detail__missing">{tr('Tour nao encontrado. Escolha outra experiencia.')}</p>
       </section>
     )
   }
@@ -125,69 +128,69 @@ function BookingPage() {
       />
 
       <div className="tour-detail__info-bar">
-        <div>Localizacao: Zanzibar</div>
-        <div>Duracao: {tour.duration}</div>
-        <div>Tamanho do grupo: Maximo 10</div>
-        <div>Avaliacoes: 120</div>
+        <div>{tr('Localizacao')}: Zanzibar</div>
+        <div>{tr('Duracao')}: {tr(tour.duration)}</div>
+        <div>{tr('Tamanho do grupo')}: {tr('Maximo 10')}</div>
+        <div>{tr('Avaliacoes')}: 120</div>
       </div>
 
       <div className="tour-detail__container">
         <div className="tour-booking__card">
           <div className="tour-booking__summary">
-            <h2>Resumo da Reserva</h2>
+            <h2>{tr('Resumo da Reserva')}</h2>
             <div className="tour-booking__summary-row">
-              <span>Tour</span>
-              <span>{pt(tour.title)}</span>
+              <span>{tr('Tour')}</span>
+              <span>{tr(tour.title)}</span>
             </div>
             <div className="tour-booking__summary-row">
-              <span>Duracao</span>
-              <span>{pt(tour.duration)}</span>
+              <span>{tr('Duracao')}</span>
+              <span>{tr(tour.duration)}</span>
             </div>
             <div className="tour-booking__summary-row">
-              <span>Preco</span>
-              <span>{tour.price}</span>
+              <span>{tr('Preco')}</span>
+              <span>{tr(tour.price)}</span>
             </div>
             <div className="tour-booking__summary-row">
-              <span>Nome completo</span>
-              <span>{formData.name || 'N/D'}</span>
+              <span>{tr('Nome completo')}</span>
+              <span>{formData.name || tr('N/D')}</span>
             </div>
             <div className="tour-booking__summary-row">
-              <span>Email</span>
-              <span>{formData.email || 'N/D'}</span>
+              <span>{tr('Email')}</span>
+              <span>{formData.email || tr('N/D')}</span>
             </div>
             <div className="tour-booking__summary-row">
-              <span>Telefone</span>
-              <span>{formData.phone || 'N/D'}</span>
+              <span>{tr('Telefone')}</span>
+              <span>{formData.phone || tr('N/D')}</span>
             </div>
             <div className="tour-booking__summary-row">
-              <span>Adultos</span>
-              <span>{formData.adults || 'N/D'}</span>
+              <span>{tr('Adultos')}</span>
+              <span>{formData.adults || tr('N/D')}</span>
             </div>
             <div className="tour-booking__summary-row">
-              <span>Criancas</span>
-              <span>{formData.children || 'N/D'}</span>
+              <span>{tr('Criancas')}</span>
+              <span>{formData.children || tr('N/D')}</span>
             </div>
             <div className="tour-booking__summary-row">
-              <span>Data do tour</span>
-              <span>{formData.tourDate || 'Nao definida'}</span>
+              <span>{tr('Data do tour')}</span>
+              <span>{formData.tourDate || tr('Nao definida')}</span>
             </div>
             <div className="tour-booking__summary-row">
-              <span>Tarifa de crianca</span>
+              <span>{tr('Tarifa de crianca')}</span>
               <span>{currency.format(childRate)}</span>
             </div>
             <div className="tour-booking__summary-row">
-              <span>Total</span>
+              <span>{tr('Total')}</span>
               <span>{formattedTotal}</span>
             </div>
           </div>
 
           <form className="tour-detail__form" onSubmit={handleSubmit}>
             <label>
-              Nome completo
+              {tr('Nome completo')}
               <input name="name" type="text" value={formData.name} onChange={handleChange} required />
             </label>
             <label>
-              Email
+              {tr('Email')}
               <input
                 name="email"
                 type="email"
@@ -197,11 +200,11 @@ function BookingPage() {
               />
             </label>
             <label>
-              Numero de telefone
+              {tr('Numero de telefone')}
               <input name="phone" type="tel" value={formData.phone} onChange={handleChange} />
             </label>
             <label>
-              Data do tour
+              {tr('Data do tour')}
               <input
                 name="tourDate"
                 type="date"
@@ -212,7 +215,7 @@ function BookingPage() {
               />
             </label>
             <label>
-              Adultos
+              {tr('Adultos')}
               <input
                 name="adults"
                 type="number"
@@ -223,7 +226,7 @@ function BookingPage() {
               />
             </label>
             <label>
-              Criancas
+              {tr('Criancas')}
               <input
                 name="children"
                 type="number"
@@ -233,14 +236,14 @@ function BookingPage() {
               />
             </label>
             <button className="tour-detail__form-btn" type="submit" disabled={submitDisabled}>
-              {submitDisabled ? 'A enviar...' : 'Confirmar Reserva'}
+              {submitDisabled ? tr('A enviar...') : tr('Confirmar Reserva')}
             </button>
           </form>
 
           {status && <p className="form-success">{status}</p>}
           {success && (
             <div className="tour-detail__confirmation">
-              <p>Recebemos os detalhes da sua reserva e responderemos em breve para confirmar.</p>
+              <p>{tr('Recebemos os detalhes da sua reserva e responderemos em breve para confirmar.')}</p>
             </div>
           )}
         </div>

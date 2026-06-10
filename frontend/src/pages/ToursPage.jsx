@@ -1,8 +1,10 @@
 import { useMemo, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import PageMeta from '../components/PageMeta'
 import { safariTours, zanzibarTours } from '../data/tours'
 import homeHeroImage from '../assets/image.jpeg'
 import TourFormatCard from '../components/TourFormatCard'
+import { translateText } from '../utils/i18nText'
 
 const filters = [
   { key: 'all', label: 'Todos' },
@@ -39,7 +41,9 @@ const normalizeExcursionCard = (tour) => ({
 })
 
 function ToursPage() {
+  const { i18n } = useTranslation()
   const [activeFilter, setActiveFilter] = useState('all')
+  const tr = (text) => translateText(text, i18n.language)
 
   const tourCards = useMemo(() => {
     const excursionCards = zanzibarTours.map(normalizeExcursionCard)
@@ -58,8 +62,8 @@ function ToursPage() {
   return (
     <>
       <PageMeta
-        title="Tours"
-        description="Explore excursoes em Zanzibar e pacotes de safari atraves de um layout organizado com filtros rapidos."
+        title={tr('Tours')}
+        description={tr('Explore excursoes em Zanzibar e pacotes de safari atraves de um layout organizado com filtros rapidos.')}
       />
 
       <section
@@ -67,8 +71,7 @@ function ToursPage() {
         style={{ '--tours-hero-image': `url(${homeHeroImage})` }}
       >
         <div className="page-hero__content container">
-          <h1>Explore Zanzibar Como Nunca Antes
-Das aventuras no oceano aos safaris de vida selvagem, descubra tudo.</h1>
+          <h1>{tr('Explore Zanzibar Como Nunca Antes Das aventuras no oceano aos safaris de vida selvagem, descubra tudo.')}</h1>
         </div>
       </section>
 
@@ -83,7 +86,7 @@ Das aventuras no oceano aos safaris de vida selvagem, descubra tudo.</h1>
                   type="button"
                   onClick={() => setActiveFilter(filter.key)}
                 >
-                  {filter.label}
+                  {tr(filter.label)}
                 </button>
               ))}
             </div>
