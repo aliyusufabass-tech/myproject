@@ -1,5 +1,4 @@
-import { useTranslation } from 'react-i18next'
-import { SUPPORTED_LANGUAGES, normalizeLanguage } from '../i18n'
+import { SUPPORTED_LANGUAGES, useTranslation } from '../i18n'
 
 const languages = [
   { code: 'en', name: 'English', flag: 'https://flagcdn.com/w40/gb.png' },
@@ -12,8 +11,7 @@ const languages = [
 ]
 
 function LanguageSwitcher() {
-  const { i18n } = useTranslation()
-  const activeLanguage = normalizeLanguage(i18n.language)
+  const { language, setLanguage, t } = useTranslation()
 
   const changeLanguage = (code) => {
     if (!SUPPORTED_LANGUAGES.includes(code)) {
@@ -21,24 +19,22 @@ function LanguageSwitcher() {
       return
     }
 
-    i18n.changeLanguage(code).catch((error) => {
-      console.error(`[i18n] Failed to change language to "${code}".`, error)
-    })
+    setLanguage(code)
   }
 
   return (
-    <div className="language-switcher" aria-label="Choose language">
+    <div className="language-switcher" aria-label={t('language.choose')}>
       {languages.map((lang) => (
         <button
           className={`language-switcher__button ${
-            activeLanguage === lang.code ? 'language-switcher__button--active' : ''
+            language === lang.code ? 'language-switcher__button--active' : ''
           }`}
           key={lang.code}
           type="button"
           onClick={() => changeLanguage(lang.code)}
         >
           <img src={lang.flag} width="25" height="18" alt="" loading="lazy" />
-          <span>{lang.name}</span>
+          <span>{t(`language.${lang.code}`)}</span>
         </button>
       ))}
     </div>

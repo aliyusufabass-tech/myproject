@@ -1,9 +1,8 @@
 import { Link } from 'react-router-dom'
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from '../i18n'
 import PageMeta from '../components/PageMeta'
 import aboutHeroImage from '../assets/40 - Copy.jpeg'
 import aboutGridImage from '../assets/38.jpeg'
-import { translateText } from '../utils/i18nText'
 
 const stats = [
   { value: '500+', label: 'Clientes Satisfeitos' },
@@ -27,14 +26,13 @@ const services = [
 ]
 
 function AboutPage() {
-  const { i18n } = useTranslation()
-  const tr = (text) => translateText(text, i18n.language)
+  const { t } = useTranslation()
 
   return (
     <>
       <PageMeta
-        title={tr('Sobre Nos')}
-        description={tr('Conheca a Zan Excursions, a nossa historia, servicos e experiencia de viagem de confianca.')}
+        title={t('page.about.page.sobre.nos')}
+        description={t('page.about.page.conheca.a.zan.excursions.a.nossa.historia.servicos')}
       />
 
       <section
@@ -42,23 +40,23 @@ function AboutPage() {
         style={{ '--about-hero-image': `url(${aboutHeroImage})` }}
       >
         <div className="container about-hero__content">
-          <h1>{tr('Descubra Zanzibar Connosco')}</h1>
-          <p>{tr('O seu parceiro de viagem de confianca para experiencias memoraveis')}</p>
+          <h1>{t('page.about.page.descubra.zanzibar.connosco')}</h1>
+          <p>{t('page.about.page.o.seu.parceiro.de.viagem.de.confianca.para')}</p>
         </div>
       </section>
 
       <section className="section about-page-section">
         <div className="container about-page-container">
           <div className="about-grid">
-            <img src={aboutGridImage} alt="Zanzibar ocean experience" />
+            <img src={aboutGridImage} alt={t('page.about.page.zanzibar.ocean.experience')} />
 
             <div className="about-text">
-              <h2>{tr('Sobre a Zan Excursions')}</h2>
+              <h2>{t('page.about.page.sobre.a.zan.excursions')}</h2>
               <p>
-                {tr('A Zan Excursions e uma empresa profissional de turismo que oferece experiencias de viagem cuidadosamente planeadas em Zanzibar e na Tanzania. De ferias de praia a safaris de vida selvagem, o nosso objetivo e tornar cada viagem inesquecivel.')}
+                {t('page.about.page.a.zan.excursions.e.uma.empresa.profissional.de')}
               </p>
               <p>
-                {tr('Focamo-nos na qualidade do servico, seguranca e satisfacao dos clientes, mostrando o melhor da natureza, cultura e aventura costeira.')}
+                {t('page.about.page.focamo.nos.na.qualidade.do.servico.seguranca.e')}
               </p>
             </div>
           </div>
@@ -67,28 +65,28 @@ function AboutPage() {
             {stats.map((stat) => (
               <div className="about-stat" key={stat.label}>
                 <h2>{stat.value}</h2>
-                <p>{tr(stat.label)}</p>
+                <p>{t(stat.label)}</p>
               </div>
             ))}
           </div>
 
           <div className="about-services">
-            <h2>{tr('O Que Oferecemos')}</h2>
+            <h2>{t('page.about.page.o.que.oferecemos')}</h2>
             <div className="about-service-boxes">
               {services.map((service) => (
                 <article className="about-service-card" key={service.title}>
-                  <h3>{tr(service.title)}</h3>
-                  <p>{tr(service.text)}</p>
+                  <h3>{t(service.title)}</h3>
+                  <p>{t(service.text)}</p>
                 </article>
               ))}
             </div>
           </div>
 
           <div className="about-cta">
-            <h2>{tr('Comece a Sua Viagem Hoje')}</h2>
-            <p>{tr('Reserve a sua experiencia hoje e descubra Zanzibar com confianca.')}</p>
+            <h2>{t('page.about.page.comece.a.sua.viagem.hoje')}</h2>
+            <p>{t('page.about.page.reserve.a.sua.experiencia.hoje.e.descubra.zanzibar')}</p>
             <Link className="about-cta__button" to="/tours">
-              {tr('Reservar Agora')}
+              {t('page.about.page.reservar.agora')}
             </Link>
           </div>
         </div>

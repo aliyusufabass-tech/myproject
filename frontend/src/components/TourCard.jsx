@@ -1,6 +1,9 @@
+import { useTranslation } from '../i18n'
 import Button from './Button'
 
 function TourCard({ tour }) {
+  const { t } = useTranslation()
+
   return (
     <article className="tour-card">
       <div
@@ -11,13 +14,13 @@ function TourCard({ tour }) {
       />
       <div className="tour-card__content">
         <div className="tour-card__meta">
-          <span>{tour.category}</span>
+          <span>{t(tour.category)}</span>
         </div>
-        <h3>{tour.title}</h3>
-        <p>{tour.description}</p>
+        <h3>{t(tour.title)}</h3>
+        <p>{t(tour.description)}</p>
         <div className="tour-card__footer">
-          <span className="tour-card__price">{tour.price}</span>
-          <Button to={`/tours/${tour.id}`}>View Details</Button>
+          <span className="tour-card__price">{t(tour.price)}</span>
+          <Button to={`/tours/${tour.id}`}>{t('common.viewDetails')}</Button>
         </div>
       </div>
     </article>

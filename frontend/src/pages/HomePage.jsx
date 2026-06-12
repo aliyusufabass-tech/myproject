@@ -1,5 +1,5 @@
 import { useMemo } from 'react'
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from '../i18n'
 import { Link } from 'react-router-dom'
 import Button from '../components/Button'
 import PageMeta from '../components/PageMeta'
@@ -7,7 +7,6 @@ import SectionHeading from '../components/SectionHeading'
 import TourFormatCard from '../components/TourFormatCard'
 import { testimonials, zanzibarTours, safariTours } from '../data/tours'
 import homeHeroImage from '../assets/image.jpeg'
-import { translateText } from '../utils/i18nText'
 
 const reasons = [
   {
@@ -51,34 +50,33 @@ const buildHomeCards = () => {
 }
 
 function HomePage() {
-  const { i18n } = useTranslation()
+  const { t } = useTranslation()
   const homeTourCards = useMemo(buildHomeCards, [])
-  const tr = (text) => translateText(text, i18n.language)
 
   return (
     <>
       <PageMeta
-        title={tr('Inicio')}
-        description={tr('Descubra tours, transfers e experiencias personalizadas na ilha com a Zan Excursions.')}
+        title={t('page.home.page.inicio')}
+        description={t('page.home.page.descubra.tours.transfers.e.experiencias.personalizadas.na.ilha')}
       />
       <section
         className="hero hero--home"
         style={{ '--home-hero-image': `url(${homeHeroImage})` }}
       >
         <div className="container hero__content">
-          <h1>{tr('Descubra Zanzibar: onde cada onda conta uma historia e cada passo leva ao encanto.')}</h1>
+          <h1>{t('page.home.page.descubra.zanzibar.onde.cada.onda.conta.uma.historia')}</h1>
           <p>
-            {tr('A Zan Excursions cria experiencias autenticas na ilha - escapadelas de praia, rotas das especiarias e transfers que fluem tao suavemente quanto as mares.')}
+            {t('page.home.page.a.zan.excursions.cria.experiencias.autenticas.na.ilha')}
           </p>
           <div className="hero__actions">
-            <Button to="/tours">{tr('Explorar Tours')}</Button>
+            <Button to="/tours">{t('page.home.page.explorar.tours')}</Button>
             <Button
               href="https://wa.me/255792692084"
               target="_blank"
               rel="noopener noreferrer"
               variant="secondary"
             >
-              {tr('Fale Connosco no WhatsApp')}
+              {t('page.home.page.fale.connosco.no.whatsapp')}
             </Button>
           </div>
         </div>
@@ -87,9 +85,9 @@ function HomePage() {
       <section className="section tours-format-section">
         <div className="container">
           <SectionHeading
-            eyebrow={tr('Tours em Destaque')}
-            title={tr('Tours selecionados que refletem as experiencias do nosso catalogo completo')}
-            text={tr('Descubra a variedade de Zanzibar com experiencias escolhidas que combinam cultura, vida selvagem e momentos no oceano.')}
+            eyebrow={t('page.home.page.tours.em.destaque')}
+            title={t('page.home.page.tours.selecionados.que.refletem.as.experiencias.do.nosso')}
+            text={t('page.home.page.descubra.a.variedade.de.zanzibar.com.experiencias.escolhidas')}
             align="center"
           />
 
@@ -101,7 +99,7 @@ function HomePage() {
 
           <div className="tour-format-cta">
             <Button to="/tours" variant="secondary">
-              {tr('Ver todos os tours')}
+              {t('page.home.page.ver.todos.os.tours')}
             </Button>
           </div>
         </div>
@@ -110,8 +108,8 @@ function HomePage() {
       <section className="section section--accent">
         <div className="container">
           <SectionHeading
-            eyebrow={tr('Por Que Escolher-nos')}
-            title={tr('Apoio de viagem pessoal, confiavel e profundamente enraizado no conhecimento local')}
+            eyebrow={t('page.home.page.por.que.escolher.nos')}
+            title={t('page.home.page.apoio.de.viagem.pessoal.confiavel.e.profundamente.enraizado')}
             className="section-heading--compact"
             align="center"
           />
@@ -119,8 +117,8 @@ function HomePage() {
             {reasons.map((reason, index) => (
               <article className="info-card" key={reason.title}>
                 <span className="info-card__icon">{`0${index + 1}`}</span>
-                <h3>{tr(reason.title)}</h3>
-                <p>{tr(reason.text)}</p>
+                <h3>{t(reason.title)}</h3>
+                <p>{t(reason.text)}</p>
               </article>
             ))}
           </div>
@@ -130,29 +128,29 @@ function HomePage() {
       <section className="section">
         <div className="container split">
           <div>
-            <p className="section-tag">{tr('Planeie com confianca')}</p>
+            <p className="section-tag">{t('page.home.page.planeie.com.confianca')}</p>
             <h2 className="home-section-title--compact">
-              {tr('Precisa de transfers, tours e orientacao local rapida num so lugar?')}
+              {t('page.home.page.precisa.de.transfers.tours.e.orientacao.local.rapida')}
             </h2>
             <p className="muted">
-              {tr('Ajudamos os visitantes a deslocarem-se sem complicacoes desde a chegada ao aeroporto ate ao check-in no hotel, e depois para experiencias inesqueciveis na ilha sem o stress habitual de coordenacao.')}
+              {t('page.home.page.ajudamos.os.visitantes.a.deslocarem.se.sem.complicacoes')}
             </p>
             <Link className="text-link" to="/transfers">
-              {tr('Ver opcoes de transfer')}
+              {t('page.home.page.ver.opcoes.de.transfer')}
             </Link>
           </div>
           <div className="feature-panel">
             <div>
-              <strong>{tr('Recolha no aeroporto')}</strong>
-              <p>{tr('Servico profissional de rececao com apoio de bagagem e transporte direto para o hotel.')}</p>
+              <strong>{t('page.home.page.recolha.no.aeroporto')}</strong>
+              <p>{t('page.home.page.servico.profissional.de.rececao.com.apoio.de.bagagem')}</p>
             </div>
             <div>
-              <strong>{tr('Combinacoes personalizadas')}</strong>
-              <p>{tr('Combine snorkeling, visitas culturais e experiencias ao por do sol num unico itinerario.')}</p>
+              <strong>{t('page.home.page.combinacoes.personalizadas')}</strong>
+              <p>{t('page.home.page.combine.snorkeling.visitas.culturais.e.experiencias.ao.por')}</p>
             </div>
             <div>
-              <strong>{tr('Resposta rapida')}</strong>
-              <p>{tr('Apoio agil para reservas de ultima hora, mudancas de horario e atualizacoes de viagem.')}</p>
+              <strong>{t('page.home.page.resposta.rapida')}</strong>
+              <p>{t('page.home.page.apoio.agil.para.reservas.de.ultima.hora.mudancas')}</p>
             </div>
           </div>
         </div>
@@ -161,14 +159,14 @@ function HomePage() {
       <section className="section section--sand">
         <div className="container">
           <SectionHeading
-            eyebrow={tr('Testemunhos')}
-            title={tr('O que os nossos clientes mais valorizam ao viajar connosco')}
+            eyebrow={t('page.home.page.testemunhos')}
+            title={t('page.home.page.o.que.os.nossos.clientes.mais.valorizam.ao')}
             align="center"
           />
           <div className="grid grid--three">
             {testimonials.map((item) => (
               <article className="testimonial-card" key={item.name}>
-                <p>"{tr(item.quote)}"</p>
+                <p>"{t(item.quote)}"</p>
                 <strong>{item.name}</strong>
               </article>
             ))}

@@ -1,15 +1,13 @@
 import { useMemo, useState, useCallback } from 'react'
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from '../i18n'
 import PageMeta from '../components/PageMeta'
 import { galleryImages } from '../data/tours'
 import galleryHero from '../assets/33.jpeg'
-import { translateText } from '../utils/i18nText'
 
 function GalleryPage() {
-  const { i18n } = useTranslation()
+  const { t } = useTranslation()
   const [modalOpen, setModalOpen] = useState(false)
   const [currentIndex, setCurrentIndex] = useState(0)
-  const tr = (text) => translateText(text, i18n.language)
 
   const duplicatedGallery = useMemo(
     () => galleryImages.concat(galleryImages),
@@ -42,8 +40,8 @@ function GalleryPage() {
   return (
     <>
       <PageMeta
-        title={tr('Galeria')}
-        description={tr('Explore momentos da Zan Excursions entre praias, paisagens da ilha e experiencias de viagem inesqueciveis.')}
+        title={t('page.gallery.page.galeria')}
+        description={t('page.gallery.page.explore.momentos.da.zan.excursions.entre.praias.paisagens')}
       />
 
       <section
@@ -51,16 +49,16 @@ function GalleryPage() {
         style={{ '--gallery-hero-image': `url(${galleryHero})` }}
       >
         <div className="container gallery-page-hero__content">
-          <h1>{tr('Galeria Zan Excursions')}</h1>
+          <h1>{t('page.gallery.page.galeria.zan.excursions')}</h1>
         </div>
       </section>
 
       <section className="section gallery-page-section">
         <div className="container">
           <div className="gallery-page-intro">
-            <h2>{tr('Momentos da ilha que valem a pena recordar')}</h2>
+            <h2>{t('page.gallery.page.momentos.da.ilha.que.valem.a.pena.recordar')}</h2>
             <p>
-              {tr('Das aguas turquesa e passeios de dhow aos fins de tarde tranquilos na praia, esta galeria mostra as experiencias que ajudamos a criar em Zanzibar.')}
+              {t('page.gallery.page.das.aguas.turquesa.e.passeios.de.dhow.aos')}
             </p>
           </div>
 
@@ -72,7 +70,7 @@ function GalleryPage() {
                 className={`gallery-page-grid__item gallery-page-grid__item--${(index % 5) + 1}`}
                 style={{ backgroundImage: `url(${image})` }}
                 onClick={() => openModalAt(index)}
-                aria-label={tr('Abrir visualizador de foto')}
+                aria-label={t('page.gallery.page.abrir.visualizador.de.foto')}
               />
             ))}
           </div>
@@ -81,19 +79,19 @@ function GalleryPage() {
 
       {modalOpen && (
         <div className="gallery-modal" role="dialog" aria-modal="true">
-          <button className="gallery-modal__close" onClick={closeModal} aria-label={tr('Fechar visualizador de galeria')}>
-            ×
+          <button className="gallery-modal__close" onClick={closeModal} aria-label={t('page.gallery.page.fechar.visualizador.de.galeria')}>
+            Ã—
           </button>
-          <button className="gallery-modal__nav gallery-modal__nav--left" onClick={goPrev} aria-label={tr('Foto anterior')}>
-            ‹
+          <button className="gallery-modal__nav gallery-modal__nav--left" onClick={goPrev} aria-label={t('page.gallery.page.foto.anterior')}>
+            â€¹
           </button>
           <img
             className="gallery-modal__image"
             src={galleryImages[currentIndex]}
-            alt={`${tr('Imagem da galeria')} ${currentIndex + 1}`}
+            alt={`${t('page.gallery.page.imagem.da.galeria')} ${currentIndex + 1}`}
           />
-          <button className="gallery-modal__nav gallery-modal__nav--right" onClick={goNext} aria-label={tr('Proxima foto')}>
-            ›
+          <button className="gallery-modal__nav gallery-modal__nav--right" onClick={goNext} aria-label={t('page.gallery.page.proxima.foto')}>
+            â€º
           </button>
         </div>
       )}

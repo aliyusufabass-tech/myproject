@@ -1,8 +1,7 @@
-﻿import { useMemo } from 'react'
+import { useMemo } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { safariTours, tours, zanzibarTours, galleryImages as sharedGalleryImages } from '../data/tours'
-import { useTranslation } from 'react-i18next'
-import { translateText } from '../utils/i18nText'
+import { useTranslation } from '../i18n'
 import lionFamily from '../assets/46.jpeg'
 import giraffePair from '../assets/47.jpeg'
 import tarangireHerd from '../assets/62.jpeg'
@@ -972,16 +971,15 @@ const createFallbackContent = (tour) => ({
 })
 
 function TourDetailPage() {
-  const { i18n } = useTranslation()
+  const { t } = useTranslation()
   const { tourId } = useParams()
   const allTours = useMemo(() => [...tours, ...zanzibarTours, ...safariTours], [])
   const tour = allTours.find((entry) => String(entry.id) === String(tourId))
   const today = useMemo(() => new Date().toISOString().split('T')[0], [])
-  const tr = (text) => translateText(text, i18n.language)
   if (!tour) {
     return (
       <div className="tour-detail">
-        <p className="tour-detail__missing">{tr('Tour nao encontrado. Escolha outra experiencia.')}</p>
+        <p className="tour-detail__missing">{t('page.tour.detail.page.tour.nao.encontrado.escolha.outra.experiencia')}</p>
       </div>
     )
   }
@@ -1036,53 +1034,53 @@ function TourDetailPage() {
         }}
       >
         <div className="tour-detail__hero-content container">
-          <h1>{tr(tour.title)}</h1>
+          <h1>{t(tour.title)}</h1>
         </div>
       </div>
 
       <div className="tour-detail__info-bar">
-        <div>{tr('Localizacao')}: {tr(content.location)}</div>
-        <div>{tr('Duracao')}: {tr(tour.duration)}</div>
-        <div>{tr('Tamanho do grupo')}: {tr(content.groupSize)}</div>
-        <div>{tr('Avaliacoes')}: {tr(content.reviews)}</div>
+        <div>{t('page.tour.detail.page.localizacao')}: {t(content.location)}</div>
+        <div>{t('page.tour.detail.page.duracao')}: {t(tour.duration)}</div>
+        <div>{t('page.tour.detail.page.tamanho.do.grupo')}: {t(content.groupSize)}</div>
+        <div>{t('page.tour.detail.page.avaliacoes')}: {t(content.reviews)}</div>
       </div>
 
       <div className="tour-detail__container">
         <div className="tour-detail__content">
-          <h1>{tr(tour.title)}</h1>
+          <h1>{t(tour.title)}</h1>
           {description && (
             <>
-              <h2>{tr('Visao Geral do Tour')}</h2>
-              <p>{tr(description)}</p>
+              <h2>{t('page.tour.detail.page.visao.geral.do.tour')}</h2>
+              <p>{t(description)}</p>
             </>
           )}
 
-          <h2>{tr('Destaques do Tour')}</h2>
+          <h2>{t('page.tour.detail.page.destaques.do.tour')}</h2>
           <ul>
             {content.experiences.map((item) => (
-              <li key={item}>{tr(item)}</li>
+              <li key={item}>{t(item)}</li>
             ))}
           </ul>
 
-          <h2>{tr('Preco Inclui')}</h2>
+          <h2>{t('page.tour.detail.page.preco.inclui')}</h2>
           <ul>
             {content.includes.map((item) => (
-              <li key={item}>{tr(item)}</li>
+              <li key={item}>{t(item)}</li>
             ))}
           </ul>
           {content.note && (
-            <p className="tour-detail__note">{tr(content.note)}</p>
+            <p className="tour-detail__note">{t(content.note)}</p>
           )}
         </div>
 
         <div className="tour-detail__booking">
-          <h3>{tr('Reserva do Tour')}</h3>
+          <h3>{t('page.tour.detail.page.reserva.do.tour')}</h3>
           <p>
-            <strong>{tr('Duracao')}:</strong> {tr(tour.duration)}
+            <strong>{t('page.tour.detail.page.duracao')}:</strong> {t(tour.duration)}
           </p>
-          <div className="tour-detail__price">{tr(tour.price)}</div>
+          <div className="tour-detail__price">{t(tour.price)}</div>
           <Link to={`/booking/${tourId}`} className="tour-detail__btn tour-detail__btn--primary">
-            {tr('Reserve o Seu Lugar')}
+            {t('page.tour.detail.page.reserve.o.seu.lugar')}
           </Link>
         </div>
       </div>
@@ -1091,12 +1089,12 @@ function TourDetailPage() {
         <section className="tour-detail__gallery-section">
           <div className="container">
             <div className="tour-detail__gallery-heading">
-              <h2>{tr('Galeria')}</h2>
+              <h2>{t('page.tour.detail.page.galeria')}</h2>
             </div>
             <div className="tour-detail__gallery-grid tour-detail__gallery-horizontal">
               {galleryImages.map((src) => (
                 <figure className="tour-detail__gallery-item" key={src}>
-                  <img src={src} alt={`${tr(tour.title)} ${tr('imagem')}`} />
+                  <img src={src} alt={`${t(tour.title)} ${t('page.tour.detail.page.imagem')}`} />
                 </figure>
               ))}
             </div>
@@ -1106,18 +1104,18 @@ function TourDetailPage() {
       {moreTours.length > 0 && (
         <section className="tour-detail__more-tours">
           <div className="container">
-            <h2>{tr('Mais Safaris de Vida Selvagem')}</h2>
+            <h2>{t('page.tour.detail.page.mais.safaris.de.vida.selvagem')}</h2>
             <div className="tour-detail__more-grid">
               {moreTours.map((option) => (
                 <article className="tour-detail__more-card" key={option.id}>
-                  <img src={option.image} alt={tr(option.title)} />
+                  <img src={option.image} alt={t(option.title)} />
                   <div className="tour-detail__more-content">
-                    <h3>{tr(option.title)}</h3>
-                    <p>{tr(option.summary)}</p>
+                    <h3>{t(option.title)}</h3>
+                    <p>{t(option.summary)}</p>
                     <div className="tour-detail__more-footer">
-                      <span>{tr(option.price)}</span>
+                      <span>{t(option.price)}</span>
                       <Link to={`/tours/${option.id}`} className="tour-detail__more-btn">
-                        {tr('Ver detalhes')}
+                        {t('page.tour.detail.page.ver.detalhes')}
                       </Link>
                     </div>
                   </div>

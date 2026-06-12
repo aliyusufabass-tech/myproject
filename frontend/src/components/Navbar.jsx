@@ -1,25 +1,23 @@
 import { useEffect, useState } from 'react'
-import { useTranslation } from 'react-i18next'
 import { NavLink, useLocation } from 'react-router-dom'
+import { useTranslation } from '../i18n'
 import logo from '../assets/new.png'
 import LanguageSwitcher from './LanguageSwitcher'
-import { translateText } from '../utils/i18nText'
 
 const navLinks = [
-  { to: '/', label: 'Início' },
-  { to: '/about', label: 'Sobre Nos' },
-  { to: '/tours', label: 'Tours' },
-  { to: '/transfers', label: 'Transfers' },
-  { to: '/gallery', label: 'Galeria' },
-  { to: '/contact', label: 'Contacto' },
+  { to: '/', labelKey: 'nav.home' },
+  { to: '/about', labelKey: 'nav.about' },
+  { to: '/tours', labelKey: 'nav.tours' },
+  { to: '/transfers', labelKey: 'nav.transfers' },
+  { to: '/gallery', labelKey: 'nav.gallery' },
+  { to: '/contact', labelKey: 'nav.contact' },
 ]
 
 function Navbar() {
-  const { i18n } = useTranslation()
+  const { t } = useTranslation()
   const [menuOpen, setMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const location = useLocation()
-  const tr = (text) => translateText(text, i18n.language)
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 24)
@@ -38,13 +36,13 @@ function Navbar() {
       <div className="container navbar__inner">
         <NavLink className="brand" to="/">
           <img className="brand__logo" src={logo} alt="Zan Excursions" />
-          <span>Zan Excursions</span>
+          <span>{t('brand.name')}</span>
         </NavLink>
 
         <button
           className="navbar__toggle"
           type="button"
-          aria-label="Alternar navegacao"
+          aria-label={t('nav.toggle')}
           aria-expanded={menuOpen}
           onClick={() => setMenuOpen((open) => !open)}
         >
@@ -63,7 +61,7 @@ function Navbar() {
               to={link.to}
               onClick={() => setMenuOpen(false)}
             >
-              {tr(link.label)}
+              {t(link.labelKey)}
             </NavLink>
           ))}
         </nav>

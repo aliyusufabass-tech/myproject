@@ -1,18 +1,16 @@
 import { Link } from 'react-router-dom'
-import { useTranslation } from 'react-i18next'
-import { translateText } from '../utils/i18nText'
+import { useTranslation } from '../i18n'
 
 function TourFormatCard({ card }) {
-  const { i18n } = useTranslation()
+  const { t } = useTranslation()
   const isInternal = card.detailUrl?.startsWith('/')
-  const tr = (text) => translateText(text, i18n.language)
 
   return (
     <article className="tour-format-card">
       <div className="tour-format-card__media">
-        <img src={card.image} alt={tr(card.title)} />
+        <img src={card.image} alt={t(card.title)} />
         <div className="tour-format-card__overlay">
-          <span className="tour-format-pill">{tr(card.badge)}</span>
+          <span className="tour-format-pill">{t(card.badge)}</span>
           <span className="tour-rating-pill">
             <span className="tour-rating-pill__star">{'\u2605'}</span>
             {card.rating}
@@ -21,15 +19,15 @@ function TourFormatCard({ card }) {
       </div>
 
       <div className="tour-format-card__body">
-        <h3>{tr(card.title)}</h3>
-        <p>{tr(card.summary)}</p>
+        <h3>{t(card.title)}</h3>
+        <p>{t(card.summary)}</p>
         <div className="tour-format-card__footer">
-          <strong>{tr(card.price)}</strong>
+          <strong>{t(card.price)}</strong>
           {isInternal ? (
-            <Link to={card.detailUrl}>{tr('Ver Detalhes')}</Link>
+            <Link to={card.detailUrl}>{t('common.viewDetails')}</Link>
           ) : (
             <a href={card.detailUrl} target="_blank" rel="noreferrer">
-              {tr('Ver Detalhes')}
+              {t('common.viewDetails')}
             </a>
           )}
         </div>

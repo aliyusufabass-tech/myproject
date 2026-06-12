@@ -1,11 +1,10 @@
 import { useMemo, useState } from 'react'
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from '../i18n'
 import { useLocation, useParams } from 'react-router-dom'
 import { tours, safariTours, zanzibarTours } from '../data/tours'
-import { translateText } from '../utils/i18nText'
 
 function BookingPage() {
-  const { i18n } = useTranslation()
+  const { t } = useTranslation()
   const { tourId } = useParams()
   const today = useMemo(() => new Date().toISOString().split('T')[0], [])
   const location = useLocation()
@@ -25,12 +24,11 @@ function BookingPage() {
   const [status, setStatus] = useState('')
   const [success, setSuccess] = useState(false)
   const [submitDisabled, setSubmitDisabled] = useState(false)
-  const tr = (text) => translateText(text, i18n.language)
 
   if (!tour) {
     return (
       <section className="tour-detail">
-        <p className="tour-detail__missing">{tr('Tour nao encontrado. Escolha outra experiencia.')}</p>
+        <p className="tour-detail__missing">{t('page.booking.page.tour.nao.encontrado.escolha.outra.experiencia')}</p>
       </section>
     )
   }
@@ -73,7 +71,7 @@ function BookingPage() {
     if (submitDisabled) {
       return
     }
-    setStatus('A enviar reserva...')
+    setStatus('Sending booking...')
     setSubmitDisabled(true)
     const payload = new FormData()
     payload.append('_subject', `Novo Pedido de Reserva - ${tour.title}`)
@@ -105,7 +103,7 @@ function BookingPage() {
         children: '0',
         tourDate: '',
       })
-      setStatus('Reserva enviada com sucesso! Entraremos em contacto em breve.')
+      setStatus('Booking sent successfully! We will contact you shortly.')
       setSuccess(true)
       setTimeout(() => {
         setStatus('')
@@ -113,7 +111,7 @@ function BookingPage() {
         setSubmitDisabled(false)
       }, 5000)
     } catch (error) {
-      setStatus('Nao foi possivel enviar a reserva. Tente novamente.')
+      setStatus('Could not send the booking. Please try again.')
       setSubmitDisabled(false)
     }
   }
@@ -128,69 +126,69 @@ function BookingPage() {
       />
 
       <div className="tour-detail__info-bar">
-        <div>{tr('Localizacao')}: Zanzibar</div>
-        <div>{tr('Duracao')}: {tr(tour.duration)}</div>
-        <div>{tr('Tamanho do grupo')}: {tr('Maximo 10')}</div>
-        <div>{tr('Avaliacoes')}: 120</div>
+        <div>{t('page.booking.page.localizacao')}: {t('page.booking.page.zanzibar')}</div>
+        <div>{t('page.booking.page.duracao')}: {t(tour.duration)}</div>
+        <div>{t('page.booking.page.tamanho.do.grupo')}: {t('page.booking.page.maximo.10')}</div>
+        <div>{t('page.booking.page.avaliacoes')}: 120</div>
       </div>
 
       <div className="tour-detail__container">
         <div className="tour-booking__card">
           <div className="tour-booking__summary">
-            <h2>{tr('Resumo da Reserva')}</h2>
+            <h2>{t('page.booking.page.resumo.da.reserva')}</h2>
             <div className="tour-booking__summary-row">
-              <span>{tr('Tour')}</span>
-              <span>{tr(tour.title)}</span>
+              <span>{t('page.booking.page.tour')}</span>
+              <span>{t(tour.title)}</span>
             </div>
             <div className="tour-booking__summary-row">
-              <span>{tr('Duracao')}</span>
-              <span>{tr(tour.duration)}</span>
+              <span>{t('page.booking.page.duracao')}</span>
+              <span>{t(tour.duration)}</span>
             </div>
             <div className="tour-booking__summary-row">
-              <span>{tr('Preco')}</span>
-              <span>{tr(tour.price)}</span>
+              <span>{t('page.booking.page.preco')}</span>
+              <span>{t(tour.price)}</span>
             </div>
             <div className="tour-booking__summary-row">
-              <span>{tr('Nome completo')}</span>
-              <span>{formData.name || tr('N/D')}</span>
+              <span>{t('page.booking.page.nome.completo')}</span>
+              <span>{formData.name || t('page.booking.page.n.d')}</span>
             </div>
             <div className="tour-booking__summary-row">
-              <span>{tr('Email')}</span>
-              <span>{formData.email || tr('N/D')}</span>
+              <span>{t('page.booking.page.email')}</span>
+              <span>{formData.email || t('page.booking.page.n.d')}</span>
             </div>
             <div className="tour-booking__summary-row">
-              <span>{tr('Telefone')}</span>
-              <span>{formData.phone || tr('N/D')}</span>
+              <span>{t('page.booking.page.telefone')}</span>
+              <span>{formData.phone || t('page.booking.page.n.d')}</span>
             </div>
             <div className="tour-booking__summary-row">
-              <span>{tr('Adultos')}</span>
-              <span>{formData.adults || tr('N/D')}</span>
+              <span>{t('page.booking.page.adultos')}</span>
+              <span>{formData.adults || t('page.booking.page.n.d')}</span>
             </div>
             <div className="tour-booking__summary-row">
-              <span>{tr('Criancas')}</span>
-              <span>{formData.children || tr('N/D')}</span>
+              <span>{t('page.booking.page.criancas')}</span>
+              <span>{formData.children || t('page.booking.page.n.d')}</span>
             </div>
             <div className="tour-booking__summary-row">
-              <span>{tr('Data do tour')}</span>
-              <span>{formData.tourDate || tr('Nao definida')}</span>
+              <span>{t('page.booking.page.data.do.tour')}</span>
+              <span>{formData.tourDate || t('page.booking.page.nao.definida')}</span>
             </div>
             <div className="tour-booking__summary-row">
-              <span>{tr('Tarifa de crianca')}</span>
+              <span>{t('page.booking.page.tarifa.de.crianca')}</span>
               <span>{currency.format(childRate)}</span>
             </div>
             <div className="tour-booking__summary-row">
-              <span>{tr('Total')}</span>
+              <span>{t('page.booking.page.total')}</span>
               <span>{formattedTotal}</span>
             </div>
           </div>
 
           <form className="tour-detail__form" onSubmit={handleSubmit}>
             <label>
-              {tr('Nome completo')}
+              {t('page.booking.page.nome.completo')}
               <input name="name" type="text" value={formData.name} onChange={handleChange} required />
             </label>
             <label>
-              {tr('Email')}
+              {t('page.booking.page.email')}
               <input
                 name="email"
                 type="email"
@@ -200,11 +198,11 @@ function BookingPage() {
               />
             </label>
             <label>
-              {tr('Numero de telefone')}
+              {t('page.booking.page.numero.de.telefone')}
               <input name="phone" type="tel" value={formData.phone} onChange={handleChange} />
             </label>
             <label>
-              {tr('Data do tour')}
+              {t('page.booking.page.data.do.tour')}
               <input
                 name="tourDate"
                 type="date"
@@ -215,7 +213,7 @@ function BookingPage() {
               />
             </label>
             <label>
-              {tr('Adultos')}
+              {t('page.booking.page.adultos')}
               <input
                 name="adults"
                 type="number"
@@ -226,7 +224,7 @@ function BookingPage() {
               />
             </label>
             <label>
-              {tr('Criancas')}
+              {t('page.booking.page.criancas')}
               <input
                 name="children"
                 type="number"
@@ -236,14 +234,14 @@ function BookingPage() {
               />
             </label>
             <button className="tour-detail__form-btn" type="submit" disabled={submitDisabled}>
-              {submitDisabled ? tr('A enviar...') : tr('Confirmar Reserva')}
+              {submitDisabled ? t('page.booking.page.a.enviar') : t('page.booking.page.confirmar.reserva')}
             </button>
           </form>
 
-          {status && <p className="form-success">{status}</p>}
+          {status && <p className="form-success">{t(status)}</p>}
           {success && (
             <div className="tour-detail__confirmation">
-              <p>{tr('Recebemos os detalhes da sua reserva e responderemos em breve para confirmar.')}</p>
+              <p>{t('page.booking.page.recebemos.os.detalhes.da.sua.reserva.e.responderemos')}</p>
             </div>
           )}
         </div>

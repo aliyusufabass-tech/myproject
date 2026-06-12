@@ -1,0 +1,1372 @@
+{
+  "app.chat.on.whatsapp": {
+    "defaultMessage": "Chat on WhatsApp",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json"
+    ]
+  },
+  "app.chat.with.us.on.whatsapp": {
+    "defaultMessage": "Chat with us on WhatsApp",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json"
+    ]
+  },
+  "booking.adultRate": {
+    "defaultMessage": "Adult rate",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json"
+    ]
+  },
+  "booking.adults": {
+    "defaultMessage": "adult(s)",
+    "generated": false,
+    "sources": [
+      "src/components/BookingForm.jsx",
+      "src/locales/en.json"
+    ]
+  },
+  "booking.childRate": {
+    "defaultMessage": "Child rate",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json"
+    ]
+  },
+  "booking.children": {
+    "defaultMessage": "child(ren)",
+    "generated": false,
+    "sources": [
+      "src/components/BookingForm.jsx",
+      "src/locales/en.json"
+    ]
+  },
+  "booking.discountNote": {
+    "defaultMessage": "per adult applied; children pay $10 less.",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json"
+    ]
+  },
+  "booking.error": {
+    "defaultMessage": "Could not send the booking. Please try again.",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json"
+    ]
+  },
+  "booking.networkError": {
+    "defaultMessage": "Network error, please try again.",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json"
+    ]
+  },
+  "booking.safariDiscount": {
+    "defaultMessage": "Safari discount",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json"
+    ]
+  },
+  "booking.sending": {
+    "defaultMessage": "Sending...",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json"
+    ]
+  },
+  "booking.sendingBooking": {
+    "defaultMessage": "Sending booking...",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json"
+    ]
+  },
+  "booking.submit": {
+    "defaultMessage": "Send Booking",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json"
+    ]
+  },
+  "booking.success": {
+    "defaultMessage": "Booking sent successfully!",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json"
+    ]
+  },
+  "booking.successContact": {
+    "defaultMessage": "Booking sent successfully! We will contact you shortly.",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json"
+    ]
+  },
+  "booking.successReply": {
+    "defaultMessage": "Booking sent successfully! We will reply soon.",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json"
+    ]
+  },
+  "booking.summary": {
+    "defaultMessage": "Booking Summary",
+    "generated": false,
+    "sources": [
+      "src/components/BookingForm.jsx",
+      "src/locales/en.json"
+    ]
+  },
+  "brand.name": {
+    "defaultMessage": "Zan Excursions",
+    "generated": false,
+    "sources": [
+      "src/components/Footer.jsx",
+      "src/components/Navbar.jsx",
+      "src/locales/en.json"
+    ]
+  },
+  "common.email": {
+    "defaultMessage": "Email",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json"
+    ]
+  },
+  "common.perPerson": {
+    "defaultMessage": "per person",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json"
+    ]
+  },
+  "common.viewDetails": {
+    "defaultMessage": "View Details",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json"
+    ]
+  },
+  "footer.copyright": {
+    "defaultMessage": "(c) 2026 Zan Excursions. Created for memorable journeys.",
+    "generated": false,
+    "sources": [
+      "src/components/Footer.jsx",
+      "src/locales/en.json"
+    ]
+  },
+  "footer.email": {
+    "defaultMessage": "info@zanexcursions.com",
+    "generated": false,
+    "sources": [
+      "src/components/Footer.jsx",
+      "src/locales/en.json"
+    ]
+  },
+  "footer.location": {
+    "defaultMessage": "Stone Town, Zanzibar",
+    "generated": false,
+    "sources": [
+      "src/components/Footer.jsx",
+      "src/locales/en.json"
+    ]
+  },
+  "footer.quickLinks": {
+    "defaultMessage": "Quick Links",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json"
+    ]
+  },
+  "footer.tagline": {
+    "defaultMessage": "Dive into island stories, ocean breeze, and effortless journeys.",
+    "generated": false,
+    "sources": [
+      "src/components/Footer.jsx",
+      "src/locales/en.json"
+    ]
+  },
+  "language.choose": {
+    "defaultMessage": "Choose language",
+    "generated": false,
+    "sources": [
+      "src/components/LanguageSwitcher.jsx",
+      "src/locales/en.json"
+    ]
+  },
+  "language.de": {
+    "defaultMessage": "German",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json"
+    ]
+  },
+  "language.en": {
+    "defaultMessage": "English",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json"
+    ]
+  },
+  "language.es": {
+    "defaultMessage": "Spanish",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json"
+    ]
+  },
+  "language.fr": {
+    "defaultMessage": "French",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json"
+    ]
+  },
+  "language.it": {
+    "defaultMessage": "Italian",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json"
+    ]
+  },
+  "language.pt": {
+    "defaultMessage": "Portuguese",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json"
+    ]
+  },
+  "language.sw": {
+    "defaultMessage": "Swahili",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json"
+    ]
+  },
+  "nav.about": {
+    "defaultMessage": "About Us",
+    "generated": false,
+    "sources": [
+      "src/components/Footer.jsx",
+      "src/locales/en.json"
+    ]
+  },
+  "nav.contact": {
+    "defaultMessage": "Contact",
+    "generated": false,
+    "sources": [
+      "src/components/Footer.jsx",
+      "src/locales/en.json"
+    ]
+  },
+  "nav.gallery": {
+    "defaultMessage": "Gallery",
+    "generated": false,
+    "sources": [
+      "src/components/Footer.jsx",
+      "src/locales/en.json"
+    ]
+  },
+  "nav.home": {
+    "defaultMessage": "Home",
+    "generated": false,
+    "sources": [
+      "src/components/Footer.jsx",
+      "src/locales/en.json"
+    ]
+  },
+  "nav.toggle": {
+    "defaultMessage": "Toggle navigation",
+    "generated": false,
+    "sources": [
+      "src/components/Navbar.jsx",
+      "src/locales/en.json"
+    ]
+  },
+  "nav.tours": {
+    "defaultMessage": "Tours",
+    "generated": false,
+    "sources": [
+      "src/components/Footer.jsx",
+      "src/locales/en.json"
+    ]
+  },
+  "nav.transfers": {
+    "defaultMessage": "Transfers",
+    "generated": false,
+    "sources": [
+      "src/components/Footer.jsx",
+      "src/locales/en.json"
+    ]
+  },
+  "page.about.page.a.zan.excursions.e.uma.empresa.profissional.de": {
+    "defaultMessage": "A Zan Excursions e uma empresa profissional de turismo que oferece experiencias de viagem cuidadosamente planeadas em Zanzibar e na Tanzania. De ferias de praia a safaris de vida selvagem, o nosso objetivo e tornar cada viagem inesquecivel.",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/AboutPage.jsx"
+    ]
+  },
+  "page.about.page.comece.a.sua.viagem.hoje": {
+    "defaultMessage": "Comece a Sua Viagem Hoje",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/AboutPage.jsx"
+    ]
+  },
+  "page.about.page.conheca.a.zan.excursions.a.nossa.historia.servicos": {
+    "defaultMessage": "Conheca a Zan Excursions, a nossa historia, servicos e experiencia de viagem de confianca.",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/AboutPage.jsx"
+    ]
+  },
+  "page.about.page.descubra.zanzibar.connosco": {
+    "defaultMessage": "Descubra Zanzibar Connosco",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/AboutPage.jsx"
+    ]
+  },
+  "page.about.page.focamo.nos.na.qualidade.do.servico.seguranca.e": {
+    "defaultMessage": "Focamo-nos na qualidade do servico, seguranca e satisfacao dos clientes, mostrando o melhor da natureza, cultura e aventura costeira.",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/AboutPage.jsx"
+    ]
+  },
+  "page.about.page.o.que.oferecemos": {
+    "defaultMessage": "O Que Oferecemos",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/AboutPage.jsx"
+    ]
+  },
+  "page.about.page.o.seu.parceiro.de.viagem.de.confianca.para": {
+    "defaultMessage": "O seu parceiro de viagem de confianca para experiencias memoraveis",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/AboutPage.jsx"
+    ]
+  },
+  "page.about.page.reservar.agora": {
+    "defaultMessage": "Reservar Agora",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/AboutPage.jsx"
+    ]
+  },
+  "page.about.page.reserve.a.sua.experiencia.hoje.e.descubra.zanzibar": {
+    "defaultMessage": "Reserve a sua experiencia hoje e descubra Zanzibar com confianca.",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/AboutPage.jsx"
+    ]
+  },
+  "page.about.page.sobre.a.zan.excursions": {
+    "defaultMessage": "Sobre a Zan Excursions",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/AboutPage.jsx"
+    ]
+  },
+  "page.about.page.sobre.nos": {
+    "defaultMessage": "Sobre Nos",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/AboutPage.jsx"
+    ]
+  },
+  "page.about.page.zanzibar.ocean.experience": {
+    "defaultMessage": "Zanzibar ocean experience",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/AboutPage.jsx"
+    ]
+  },
+  "page.booking.page.a.enviar": {
+    "defaultMessage": "A enviar...",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/BookingPage.jsx"
+    ]
+  },
+  "page.booking.page.adultos": {
+    "defaultMessage": "Adultos",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/BookingPage.jsx"
+    ]
+  },
+  "page.booking.page.avaliacoes": {
+    "defaultMessage": "Avaliacoes",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/BookingPage.jsx"
+    ]
+  },
+  "page.booking.page.confirmar.reserva": {
+    "defaultMessage": "Confirmar Reserva",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/BookingPage.jsx"
+    ]
+  },
+  "page.booking.page.criancas": {
+    "defaultMessage": "Criancas",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/BookingPage.jsx"
+    ]
+  },
+  "page.booking.page.data.do.tour": {
+    "defaultMessage": "Data do tour",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/BookingPage.jsx"
+    ]
+  },
+  "page.booking.page.duracao": {
+    "defaultMessage": "Duracao",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/BookingPage.jsx"
+    ]
+  },
+  "page.booking.page.email": {
+    "defaultMessage": "Email",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/BookingPage.jsx"
+    ]
+  },
+  "page.booking.page.localizacao": {
+    "defaultMessage": "Localizacao",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/BookingPage.jsx"
+    ]
+  },
+  "page.booking.page.maximo.10": {
+    "defaultMessage": "Maximo 10",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/BookingPage.jsx"
+    ]
+  },
+  "page.booking.page.n.d": {
+    "defaultMessage": "N/D",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/BookingPage.jsx"
+    ]
+  },
+  "page.booking.page.nao.definida": {
+    "defaultMessage": "Nao definida",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/BookingPage.jsx"
+    ]
+  },
+  "page.booking.page.nome.completo": {
+    "defaultMessage": "Nome completo",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/BookingPage.jsx"
+    ]
+  },
+  "page.booking.page.numero.de.telefone": {
+    "defaultMessage": "Numero de telefone",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/BookingPage.jsx"
+    ]
+  },
+  "page.booking.page.preco": {
+    "defaultMessage": "Preco",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/BookingPage.jsx"
+    ]
+  },
+  "page.booking.page.recebemos.os.detalhes.da.sua.reserva.e.responderemos": {
+    "defaultMessage": "Recebemos os detalhes da sua reserva e responderemos em breve para confirmar.",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/BookingPage.jsx"
+    ]
+  },
+  "page.booking.page.resumo.da.reserva": {
+    "defaultMessage": "Resumo da Reserva",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/BookingPage.jsx"
+    ]
+  },
+  "page.booking.page.tamanho.do.grupo": {
+    "defaultMessage": "Tamanho do grupo",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/BookingPage.jsx"
+    ]
+  },
+  "page.booking.page.tarifa.de.crianca": {
+    "defaultMessage": "Tarifa de crianca",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/BookingPage.jsx"
+    ]
+  },
+  "page.booking.page.telefone": {
+    "defaultMessage": "Telefone",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/BookingPage.jsx"
+    ]
+  },
+  "page.booking.page.total": {
+    "defaultMessage": "Total",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/BookingPage.jsx"
+    ]
+  },
+  "page.booking.page.tour": {
+    "defaultMessage": "Tour",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/BookingPage.jsx"
+    ]
+  },
+  "page.booking.page.tour.nao.encontrado.escolha.outra.experiencia": {
+    "defaultMessage": "Tour nao encontrado. Escolha outra experiencia.",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/BookingPage.jsx"
+    ]
+  },
+  "page.booking.page.zanzibar": {
+    "defaultMessage": "Zanzibar",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/BookingPage.jsx"
+    ]
+  },
+  "page.contact.page.contacte.a.zan.excursions.para.reservas.orientacao.de": {
+    "defaultMessage": "Contacte a Zan Excursions para reservas, orientacao de viagem e planeamento personalizado em Zanzibar.",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/ContactPage.jsx"
+    ]
+  },
+  "page.contact.page.contacto": {
+    "defaultMessage": "Contacto",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/ContactPage.jsx"
+    ]
+  },
+  "page.contact.page.email": {
+    "defaultMessage": "Email",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/ContactPage.jsx"
+    ]
+  },
+  "page.contact.page.enviar.informacoes.de.viagem": {
+    "defaultMessage": "Enviar informacoes de viagem",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/ContactPage.jsx"
+    ]
+  },
+  "page.contact.page.envie.os.detalhes.da.sua.viagem.pelo.formulario": {
+    "defaultMessage": "Envie os detalhes da sua viagem pelo formulario ou contacte-nos diretamente.",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/ContactPage.jsx"
+    ]
+  },
+  "page.contact.page.fale.com.a.zan.excursions": {
+    "defaultMessage": "Fale com a Zan Excursions",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/ContactPage.jsx"
+    ]
+  },
+  "page.contact.page.fale.nos.das.datas.preferidas.tamanho.do.grupo": {
+    "defaultMessage": "Fale-nos das datas preferidas, tamanho do grupo e pedidos especiais.",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/ContactPage.jsx"
+    ]
+  },
+  "page.contact.page.horario.de.atendimento": {
+    "defaultMessage": "Horario de Atendimento",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/ContactPage.jsx"
+    ]
+  },
+  "page.contact.page.info.zanexcursions.com": {
+    "defaultMessage": "info@zanexcursions.com",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/ContactPage.jsx"
+    ]
+  },
+  "page.contact.page.localizacao": {
+    "defaultMessage": "Localizacao",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/ContactPage.jsx"
+    ]
+  },
+  "page.contact.page.mapa.de.zanzibar": {
+    "defaultMessage": "Mapa de Zanzibar",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/ContactPage.jsx"
+    ]
+  },
+  "page.contact.page.mensagem": {
+    "defaultMessage": "Mensagem",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/ContactPage.jsx"
+    ]
+  },
+  "page.contact.page.nome.completo": {
+    "defaultMessage": "Nome completo",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/ContactPage.jsx"
+    ]
+  },
+  "page.contact.page.numero.de.telefone": {
+    "defaultMessage": "Numero de telefone",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/ContactPage.jsx"
+    ]
+  },
+  "page.contact.page.o.seu.nome.completo": {
+    "defaultMessage": "O seu nome completo",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/ContactPage.jsx"
+    ]
+  },
+  "page.contact.page.partilhe.os.detalhes.da.sua.viagem": {
+    "defaultMessage": "Partilhe os detalhes da sua viagem",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/ContactPage.jsx"
+    ]
+  },
+  "page.contact.page.seg.dom.8.00.20.00": {
+    "defaultMessage": "Seg - Dom: 8:00 - 20:00",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/ContactPage.jsx"
+    ]
+  },
+  "page.contact.page.telefone": {
+    "defaultMessage": "Telefone",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/ContactPage.jsx"
+    ]
+  },
+  "page.contact.page.zanzibar.tanzania": {
+    "defaultMessage": "Zanzibar, Tanzania",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/ContactPage.jsx"
+    ]
+  },
+  "page.gallery.page.abrir.visualizador.de.foto": {
+    "defaultMessage": "Abrir visualizador de foto",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/GalleryPage.jsx"
+    ]
+  },
+  "page.gallery.page.das.aguas.turquesa.e.passeios.de.dhow.aos": {
+    "defaultMessage": "Das aguas turquesa e passeios de dhow aos fins de tarde tranquilos na praia, esta galeria mostra as experiencias que ajudamos a criar em Zanzibar.",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/GalleryPage.jsx"
+    ]
+  },
+  "page.gallery.page.explore.momentos.da.zan.excursions.entre.praias.paisagens": {
+    "defaultMessage": "Explore momentos da Zan Excursions entre praias, paisagens da ilha e experiencias de viagem inesqueciveis.",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/GalleryPage.jsx"
+    ]
+  },
+  "page.gallery.page.fechar.visualizador.de.galeria": {
+    "defaultMessage": "Fechar visualizador de galeria",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/GalleryPage.jsx"
+    ]
+  },
+  "page.gallery.page.foto.anterior": {
+    "defaultMessage": "Foto anterior",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/GalleryPage.jsx"
+    ]
+  },
+  "page.gallery.page.galeria": {
+    "defaultMessage": "Galeria",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/GalleryPage.jsx"
+    ]
+  },
+  "page.gallery.page.galeria.zan.excursions": {
+    "defaultMessage": "Galeria Zan Excursions",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/GalleryPage.jsx"
+    ]
+  },
+  "page.gallery.page.imagem.da.galeria": {
+    "defaultMessage": "Imagem da galeria",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/GalleryPage.jsx"
+    ]
+  },
+  "page.gallery.page.momentos.da.ilha.que.valem.a.pena.recordar": {
+    "defaultMessage": "Momentos da ilha que valem a pena recordar",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/GalleryPage.jsx"
+    ]
+  },
+  "page.gallery.page.proxima.foto": {
+    "defaultMessage": "Proxima foto",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/GalleryPage.jsx"
+    ]
+  },
+  "page.home.page.a.zan.excursions.cria.experiencias.autenticas.na.ilha": {
+    "defaultMessage": "A Zan Excursions cria experiencias autenticas na ilha - escapadelas de praia, rotas das especiarias e transfers que fluem tao suavemente quanto as mares.",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/HomePage.jsx"
+    ]
+  },
+  "page.home.page.ajudamos.os.visitantes.a.deslocarem.se.sem.complicacoes": {
+    "defaultMessage": "Ajudamos os visitantes a deslocarem-se sem complicacoes desde a chegada ao aeroporto ate ao check-in no hotel, e depois para experiencias inesqueciveis na ilha sem o stress habitual de coordenacao.",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/HomePage.jsx"
+    ]
+  },
+  "page.home.page.apoio.agil.para.reservas.de.ultima.hora.mudancas": {
+    "defaultMessage": "Apoio agil para reservas de ultima hora, mudancas de horario e atualizacoes de viagem.",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/HomePage.jsx"
+    ]
+  },
+  "page.home.page.apoio.de.viagem.pessoal.confiavel.e.profundamente.enraizado": {
+    "defaultMessage": "Apoio de viagem pessoal, confiavel e profundamente enraizado no conhecimento local",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/HomePage.jsx"
+    ]
+  },
+  "page.home.page.combinacoes.personalizadas": {
+    "defaultMessage": "Combinacoes personalizadas",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/HomePage.jsx"
+    ]
+  },
+  "page.home.page.combine.snorkeling.visitas.culturais.e.experiencias.ao.por": {
+    "defaultMessage": "Combine snorkeling, visitas culturais e experiencias ao por do sol num unico itinerario.",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/HomePage.jsx"
+    ]
+  },
+  "page.home.page.descubra.a.variedade.de.zanzibar.com.experiencias.escolhidas": {
+    "defaultMessage": "Descubra a variedade de Zanzibar com experiencias escolhidas que combinam cultura, vida selvagem e momentos no oceano.",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/HomePage.jsx"
+    ]
+  },
+  "page.home.page.descubra.tours.transfers.e.experiencias.personalizadas.na.ilha": {
+    "defaultMessage": "Descubra tours, transfers e experiencias personalizadas na ilha com a Zan Excursions.",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/HomePage.jsx"
+    ]
+  },
+  "page.home.page.descubra.zanzibar.onde.cada.onda.conta.uma.historia": {
+    "defaultMessage": "Descubra Zanzibar: onde cada onda conta uma historia e cada passo leva ao encanto.",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/HomePage.jsx"
+    ]
+  },
+  "page.home.page.explorar.tours": {
+    "defaultMessage": "Explorar Tours",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/HomePage.jsx"
+    ]
+  },
+  "page.home.page.fale.connosco.no.whatsapp": {
+    "defaultMessage": "Fale Connosco no WhatsApp",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/HomePage.jsx"
+    ]
+  },
+  "page.home.page.inicio": {
+    "defaultMessage": "Inicio",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/HomePage.jsx"
+    ]
+  },
+  "page.home.page.o.que.os.nossos.clientes.mais.valorizam.ao": {
+    "defaultMessage": "O que os nossos clientes mais valorizam ao viajar connosco",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/HomePage.jsx"
+    ]
+  },
+  "page.home.page.planeie.com.confianca": {
+    "defaultMessage": "Planeie com confianca",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/HomePage.jsx"
+    ]
+  },
+  "page.home.page.por.que.escolher.nos": {
+    "defaultMessage": "Por Que Escolher-nos",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/HomePage.jsx"
+    ]
+  },
+  "page.home.page.precisa.de.transfers.tours.e.orientacao.local.rapida": {
+    "defaultMessage": "Precisa de transfers, tours e orientacao local rapida num so lugar?",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/HomePage.jsx"
+    ]
+  },
+  "page.home.page.recolha.no.aeroporto": {
+    "defaultMessage": "Recolha no aeroporto",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/HomePage.jsx"
+    ]
+  },
+  "page.home.page.resposta.rapida": {
+    "defaultMessage": "Resposta rapida",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/HomePage.jsx"
+    ]
+  },
+  "page.home.page.servico.profissional.de.rececao.com.apoio.de.bagagem": {
+    "defaultMessage": "Servico profissional de rececao com apoio de bagagem e transporte direto para o hotel.",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/HomePage.jsx"
+    ]
+  },
+  "page.home.page.testemunhos": {
+    "defaultMessage": "Testemunhos",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/HomePage.jsx"
+    ]
+  },
+  "page.home.page.tours.em.destaque": {
+    "defaultMessage": "Tours em Destaque",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/HomePage.jsx"
+    ]
+  },
+  "page.home.page.tours.selecionados.que.refletem.as.experiencias.do.nosso": {
+    "defaultMessage": "Tours selecionados que refletem as experiencias do nosso catalogo completo",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/HomePage.jsx"
+    ]
+  },
+  "page.home.page.ver.opcoes.de.transfer": {
+    "defaultMessage": "Ver opcoes de transfer",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/HomePage.jsx"
+    ]
+  },
+  "page.home.page.ver.todos.os.tours": {
+    "defaultMessage": "Ver todos os tours",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/HomePage.jsx"
+    ]
+  },
+  "page.tour.detail.page.avaliacoes": {
+    "defaultMessage": "Avaliacoes",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/TourDetailPage.jsx"
+    ]
+  },
+  "page.tour.detail.page.destaques.do.tour": {
+    "defaultMessage": "Destaques do Tour",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/TourDetailPage.jsx"
+    ]
+  },
+  "page.tour.detail.page.duracao": {
+    "defaultMessage": "Duracao",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/TourDetailPage.jsx"
+    ]
+  },
+  "page.tour.detail.page.galeria": {
+    "defaultMessage": "Galeria",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/TourDetailPage.jsx"
+    ]
+  },
+  "page.tour.detail.page.imagem": {
+    "defaultMessage": "imagem",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/TourDetailPage.jsx"
+    ]
+  },
+  "page.tour.detail.page.localizacao": {
+    "defaultMessage": "Localizacao",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/TourDetailPage.jsx"
+    ]
+  },
+  "page.tour.detail.page.mais.safaris.de.vida.selvagem": {
+    "defaultMessage": "Mais Safaris de Vida Selvagem",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/TourDetailPage.jsx"
+    ]
+  },
+  "page.tour.detail.page.preco.inclui": {
+    "defaultMessage": "Preco Inclui",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/TourDetailPage.jsx"
+    ]
+  },
+  "page.tour.detail.page.reserva.do.tour": {
+    "defaultMessage": "Reserva do Tour",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/TourDetailPage.jsx"
+    ]
+  },
+  "page.tour.detail.page.reserve.o.seu.lugar": {
+    "defaultMessage": "Reserve o Seu Lugar",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/TourDetailPage.jsx"
+    ]
+  },
+  "page.tour.detail.page.tamanho.do.grupo": {
+    "defaultMessage": "Tamanho do grupo",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/TourDetailPage.jsx"
+    ]
+  },
+  "page.tour.detail.page.tour.nao.encontrado.escolha.outra.experiencia": {
+    "defaultMessage": "Tour nao encontrado. Escolha outra experiencia.",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/TourDetailPage.jsx"
+    ]
+  },
+  "page.tour.detail.page.ver.detalhes": {
+    "defaultMessage": "Ver detalhes",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/TourDetailPage.jsx"
+    ]
+  },
+  "page.tour.detail.page.visao.geral.do.tour": {
+    "defaultMessage": "Visao Geral do Tour",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/TourDetailPage.jsx"
+    ]
+  },
+  "page.tours.page.explore.excursoes.em.zanzibar.e.pacotes.de.safari": {
+    "defaultMessage": "Explore excursoes em Zanzibar e pacotes de safari atraves de um layout organizado com filtros rapidos.",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/ToursPage.jsx"
+    ]
+  },
+  "page.tours.page.explore.zanzibar.como.nunca.antes.das.aventuras.no": {
+    "defaultMessage": "Explore Zanzibar Como Nunca Antes Das aventuras no oceano aos safaris de vida selvagem, descubra tudo.",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/ToursPage.jsx"
+    ]
+  },
+  "page.tours.page.tours": {
+    "defaultMessage": "Tours",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/ToursPage.jsx"
+    ]
+  },
+  "page.transfers.page.adultos": {
+    "defaultMessage": "Adultos",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/TransfersPage.jsx"
+    ]
+  },
+  "page.transfers.page.as.nossas.viaturas": {
+    "defaultMessage": "As Nossas Viaturas",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/TransfersPage.jsx"
+    ]
+  },
+  "page.transfers.page.criancas": {
+    "defaultMessage": "Criancas",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/TransfersPage.jsx"
+    ]
+  },
+  "page.transfers.page.data.do.transfer": {
+    "defaultMessage": "Data do transfer",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/TransfersPage.jsx"
+    ]
+  },
+  "page.transfers.page.destino": {
+    "defaultMessage": "Destino",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/TransfersPage.jsx"
+    ]
+  },
+  "page.transfers.page.email": {
+    "defaultMessage": "Email",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/TransfersPage.jsx"
+    ]
+  },
+  "page.transfers.page.entraremos.em.contacto.em.breve.para.confirmar.o": {
+    "defaultMessage": "Entraremos em contacto em breve para confirmar o transfer.",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/TransfersPage.jsx"
+    ]
+  },
+  "page.transfers.page.enviar.reserva": {
+    "defaultMessage": "Enviar Reserva",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/TransfersPage.jsx"
+    ]
+  },
+  "page.transfers.page.horario.preferido": {
+    "defaultMessage": "Horario preferido",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/TransfersPage.jsx"
+    ]
+  },
+  "page.transfers.page.hotel.aeroporto": {
+    "defaultMessage": "Hotel / Aeroporto",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/TransfersPage.jsx"
+    ]
+  },
+  "page.transfers.page.hotel.zona": {
+    "defaultMessage": "Hotel / Zona",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/TransfersPage.jsx"
+    ]
+  },
+  "page.transfers.page.local.de.recolha": {
+    "defaultMessage": "Local de Recolha",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/TransfersPage.jsx"
+    ]
+  },
+  "page.transfers.page.nome.completo": {
+    "defaultMessage": "Nome Completo",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/TransfersPage.jsx"
+    ]
+  },
+  "page.transfers.page.notas.pedidos.especiais": {
+    "defaultMessage": "Notas / Pedidos Especiais",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/TransfersPage.jsx"
+    ]
+  },
+  "page.transfers.page.os.nossos.servicos": {
+    "defaultMessage": "Os Nossos Servicos",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/TransfersPage.jsx"
+    ]
+  },
+  "page.transfers.page.partilhe.detalhes.importantes": {
+    "defaultMessage": "Partilhe detalhes importantes",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/TransfersPage.jsx"
+    ]
+  },
+  "page.transfers.page.recolha.profissional.no.aeroporto.transfers.de.hotel.viagens": {
+    "defaultMessage": "Recolha profissional no aeroporto, Transfers de hotel, viagens privadas e servicos de viaturas em Zanzibar.",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/TransfersPage.jsx"
+    ]
+  },
+  "page.transfers.page.reserva.enviada": {
+    "defaultMessage": "Reserva Enviada!",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/TransfersPage.jsx"
+    ]
+  },
+  "page.transfers.page.reserve.o.seu.transfer": {
+    "defaultMessage": "Reserve o Seu Transfer",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/TransfersPage.jsx"
+    ]
+  },
+  "page.transfers.page.servicos.de.transfer": {
+    "defaultMessage": "Servicos de Transfer",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/TransfersPage.jsx"
+    ]
+  },
+  "page.transfers.page.telefone": {
+    "defaultMessage": "Telefone",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/TransfersPage.jsx"
+    ]
+  },
+  "page.transfers.page.transfers": {
+    "defaultMessage": "Transfers",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json",
+      "src/pages/TransfersPage.jsx"
+    ]
+  },
+  "tour.zanzibarOceanExperience": {
+    "defaultMessage": "Zanzibar ocean experience",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json"
+    ]
+  },
+  "transfer.airportPickup": {
+    "defaultMessage": "Airport Pickup",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json"
+    ]
+  },
+  "transfer.bus": {
+    "defaultMessage": "Bus",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json"
+    ]
+  },
+  "transfer.hotelTransfers": {
+    "defaultMessage": "Hotel Transfers",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json"
+    ]
+  },
+  "transfer.privateTrips": {
+    "defaultMessage": "Private Trips",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json"
+    ]
+  },
+  "transfer.standardCar": {
+    "defaultMessage": "Standard Car",
+    "generated": false,
+    "sources": [
+      "src/locales/en.json"
+    ]
+  }
+}

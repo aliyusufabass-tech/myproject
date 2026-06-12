@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
+import { useTranslation } from './i18n'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
@@ -12,6 +13,8 @@ import GalleryPage from './pages/GalleryPage'
 import ContactPage from './pages/ContactPage'
 
 function App() {
+  const { t } = useTranslation()
+
   return (
     <>
       <ScrollToTop />
@@ -34,8 +37,8 @@ function App() {
           href="https://wa.me/255792692084"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Chat with us on WhatsApp"
-          title="Chat on WhatsApp"
+          aria-label={t('Chat with us on WhatsApp')}
+          title={t('Chat on WhatsApp')}
         >
           <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
             <path

@@ -1,22 +1,20 @@
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from '../i18n'
 import PageMeta from '../components/PageMeta'
 import contactHero from '../assets/picha.jpeg'
-import { translateText } from '../utils/i18nText'
 
 function ContactPage() {
-  const { i18n } = useTranslation()
-  const tr = (text) => translateText(text, i18n.language)
+  const { t } = useTranslation()
 
   return (
     <>
       <PageMeta
-        title={tr('Contacto')}
-        description={tr('Contacte a Zan Excursions para reservas, orientacao de viagem e planeamento personalizado em Zanzibar.')}
+        title={t('page.contact.page.contacto')}
+        description={t('page.contact.page.contacte.a.zan.excursions.para.reservas.orientacao.de')}
       />
 
       <section className="contact-hero" style={{ '--contact-hero-image': `url(${contactHero})` }}>
         <div className="container contact-hero__content">
-          <h1>{tr('Contacto')}</h1>
+          <h1>{t('page.contact.page.contacto')}</h1>
         </div>
       </section>
 
@@ -24,58 +22,58 @@ function ContactPage() {
         <div className="container contact-page-container">
           <div className="contact-page-grid">
             <div className="contact-info-box contact-info-box--wide">
-              <h2>{tr('Fale com a Zan Excursions')}</h2>
-              <p>{tr('Envie os detalhes da sua viagem pelo formulario ou contacte-nos diretamente.')}</p>
+              <h2>{t('page.contact.page.fale.com.a.zan.excursions')}</h2>
+              <p>{t('page.contact.page.envie.os.detalhes.da.sua.viagem.pelo.formulario')}</p>
 
               <div className="contact-info-item">
-                <strong>Email:</strong>
+                <strong>{t('page.contact.page.email')}:</strong>
                 <p>
-                  <a href="mailto:info@zanexcursions.com">info@zanexcursions.com</a>
+                  <a href="mailto:info@zanexcursions.com">{t('page.contact.page.info.zanexcursions.com')}</a>
                 </p>
               </div>
 
               <div className="contact-info-item">
-                <strong>{tr('Telefone')}:</strong>
+                <strong>{t('page.contact.page.telefone')}:</strong>
                 <p>+255 792 692 084</p>
               </div>
 
               <div className="contact-info-item">
-                <strong>{tr('Localizacao')}:</strong>
-                <p>Zanzibar, Tanzania</p>
+                <strong>{t('page.contact.page.localizacao')}:</strong>
+                <p>{t('page.contact.page.zanzibar.tanzania')}</p>
               </div>
 
               <div className="contact-info-item">
-                <strong>{tr('Horario de Atendimento')}:</strong>
-                <p>{tr('Seg - Dom: 8:00 - 20:00')}</p>
+                <strong>{t('page.contact.page.horario.de.atendimento')}:</strong>
+                <p>{t('page.contact.page.seg.dom.8.00.20.00')}</p>
               </div>
             </div>
 
             <div className="contact-form-box">
-              <h2>{tr('Partilhe os detalhes da sua viagem')}</h2>
+              <h2>{t('page.contact.page.partilhe.os.detalhes.da.sua.viagem')}</h2>
               <form className="contact-page-form">
                 <div className="contact-form-group">
-                  <label htmlFor="contact-fullname">{tr('Nome completo')}</label>
-                  <input id="contact-fullname" type="text" placeholder={tr('O seu nome completo')} required />
+                  <label htmlFor="contact-fullname">{t('page.contact.page.nome.completo')}</label>
+                  <input id="contact-fullname" type="text" placeholder={t('page.contact.page.o.seu.nome.completo')} required />
                 </div>
                 <div className="contact-form-group">
-                  <label htmlFor="contact-email">{tr('Email')}</label>
+                  <label htmlFor="contact-email">{t('page.contact.page.email')}</label>
                   <input id="contact-email" type="email" placeholder="you@example.com" required />
                 </div>
                 <div className="contact-form-group">
-                  <label htmlFor="contact-phone">{tr('Numero de telefone')}</label>
+                  <label htmlFor="contact-phone">{t('page.contact.page.numero.de.telefone')}</label>
                   <input id="contact-phone" type="tel" placeholder="+255 7XX XXX XXX" required />
                 </div>
                 <div className="contact-form-group">
-                  <label htmlFor="contact-message">{tr('Mensagem')}</label>
+                  <label htmlFor="contact-message">{t('page.contact.page.mensagem')}</label>
                   <textarea
                     id="contact-message"
                     rows="4"
-                    placeholder={tr('Fale-nos das datas preferidas, tamanho do grupo e pedidos especiais.')}
+                    placeholder={t('page.contact.page.fale.nos.das.datas.preferidas.tamanho.do.grupo')}
                     required
                   />
                 </div>
                 <button className="contact-submit-btn" type="submit">
-                  {tr('Enviar informacoes de viagem')}
+                  {t('page.contact.page.enviar.informacoes.de.viagem')}
                 </button>
               </form>
             </div>
@@ -83,7 +81,7 @@ function ContactPage() {
 
           <div className="contact-map-box">
             <iframe
-              title={tr('Mapa de Zanzibar')}
+              title={t('page.contact.page.mapa.de.zanzibar')}
               src="https://www.google.com/maps?q=Zanzibar&output=embed"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
